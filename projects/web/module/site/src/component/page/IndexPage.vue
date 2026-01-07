@@ -43,7 +43,12 @@ import {
   mdiHistory,
   mdiXml,
   mdiGhost,
-  mdiBugOutline, mdiTrophyVariantOutline, mdiInformationOutline
+  mdiBugOutline, mdiTrophyVariantOutline, mdiInformationOutline,
+  mdiTarget,
+  mdiChartTimelineVariant,
+  mdiSecurity,
+  mdiAccountGroupOutline,
+  mdiWall,
 } from "@mdi/js"
 import { ref } from 'vue'
 import zendImage from '@/public/img/zend.png'
@@ -141,6 +146,78 @@ const showFullExperience = ref(false)
                   <v-chip size="x-small" variant="tonal" color="success" class="font-weight-bold">B2 Upper-Intermediate</v-chip>
                 </div>
               </div>
+            </v-col>
+          </v-row>
+        </section>
+
+        <section class="mb-16 animate-up" style="animation-delay: 0.1s;">
+          <div class="section-label mb-8">Role & Strategic Focus</div>
+
+          <v-row>
+            <v-col cols="12">
+              <v-card variant="flat" class="role-focus-card pa-8">
+                <v-row>
+                  <v-col cols="12" md="6">
+                    <h2 class="text-h4 font-weight-black mb-6 d-flex align-center">
+                      <v-icon :icon="mdiTarget" color="primary" class="mr-3" />
+                      What I Solve
+                    </h2>
+                    <p class="text-body-1 text-grey-lighten-1 mb-6" style="line-height: 1.8;">
+                      I specialize in designing and implementing fault-tolerant high-load web services from scratch. My key advantage is absolute independence: I can single-handedly design and implement systems capable of handling 1M+ RPS, covering every layer of the technology stack.
+
+                    </p>
+                    <div class="d-flex flex-column gap-3">
+                      <div class="focus-item d-flex align-center">
+                        <v-icon :icon="mdiChartTimelineVariant" size="small" color="primary" class="mr-3" />
+                        <span><strong>Zero-to-One:</strong> Building core infrastructure from scratch for startups.</span>
+                      </div>
+                      <div class="focus-item d-flex align-center">
+                        <v-icon :icon="mdiWall" size="small" color="primary" class="mr-3" />
+                        <span><strong>Legacy-to-Modern:</strong> High-risk migrations and architectural refactoring.</span>
+                      </div>
+                      <div class="focus-item d-flex align-center">
+                        <v-icon :icon="mdiSecurity" size="small" color="primary" class="mr-3" />
+                        <span><strong>System Hardening:</strong> Deep security audits and performance tuning.</span>
+                      </div>
+                    </div>
+                  </v-col>
+
+                  <v-col cols="12" md="6" class="border-left-md px-md-8">
+                    <h2 class="text-h4 font-weight-black mb-6">Roles I'm Open To</h2>
+                    <v-list bg-color="transparent" class="pa-0">
+                      <v-list-item class="px-0 mb-4">
+                        <template v-slot:prepend>
+                          <v-avatar color="rgba(124, 77, 255, 0.1)" rounded="lg" class="mr-4">
+                            <v-icon :icon="mdiCogs" color="#7C4DFF" />
+                          </v-avatar>
+                        </template>
+                        <v-list-item-title class="text-h6 font-weight-bold">CTO / Technical Founder</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">Tech strategy, hiring, and 0-to-1 execution.</v-list-item-subtitle>
+                      </v-list-item>
+
+                      <v-list-item class="px-0 mb-4">
+                        <template v-slot:prepend>
+                          <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
+                            <v-icon :icon="mdiServerNetwork" color="#00C853" />
+                          </v-avatar>
+                        </template>
+                        <v-list-item-title class="text-h6 font-weight-bold">Principal Architect</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">Designing complex distributed systems & high-load backends.</v-list-item-subtitle>
+                      </v-list-item>
+
+                      <v-list-item class="px-0 mb-4">
+                        <template v-slot:prepend>
+                          <v-avatar color="rgba(33, 150, 243, 0.1)" rounded="lg" class="mr-4">
+                            <v-icon :icon="mdiAccountGroupOutline" color="primary" />
+                          </v-avatar>
+                        </template>
+                        <v-list-item-title class="text-h6 font-weight-bold">Head of Engineering / Team Lead</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">Mentoring, process excellence, and team scaling.</v-list-item-subtitle>
+                      </v-list-item>
+                    </v-list>
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-col>
           </v-row>
         </section>
@@ -1880,5 +1957,38 @@ const showFullExperience = ref(false)
 .experience-card {
   border-color: rgba(var(--v-theme-primary), 0.3) !important;
   background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
+}
+
+.role-focus-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(var(--v-theme-primary), 0.1) !important;
+  border-radius: 24px !important;
+  backdrop-filter: blur(10px);
+}
+
+.focus-item {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 960px) {
+  .border-left-md {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.text-mono {
+  font-family: 'Fira Code', monospace !important;
+}
+
+:deep(.v-list-item-subtitle .v-list-item__content) {
+  overflow: initial !important;
+}
+
+:deep(.v-list-item--one-line .v-list-item-subtitle) {
+  -webkit-line-clamp: initial !important;
 }
 </style>
