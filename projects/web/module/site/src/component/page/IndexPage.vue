@@ -43,7 +43,7 @@ import {
   mdiHistory,
   mdiXml,
   mdiGhost,
-  mdiBugOutline, mdiTrophyVariantOutline
+  mdiBugOutline, mdiTrophyVariantOutline, mdiInformationOutline
 } from "@mdi/js"
 import { ref } from 'vue'
 import zendImage from '@/public/img/zend.png'
@@ -289,7 +289,7 @@ const showFullExperience = ref(false)
             <v-alert
                 density="compact"
                 variant="tonal"
-                color="primary"
+                color="warning"
                 class="text-caption border-opacity-25 py-2 px-4"
                 style="max-width: fit-content; border-left: 4px solid !important;"
             >
