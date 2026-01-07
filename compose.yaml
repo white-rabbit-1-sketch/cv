@@ -1,19 +1,19 @@
 services:
-  web:
+  cv:
     image: caddy:2.10.0-alpine
     container_name: web
     restart: unless-stopped
     volumes:
       - ./docker/web/Caddyfile:/etc/caddy/Caddyfile
       - ./dist/web/site:/usr/share/caddy/site
-      - web_caddy_data:/data
-      - web_caddy_config:/config
+      - cv_caddy_data:/data
+      - cv_caddy_config:/config
     networks:
       - external-network
 
 volumes:
-  web_caddy_data:
-  web_caddy_config:
+  cv_caddy_data:
+  cv_caddy_config:
 
 networks:
   external-network:
