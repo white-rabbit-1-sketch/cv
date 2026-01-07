@@ -1,0 +1,9 @@
+:80 {
+    handle {
+        root * /usr/share/caddy/site
+        try_files {path} /index.html
+        file_server
+    }
+
+    encode gzip zstd
+}
