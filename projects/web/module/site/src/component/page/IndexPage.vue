@@ -67,7 +67,7 @@ const showFullStack = ref(false)
 
       <v-container class="max-container py-16">
 
-        <section class="mb-16 animate-up">
+        <section class="hero-section mb-16 animate-up">
           <v-row align="center">
             <v-col cols="12" md="8">
               <div class="d-flex flex-wrap align-center mb-4 gap-2">
@@ -77,7 +77,7 @@ const showFullStack = ref(false)
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  Systems Engineer
+                  Principal Architect
                 </v-chip>
 
                 <v-chip
@@ -86,7 +86,7 @@ const showFullStack = ref(false)
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  Principal Architect
+                  Team Lead
                 </v-chip>
 
                 <v-chip
@@ -95,21 +95,24 @@ const showFullStack = ref(false)
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  Team Lead / CTO
+                  CTO
                 </v-chip>
 
-
-
-                <span class="ml-2 text-grey text-caption d-none d-sm-inline ">
-                  // 17+ years of expertise
-                </span>
+                <span class="ml-2 text-grey text-caption d-none d-sm-inline opacity-60">
+          // 17+ years of expertise
+        </span>
               </div>
 
-              <h1 class="name-title mb-2">Mikhail Chuloshnikov</h1>
+              <h1 class="name-title mb-4">Mikhail Chuloshnikov</h1>
 
-              <p class="hero-desc mb-8">
-                Specializing in high-load system design, advanced high-tech architecture, and information security.
-                My journey spans from low-level debugging and exploit research to leading engineering teams for complex, large-scale platforms.
+              <h2 class="text-h4 font-weight-bold text-white mb-6">
+                Engineering Resilience for <span class="text-primary">High-Load Web Platforms</span>.
+              </h2>
+
+              <p class="hero-desc mb-8 text-grey-lighten-1" style="max-width: 650px; font-size: 1.1rem; line-height: 1.6;">
+                I bridge the gap between low-level system engineering and scalable web architecture.
+                Leveraging 17+ years of experience, I build mission-critical backend ecosystems
+                where performance, security, and stability are solved at the foundation.
               </p>
 
               <div class="d-flex flex-wrap gap-4">
@@ -117,7 +120,7 @@ const showFullStack = ref(false)
                   <template v-slot:prepend><v-icon :icon="mdiSend" /></template>
                   Message on Telegram
                 </v-btn>
-                <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none">
+                <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none border-white">
                   <template v-slot:prepend><v-icon :icon="mdiEmail" /></template>
                   Email Me
                 </v-btn>
@@ -126,7 +129,7 @@ const showFullStack = ref(false)
 
             <v-col cols="12" md="4" class="d-flex justify-md-end">
               <div class="status-box pa-6 w-100" style="max-width: 320px;">
-                <div class="text-overline text-grey-darken-1 mb-4 tracking-widest">Candidate Status</div>
+                <div class="text-overline text-grey-darken-1 mb-4 tracking-widest text-uppercase" style="font-size: 0.65rem;">Candidate Status</div>
 
                 <div class="d-flex align-center mb-3">
                   <v-icon :icon="mdiMapMarkerOutline" size="small" class="mr-3 text-primary" />
@@ -147,7 +150,7 @@ const showFullStack = ref(false)
 
                 <div class="d-flex justify-space-between align-center">
                   <span class="text-caption text-grey">English Level:</span>
-                  <v-chip size="x-small" variant="tonal" color="success" class="font-weight-bold">B2 Upper-Intermediate</v-chip>
+                  <v-chip size="x-small" variant="tonal" color="success" class="font-weight-bold px-2">B2 Upper-Intermediate</v-chip>
                 </div>
               </div>
             </v-col>
