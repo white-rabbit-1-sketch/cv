@@ -27,7 +27,7 @@ export default defineConfig(({mode}) => {
                 targets: [
                     {
                         src: './../src/public/img/logo/transparent/logo-1024.png',
-                        dest: outDir + 'img/'
+                        dest: './../../../dist/web/site/img/'
                     },
                 ]
             }),
