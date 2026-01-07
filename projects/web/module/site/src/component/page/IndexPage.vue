@@ -49,11 +49,15 @@ import {
   mdiSecurity,
   mdiAccountGroupOutline,
   mdiWall,
+  mdiLanguagePhp,
+  mdiLanguageGo,
+  mdiCheckDecagram
 } from "@mdi/js"
 import { ref } from 'vue'
 import zendImage from '@/public/img/zend.png'
 
 const showFullExperience = ref(false)
+const showFullStack = ref(false)
 </script>
 
 <template>
@@ -222,121 +226,224 @@ const showFullExperience = ref(false)
           </v-row>
         </section>
 
-        <section class="mb-16">
-          <div class="section-label mb-8">Expertise & Technical DNA</div>
+        <section class="mb-16 animate-up" style="animation-delay: 0.2s;">
+          <div class="section-label mb-8">Primary Tech Stack</div>
 
-          <v-row class="g-4">
-            <v-col cols="12" lg="4">
-              <v-card variant="flat" class="tech-card h-100 pa-6">
-                <div class="d-flex align-center mb-6">
-                  <v-icon :icon="mdiCodeBraces" color="#7C4DFF" class="mr-3" />
-                  <span class="text-overline tracking-widest font-weight-bold">Languages & Core</span>
-                </div>
-
-                <div class="tech-group mb-6">
-                  <div class="d-flex justify-space-between align-center mb-2">
-                    <span class="group-title">PHP / Go / Java</span>
-                    <v-chip size="x-small" color="primary" variant="tonal" class="font-weight-black">ZEND CERTIFIED</v-chip>
-                  </div>
-                  <div class="tech-tags">
-                    Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs •
-                    High-perf Microservices • Concurrency • Spring Security/Boot/Social • Hibernate •
-                    Apache JBI/ESB/JMS/Service Mix/ActiveMQ/Camel
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-card variant="flat" class="stack-card h-100 pa-6">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(119, 123, 180, 0.1)" rounded="lg" size="48" class="mr-4">
+                    <v-icon :icon="mdiLanguagePhp" color="#777BB4" size="32" />
+                  </v-avatar>
+                  <div>
+                    <div class="text-h6 font-weight-black">PHP</div>
+                    <div class="text-caption text-primary font-weight-bold uppercase">Expert Level</div>
                   </div>
                 </div>
-
-                <div class="tech-group mb-6">
-                  <span class="group-title">Python / TypeScript / Lua / Gdscript (Godot)</span>
-                  <div class="tech-tags">
-                    Django • SQLAlchemy • Vue • Vuetify • Angular • Electron/Ionic/Capacitor •  Webpack • Lua Stdl/COM/fs/socket/C API
-                  </div>
-                </div>
-
-                <div class="tech-group">
-                  <span class="group-title">C / C++ / ASM / TCL / Delphi / VBA / Bash</span>
-                  <div class="tech-tags">
-                    Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers
-                  </div>
+                <p class="text-body-2 text-grey-lighten-1 mb-4">
+                  17+ years of experience. High-load architecture, Symfony, and custom core engines.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <v-chip size="x-small" variant="outlined" color="primary">High-Load</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="primary">Symfony</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="primary">Architecture</v-chip>
                 </div>
               </v-card>
             </v-col>
 
-            <v-col cols="12" lg="4">
-              <v-card variant="flat" class="tech-card h-100 pa-6 border-primary-low">
-                <div class="d-flex align-center mb-6">
-                  <v-icon :icon="mdiServerNetwork" color="#00C853" class="mr-3" />
-                  <span class="text-overline tracking-widest font-weight-bold">Systems & High Load</span>
-                </div>
-
-                <div class="tech-group mb-6">
-                  <span class="group-title">Databases (1B+ Records)</span>
-                  <div class="tech-tags">
-                    PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto
-                    • Hash • Cardinality • Constraints • Replication • Sharding
-                    • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
+            <v-col cols="12" md="4">
+              <v-card variant="flat" class="stack-card h-100 pa-6">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(0, 173, 216, 0.1)" rounded="lg" size="48" class="mr-4">
+                    <v-icon :icon="mdiLanguageGo" color="#00ADD8" size="32" />
+                  </v-avatar>
+                  <div>
+                    <div class="text-h6 font-weight-black">Golang</div>
+                    <div class="text-caption text-blue font-weight-bold uppercase">Proficient level</div>
                   </div>
                 </div>
-
-                <div class="tech-group mb-6">
-                  <span class="group-title">CI/CD</span>
-                  <div class="tech-tags">
-                    Docker • Ansible • Github Actions
-                  </div>
-                </div>
-
-                <div class="tech-group mb-6">
-                  <span class="group-title">Infrastructure</span>
-                  <div class="tech-tags">
-                    Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy
-                    • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
-                  </div>
-                </div>
-
-                <div class="tech-group">
-                  <span class="group-title">Architecture</span>
-                  <div class="tech-tags">
-                    Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
-                  </div>
+                <p class="text-body-2 text-grey-lighten-1 mb-4">
+                  Building ultra-fast microservices, concurrent processing, and networking tools.
+                  Focus on performance and memory efficiency in distributed systems.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <v-chip size="x-small" variant="outlined" color="blue">Microservices</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">Concurrency</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">gRPC</v-chip>
                 </div>
               </v-card>
             </v-col>
 
-            <v-col cols="12" lg="4">
-              <v-card variant="flat" class="tech-card h-100 pa-6">
-                <div class="d-flex align-center mb-6">
-                  <v-icon :icon="mdiShieldBugOutline" color="#FF5252" class="mr-3" />
-                  <span class="text-overline tracking-widest font-weight-bold">Security & Low-Level</span>
-                </div>
-
-                <div class="tech-group mb-6">
-                  <span class="group-title">Sec Research & Audits</span>
-                  <div class="tech-tags">
-                    0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
+            <v-col cols="12" md="4">
+              <v-card variant="flat" class="stack-card h-100 pa-6">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(55, 118, 171, 0.1)" rounded="lg" size="48" class="mr-4">
+                    <v-icon :icon="mdiLanguagePython" color="#3776AB" size="32" />
+                  </v-avatar>
+                  <div>
+                    <div class="text-h6 font-weight-black">Python</div>
+                    <div class="text-caption text-green font-weight-bold uppercase">Proficient level</div>
                   </div>
                 </div>
-
-                <div class="tech-group mb-6">
-                  <span class="group-title">Reverse Engineering</span>
-                  <div class="tech-tags text-blue-lighten-3">
-                    OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
-                  </div>
-                </div>
-
-                <div class="tech-group">
-                  <span class="group-title">Deep Debugging</span>
-                  <div class="tech-tags">
-                    Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
-                  </div>
+                <p class="text-body-2 text-grey-lighten-1 mb-4">
+                  Data processing pipelines, automation scripts, and integration layers.
+                  Used for rapid prototyping and complex backend utility services.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <v-chip size="x-small" variant="outlined" color="green">Scripting</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="green">Data Pipelines</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="green">DevOps</v-chip>
                 </div>
               </v-card>
             </v-col>
           </v-row>
+        </section>
 
-          <v-card variant="flat" class="fundamentals-bar mt-4 pa-4 d-flex flex-wrap justify-center align-center">
-            <span class="text-caption text-mono mx-4 opacity-60">ALGORITHMS & STRUCTURES: B-Tree, Red-Black Tree, Binary Search Tree, QuickSort, Bubble Sort, Shaker Sort, Binary Search, Hash Tables, Queue, Deque, Stack, Singly Linked List, Doubly Linked List, System V IPC: Shared Memory, Multithreading, Graph Theory</span>
-            <v-divider vertical class="mx-2 d-none d-md-block" opacity="0.1" />
-            <span class="text-caption text-mono mx-4 opacity-60">PATTERNS & OTHER: SOLID, GoF, Undetermined State Machines, Trust Ring Architecture, Game/World Physics, Decorator, Singleton, Proxy, Outbox, Factory, Abstract Factory, Registry, Command, MVC, Prototype, Adapter, Facade, Workflow, KIS, Threads, Fork, UML, Late Static Binding, FIFO, LIFO</span>
-          </v-card>
+        <section class="mb-16 animate-up">
+          <div class="d-flex justify-center mb-8">
+            <v-btn
+                variant="outlined"
+                color="primary"
+                size="large"
+                class="full-stack-btn"
+                @click="showFullStack = !showFullStack"
+                :prepend-icon="showFullStack ? mdiMenuUp : mdiMenuDown"
+            >
+              {{ showFullStack ? 'Hide Broad Stack' : 'View Broad Stack & Tools' }}
+            </v-btn>
+          </div>
+
+          <v-expand-transition>
+            <div v-show="showFullStack">
+              <v-card variant="flat" class="secondary-stack-card pa-8">
+                <div class="d-flex align-center mb-8 info-banner pa-4">
+                  <v-icon :icon="mdiInformationOutline" color="primary" class="mr-3" />
+                  <span class="text-body-2 text-grey-lighten-1">
+                    <strong>Note:</strong> The technologies below represent my broader ecosystem. While not my primary daily drivers,
+                    I have practical experience with them and can effectively implement, debug, or lead projects using these tools as needed.
+                  </span>
+                </div>
+
+                <div class="full-stack-content">
+                  <div class="section-label mb-8">Expertise & Technical DNA</div>
+
+                  <v-row class="g-4">
+                    <v-col cols="12" lg="4">
+                      <v-card variant="flat" class="tech-card h-100 pa-6">
+                        <div class="d-flex align-center mb-6">
+                          <v-icon :icon="mdiCodeBraces" color="#7C4DFF" class="mr-3" />
+                          <span class="text-overline tracking-widest font-weight-bold">Languages & Core</span>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <div class="d-flex justify-space-between align-center mb-2">
+                            <span class="group-title">PHP / Go / Java</span>
+                            <v-chip size="x-small" color="primary" variant="tonal" class="font-weight-black">ZEND CERTIFIED</v-chip>
+                          </div>
+                          <div class="tech-tags">
+                            Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs •
+                            High-perf Microservices • Concurrency • Spring Security/Boot/Social • Hibernate •
+                            Apache JBI/ESB/JMS/Service Mix/ActiveMQ/Camel
+                          </div>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <span class="group-title">Python / TypeScript / Lua / Gdscript (Godot)</span>
+                          <div class="tech-tags">
+                            Django • SQLAlchemy • Vue • Vuetify • Angular • Electron/Ionic/Capacitor •  Webpack • Lua Stdl/COM/fs/socket/C API
+                          </div>
+                        </div>
+
+                        <div class="tech-group">
+                          <span class="group-title">C / C++ / ASM / TCL / Delphi / VBA / Bash</span>
+                          <div class="tech-tags">
+                            Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers
+                          </div>
+                        </div>
+                      </v-card>
+                    </v-col>
+
+                    <v-col cols="12" lg="4">
+                      <v-card variant="flat" class="tech-card h-100 pa-6 border-primary-low">
+                        <div class="d-flex align-center mb-6">
+                          <v-icon :icon="mdiServerNetwork" color="#00C853" class="mr-3" />
+                          <span class="text-overline tracking-widest font-weight-bold">Systems & High Load</span>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <span class="group-title">Databases (1B+ Records)</span>
+                          <div class="tech-tags">
+                            PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto
+                            • Hash • Cardinality • Constraints • Replication • Sharding
+                            • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
+                          </div>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <span class="group-title">CI/CD</span>
+                          <div class="tech-tags">
+                            Docker • Ansible • Github Actions
+                          </div>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <span class="group-title">Infrastructure</span>
+                          <div class="tech-tags">
+                            Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy
+                            • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
+                          </div>
+                        </div>
+
+                        <div class="tech-group">
+                          <span class="group-title">Architecture</span>
+                          <div class="tech-tags">
+                            Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
+                          </div>
+                        </div>
+                      </v-card>
+                    </v-col>
+
+                    <v-col cols="12" lg="4">
+                      <v-card variant="flat" class="tech-card h-100 pa-6">
+                        <div class="d-flex align-center mb-6">
+                          <v-icon :icon="mdiShieldBugOutline" color="#FF5252" class="mr-3" />
+                          <span class="text-overline tracking-widest font-weight-bold">Security & Low-Level</span>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <span class="group-title">Sec Research & Audits</span>
+                          <div class="tech-tags">
+                            0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
+                          </div>
+                        </div>
+
+                        <div class="tech-group mb-6">
+                          <span class="group-title">Reverse Engineering</span>
+                          <div class="tech-tags text-blue-lighten-3">
+                            OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
+                          </div>
+                        </div>
+
+                        <div class="tech-group">
+                          <span class="group-title">Deep Debugging</span>
+                          <div class="tech-tags">
+                            Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
+                          </div>
+                        </div>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+
+                  <v-card variant="flat" class="fundamentals-bar mt-4 pa-4 d-flex flex-wrap justify-center align-center">
+                    <span class="text-caption text-mono mx-4 opacity-60">ALGORITHMS & STRUCTURES: B-Tree, Red-Black Tree, Binary Search Tree, QuickSort, Bubble Sort, Shaker Sort, Binary Search, Hash Tables, Queue, Deque, Stack, Singly Linked List, Doubly Linked List, System V IPC: Shared Memory, Multithreading, Graph Theory</span>
+                    <v-divider vertical class="mx-2 d-none d-md-block" opacity="0.1" />
+                    <span class="text-caption text-mono mx-4 opacity-60">PATTERNS & OTHER: SOLID, GoF, Undetermined State Machines, Trust Ring Architecture, Game/World Physics, Decorator, Singleton, Proxy, Outbox, Factory, Abstract Factory, Registry, Command, MVC, Prototype, Adapter, Facade, Workflow, KIS, Threads, Fork, UML, Late Static Binding, FIFO, LIFO</span>
+                  </v-card>
+                </div>
+              </v-card>
+            </div>
+          </v-expand-transition>
         </section>
 
 
@@ -1297,96 +1404,6 @@ const showFullExperience = ref(false)
 
 
 
-        <section class="engineering-dna-section mt-16 mb-12">
-          <div class="d-flex align-center mb-8">
-            <div class="section-icon-wrap mr-4">
-              <v-icon :icon="mdiDna" color="primary" size="32" />
-            </div>
-            <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Engineering DNA</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">Computer Science, Low-Level & System Design</div>
-            </div>
-            <v-divider class="ml-6 border-opacity-25" />
-          </div>
-
-          <v-row>
-            <v-col cols="12" md="6">
-              <v-card class="pa-6 h-100 dna-card" variant="flat" border="primary">
-                <div class="d-flex align-center mb-4 text-primary font-weight-black">
-                  <v-icon :icon="mdiGraphOutline" class="mr-2" /> DATA STRUCTURES & ALGORITHMS
-                </div>
-                <div class="text-body-2 text-grey-lighten-1">
-                  Stack, Queue, Deque, Map, Hash-tables. Advanced Trees: <strong>B-Tree, RB-Tree, Balanced Binary Trees</strong>.
-                  Sorting (Quick, Bubble), Binary Search, Index-sequential search. Bitwise operations, Linked lists.
-                  Deep understanding of memory alignment and cache locality.
-                </div>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="6">
-              <v-card class="pa-6 h-100 dna-card" variant="flat" border="primary">
-                <div class="d-flex align-center mb-4 text-primary font-weight-black">
-                  <v-icon :icon="mdiDatabaseCog" class="mr-2" /> DATA STORAGE & HIGH-LOAD
-                </div>
-                <div class="text-body-2 text-grey-lighten-1">
-                  <strong>RDBMS:</strong> PostgreSQL, MySQL, MSSQL (Triggers, Stored Procedures, Isolation levels, BTree/RTree).
-                  <strong>Performance:</strong> Master-Master/Master-Slave replication, Binlog, GTID, Partitioning.
-                  <strong>NoSQL & Cache:</strong> Redis, Memcached, RabbitMQ, RRDB.
-                  Handling billions of records and hundreds of GBs on hardware-constrained systems.
-                </div>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12">
-              <v-card class="pa-6 dna-card" variant="flat" border="primary">
-                <div class="d-flex align-center mb-4 text-primary font-weight-black">
-                  <v-icon :icon="mdiCpu64Bit" class="mr-2" /> LOW-LEVEL & REVERSE ENGINEERING
-                </div>
-                <v-row>
-                  <v-col cols="12" md="8">
-                    <div class="text-body-2 text-grey-lighten-1 mb-4">
-                      Advanced debugging with <strong>WinDbg, OllyDbg, strace, gdb</strong>. Deep knowledge of Registers, Stacks, Heaps, and Buffer Overflows.
-                      Reverse Engineering hobbyist: unpacking EXEs, restoring import tables, bypass security checks, and binary patching (incl. Linux kernel modules & game engines).
-                    </div>
-                    <div class="text-caption font-italic text-grey">"Seven troubles — one strace -p -s 1000"</div>
-                  </v-col>
-                  <v-col cols="12" md="4" class="d-flex flex-wrap gap-2 align-center">
-                    <v-chip size="x-small" variant="flat" color="grey-darken-3">ASM</v-chip>
-                    <v-chip size="x-small" variant="flat" color="grey-darken-3">C/C++</v-chip>
-                    <v-chip size="x-small" variant="flat" color="grey-darken-3">WinAPI</v-chip>
-                    <v-chip size="x-small" variant="flat" color="grey-darken-3">POSIX</v-chip>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="7">
-              <v-card class="pa-6 h-100 dna-card" variant="flat" border="primary">
-                <div class="d-flex align-center mb-4 text-primary font-weight-black">
-                  <v-icon :icon="mdiShieldBug" class="mr-2" /> CYBERSECURITY & AUDIT
-                </div>
-                <div class="text-body-2 text-grey-lighten-1">
-                  Identifying cross-platform 0-days and <strong>RCE vulnerabilities</strong>. Security audits for databases, computing centers, and apps (Adobe Reader, etc.).
-                  Knowledge of complex attack vectors: from memory corruption to JS-based CPU manipulation and XSS-driven filesystem impacts.
-                </div>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="5">
-              <v-card class="pa-6 h-100 dna-card historical-card" variant="flat">
-                <div class="d-flex align-center mb-4 text-grey font-weight-black">
-                  <v-icon :icon="mdiHistory" class="mr-2" /> TECH TIMELINE (STABLE SKILLS)
-                </div>
-                <div class="tech-cloud">
-                  <span>PHP (Symfony/Laravel)</span> • <span>Go</span> • <span>Java (Spring/Hibernate)</span> •
-                  <span>Python (Django)</span> • <span>Lua</span> • <span>Node.js</span> • <span>TypeScript</span> •
-                  <span>Ansible</span> • <span>Docker</span> • <span>Delphi</span> • <span>VBA</span> • <span>Bash</span> • <span>A lot of other tech</span>
-                </div>
-              </v-card>
-            </v-col>
-          </v-row>
-        </section>
-
 
         <section class="backstory-section mt-16 mb-12">
           <div class="d-flex align-center mb-8">
@@ -1990,5 +2007,49 @@ const showFullExperience = ref(false)
 
 :deep(.v-list-item--one-line .v-list-item-subtitle) {
   -webkit-line-clamp: initial !important;
+}
+
+.stack-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 20px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stack-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.gap-2 { gap: 8px; }
+
+.full-stack-btn {
+  border-radius: 16px !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 700 !important;
+  border-width: 2px !important;
+  padding: 0 40px !important;
+  height: 56px !important;
+}
+
+.secondary-stack-card {
+  background: rgba(255, 255, 255, 0.01) !important;
+  border: 1px dashed rgba(255, 255, 255, 0.1) !important;
+  border-radius: 24px !important;
+}
+
+.info-banner {
+  background: rgba(var(--v-theme-primary), 0.05);
+  border-radius: 12px;
+  border-left: 4px solid rgba(var(--v-theme-primary), 0.5);
+}
+
+/* Эффект для кнопки при наведении */
+.full-stack-btn:hover {
+  background: rgba(var(--v-theme-primary), 0.1) !important;
+  box-shadow: 0 0 20px rgba(var(--v-theme-primary), 0.2);
 }
 </style>
