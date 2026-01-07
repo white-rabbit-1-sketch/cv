@@ -51,7 +51,15 @@ import {
   mdiWall,
   mdiLanguagePhp,
   mdiLanguageGo,
-  mdiCheckDecagram
+  mdiCheckDecagram,
+  mdiTrophyOutline,
+  mdiShieldCheckOutline,
+  mdiRocketLaunchOutline,
+  mdiBankOutline,
+  mdiBugCheckOutline,
+  mdiSchoolOutline,
+  mdiCertificateOutline,
+  mdiCounter
 } from "@mdi/js"
 import { ref } from 'vue'
 import zendImage from '@/public/img/zend.png'
@@ -81,8 +89,17 @@ const showFullStack = ref(false)
                 </v-chip>
 
                 <v-chip
+                    color="#FF9800"
+                    variant="flat"
+                    size="small"
+                    class="text-uppercase font-weight-bold tracking-widest px-4"
+                >
+                  Senior Developer
+                </v-chip>
+
+                <v-chip
                     color="primary"
-                    variant="outlined"
+                    variant="flat"
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
@@ -91,7 +108,7 @@ const showFullStack = ref(false)
 
                 <v-chip
                     color="#7C4DFF"
-                    variant="outlined"
+                    variant="flat"
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
@@ -194,16 +211,6 @@ const showFullStack = ref(false)
                     <v-list bg-color="transparent" class="pa-0">
                       <v-list-item class="px-0 mb-4">
                         <template v-slot:prepend>
-                          <v-avatar color="rgba(124, 77, 255, 0.1)" rounded="lg" class="mr-4">
-                            <v-icon :icon="mdiCogs" color="#7C4DFF" />
-                          </v-avatar>
-                        </template>
-                        <v-list-item-title class="text-h6 font-weight-bold">CTO / Technical Founder</v-list-item-title>
-                        <v-list-item-subtitle class="text-grey">Tech strategy, hiring, and 0-to-1 execution.</v-list-item-subtitle>
-                      </v-list-item>
-
-                      <v-list-item class="px-0 mb-4">
-                        <template v-slot:prepend>
                           <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
                             <v-icon :icon="mdiServerNetwork" color="#00C853" />
                           </v-avatar>
@@ -214,12 +221,32 @@ const showFullStack = ref(false)
 
                       <v-list-item class="px-0 mb-4">
                         <template v-slot:prepend>
+                          <v-avatar color="rgba(255, 152, 0, 0.1)" rounded="lg" class="mr-4">
+                            <v-icon :icon="mdiCodeBraces" color="#FF9800" />
+                          </v-avatar>
+                        </template>
+                        <v-list-item-title class="text-h6 font-weight-bold">Senior Developer</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">Hands-on development of mission-critical core modules.</v-list-item-subtitle>
+                      </v-list-item>
+
+                      <v-list-item class="px-0 mb-4">
+                        <template v-slot:prepend>
                           <v-avatar color="rgba(33, 150, 243, 0.1)" rounded="lg" class="mr-4">
                             <v-icon :icon="mdiAccountGroupOutline" color="primary" />
                           </v-avatar>
                         </template>
                         <v-list-item-title class="text-h6 font-weight-bold">Head of Engineering / Team Lead</v-list-item-title>
                         <v-list-item-subtitle class="text-grey">Mentoring, process excellence, and team scaling.</v-list-item-subtitle>
+                      </v-list-item>
+
+                      <v-list-item class="px-0">
+                        <template v-slot:prepend>
+                          <v-avatar color="rgba(124, 77, 255, 0.1)" rounded="lg" class="mr-4">
+                            <v-icon :icon="mdiCogs" color="#7C4DFF" />
+                          </v-avatar>
+                        </template>
+                        <v-list-item-title class="text-h6 font-weight-bold">CTO / Technical Founder</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">Tech strategy, hiring, and 0-to-1 execution.</v-list-item-subtitle>
                       </v-list-item>
                     </v-list>
                   </v-col>
@@ -449,6 +476,82 @@ const showFullStack = ref(false)
           </v-expand-transition>
         </section>
 
+
+        <section class="mb-16 animate-up">
+          <div class="section-label mb-8">Selected Achievements & Impact</div>
+
+          <v-row>
+            <v-col cols="12" md="6">
+              <v-card variant="flat" class="achievement-card pa-6 h-100">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
+                    <v-icon :icon="mdiBankOutline" color="success" />
+                  </v-avatar>
+                  <h3 class="text-h6 font-weight-bold">Fintech & Core Banking</h3>
+                </div>
+                <ul class="achievement-list text-body-2 text-grey-lighten-1">
+                  <li>
+                    <strong>Silverbird:</strong> Architected and built the core processing engine for FX, multi-currency routing, and high-load payment gateways from scratch.
+                  </li>
+                  <li>
+                    <strong>Banking Platform Launch:</strong> Led the end-to-end creation of a banking infrastructure, including team assembly, business process automation, and core service design.
+                  </li>
+                  <li>
+                    <strong>Compliance & Security:</strong> Implemented high-security payment schemes (SWIFT, SEPA).
+                  </li>
+                </ul>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" md="6">
+              <v-card variant="flat" class="achievement-card pa-6 h-100">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(33, 150, 243, 0.1)" rounded="lg" class="mr-4">
+                    <v-icon :icon="mdiRocketLaunchOutline" color="blue" />
+                  </v-avatar>
+                  <h3 class="text-h6 font-weight-bold">Scale & Performance</h3>
+                </div>
+                <ul class="achievement-list text-body-2 text-grey-lighten-1">
+                  <li><strong>TSUM (High-Load):</strong> Managed a cluster of 6+ services handling <strong>1 Billion+ data records</strong>.</li>
+                  <li><strong>JivoSite:</strong> Reorganized the dev team and processes, increasing team velocity from 70% to <strong>120% efficiency</strong> using modified Scrum.</li>
+                  <li><strong>Mamba:</strong> Optimized notification systems and database interactions for a platform with <strong>tens of millions of active users</strong>.</li>
+                </ul>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" md="6">
+              <v-card variant="flat" class="achievement-card pa-6 h-100">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(244, 67, 54, 0.1)" rounded="lg" class="mr-4">
+                    <v-icon :icon="mdiShieldCheckOutline" color="error" />
+                  </v-avatar>
+                  <h3 class="text-h6 font-weight-bold">Security & Research</h3>
+                </div>
+                <ul class="achievement-list text-body-2 text-grey-lighten-1">
+                  <li><strong>0-Day Research:</strong> History of discovering remote code execution (RCE) vulnerabilities in browsers and PDF readers (purely for research).</li>
+                  <li><strong>Low-Level Debugging:</strong> Custom kernel patching for Linux Wi-Fi modules and binary patching for legacy engines.</li>
+                  <li>Implemented transparent authentication with ESIA (GosUslugi) for government-scale banking infrastructure.</li>
+                </ul>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" md="6">
+              <v-card variant="flat" class="achievement-card pa-6 h-100">
+                <div class="d-flex align-center mb-4">
+                  <v-avatar color="rgba(124, 77, 255, 0.1)" rounded="lg" class="mr-4">
+                    <v-icon :icon="mdiTrophyOutline" color="#7C4DFF" />
+                  </v-avatar>
+                  <h3 class="text-h6 font-weight-bold">Zero-to-One Launch</h3>
+                </div>
+                <ul class="achievement-list text-body-2 text-grey-lighten-1">
+                  <li><strong>Infrastructure from Scratch:</strong> Built the entire IT department and business processes for a banking platform (team, environments, CI/CD, documentation).</li>
+                  <li><strong>Wikimart:</strong> Developed the billing system and search engine architecture during the platform's hyper-growth phase.</li>
+                  <li>Expertise in building decentralized trust-ring networks and anti-censorship systems.</li>
+                </ul>
+              </v-card>
+            </v-col>
+          </v-row>
+        </section>
 
 
         <section class="experience-section mt-16 mb-12">
@@ -1340,6 +1443,58 @@ const showFullStack = ref(false)
         </section>
 
 
+        <section class="mb-16 animate-up">
+          <div class="section-label mb-8">Education</div>
+
+          <v-row>
+            <v-col cols="12" md="12">
+              <v-card variant="flat" class="education-card pa-6">
+                <div class="d-flex align-center mb-6">
+                  <v-avatar color="rgba(var(--v-theme-primary), 0.1)" rounded="lg" class="mr-4">
+                    <v-icon :icon="mdiSchoolOutline" color="primary" />
+                  </v-avatar>
+                  <h3 class="text-h6 font-weight-bold">Academic Background</h3>
+                </div>
+
+                <div class="education-item mb-6 pl-4 border-left">
+                  <div class="d-flex justify-space-between align-start flex-wrap">
+                    <div>
+                      <div class="text-subtitle-1 font-weight-bold text-white">Moscow University of Industry and Finance "Synergy"</div>
+                      <div class="text-body-2 text-primary mb-1">Software Engineering & Information Systems Administration</div>
+                    </div>
+                    <v-chip size="small" variant="tonal" color="primary">2026 (Expected)</v-chip>
+                  </div>
+                  <div class="text-caption text-grey">Specialization: Fullstack Development</div>
+                </div>
+
+                <div class="education-item mb-6 pl-4 border-left">
+                  <div class="d-flex justify-space-between align-start flex-wrap">
+                    <div>
+                      <div class="text-subtitle-1 font-weight-bold text-white">Modern Technical Institute</div>
+                      <div class="text-body-2 text-grey-lighten-1 mb-1">Service</div>
+                    </div>
+                    <v-chip size="small" variant="tonal" color="grey">2015</v-chip>
+                  </div>
+                </div>
+
+                <div class="education-item pl-4 border-left">
+                  <div class="d-flex justify-space-between align-start flex-wrap">
+                    <div>
+                      <div class="text-subtitle-1 font-weight-bold text-white">Moscow College of Mathematics</div>
+                      <div class="text-body-2 text-grey-lighten-1 mb-1">Computer Programming & Automated Systems</div>
+                    </div>
+                    <v-chip size="small" variant="tonal" color="grey">2008</v-chip>
+                  </div>
+                  <div class="text-caption text-grey">The foundation of my CS background, algorithms, and low-level logic.</div>
+                </div>
+              </v-card>
+            </v-col>
+
+
+          </v-row>
+        </section>
+
+
         <section class="certifications-section mt-16 mb-12">
           <div class="d-flex align-center mb-8">
             <div class="section-icon-wrap mr-4">
@@ -2054,5 +2209,50 @@ const showFullStack = ref(false)
 .full-stack-btn:hover {
   background: rgba(var(--v-theme-primary), 0.1) !important;
   box-shadow: 0 0 20px rgba(var(--v-theme-primary), 0.2);
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 20px !important;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(var(--v-theme-primary), 0.2) !important;
+}
+
+.achievement-list {
+  padding-left: 20px;
+}
+
+.achievement-list li {
+  margin-bottom: 12px;
+  position: relative;
+  list-style: none;
+}
+
+.achievement-list li::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  color: rgba(var(--v-theme-primary), 0.7);
+  font-weight: bold;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 24px !important;
+}
+
+.border-left {
+  border-left: 2px solid rgba(var(--v-theme-primary), 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.education-item:hover {
+  border-left-color: rgba(var(--v-theme-primary), 1);
 }
 </style>
