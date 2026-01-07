@@ -1,7 +1,7 @@
 services:
   cv:
     image: caddy:2.10.0-alpine
-    container_name: web
+    container_name: cv
     restart: unless-stopped
     volumes:
       - ./docker/web/Caddyfile:/etc/caddy/Caddyfile
