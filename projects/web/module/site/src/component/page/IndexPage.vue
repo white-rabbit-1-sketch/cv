@@ -43,10 +43,12 @@ import {
   mdiHistory,
   mdiXml,
   mdiGhost,
-  mdiBugOutline
+  mdiBugOutline, mdiTrophyVariantOutline
 } from "@mdi/js"
-
+import { ref } from 'vue'
 import zendImage from '@/public/img/zend.png'
+
+const showFullExperience = ref(false)
 </script>
 
 <template>
@@ -260,445 +262,626 @@ import zendImage from '@/public/img/zend.png'
           </v-card>
         </section>
 
-        <section class="mb-16">
-          <div class="section-label mb-10">Professional Journey</div>
 
-          <div class="experience-timeline pl-2">
 
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Aventus IT</h3>
-                    <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Fintech</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">July 2024 — October 2025</div>
+        <section class="experience-section mt-16 mb-12">
+          <div class="d-flex flex-column mb-10">
+            <div class="d-flex align-center mb-4">
+              <div class="section-icon-wrap mr-4">
+                <v-icon :icon="mdiBriefcaseVariantOutline" color="primary" size="32" />
+              </div>
+              <div>
+                <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Experience</h2>
+                <div class="d-flex align-center">
+                  <v-chip
+                      color="primary"
+                      size="x-small"
+                      variant="flat"
+                      class="mr-2 font-weight-black"
+                      label
+                  >FEATURED</v-chip>
+                  <div class="text-subtitle-2 text-grey-lighten-1">Focusing on technical complexity, not timeline</div>
                 </div>
               </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Engineering Management:</strong> Leading and mentoring a backend development team of 7 people.</li>
-                  <li><strong>Business Process Organization:</strong> Establishing and streamlining internal workflows and cross-departmental operations.</li>
-                  <li><strong>System Architecture:</strong> Designing robust architectures for complex projects and high-performance services.</li>
-                  <li><strong>CI/CD Excellence:</strong> Integrating and optimizing continuous integration and delivery pipelines to accelerate deployment.</li>
-                  <li><strong>Core Development:</strong> Direct contribution to large-scale flagship projects and their interconnected microservices ecosystem.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">PHP • MySQL • Microservices • CI/CD</div>
-                </div>
-              </div>
+              <v-divider class="ml-6 border-opacity-25" />
             </div>
 
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
-                    <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
-                  <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
-                  <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
-                  <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
-                  <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
-                  <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
-                  <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">MTS (Mobile TeleSystems)</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80">Telecom / ISP / Internet Services</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">July 2022 — Sept 2022</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Bitrix Development:</strong> Engineering and implementation of new functional modules within the Bitrix framework.</li>
-                  <li><strong>Legacy Migration:</strong> Architectural transition and migration of legacy Bitrix functionality to new microservices using a modern technology stack.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Bitrix • Legacy Migration • Microservices Refactoring</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
-                    <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
-                  <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
-                  <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
-                  <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
-                  <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
-                  <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
-                  <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Silverbird</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">HEAD OF DEVELOPMENT</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Fintech / Banking Infrastructure</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Sept 2020 — April 2021</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Banking Platform:</strong> Orchestrated the end-to-end creation and implementation of the core banking platform, infrastructure, and essential services.</li>
-                  <li><strong>Operational Leadership:</strong> Assembled the engineering team from scratch; established business processes, administration protocols, and organizational workflows.</li>
-                  <li><strong>Strategic Partnership:</strong> Managed cross-company interactions with partners, including joint strategic planning, training, and deep integration.</li>
-                  <li><strong>Project Launch:</strong> Designed and launched ~10 mission-critical projects from the ground up, including API services, microservices, and integration layers.</li>
-                  <li><strong>Macro-Banking Integration:</strong> Audited and deployed multi-level macro-banking platforms across diverse technology stacks, ensuring seamless platform enhancements.</li>
-                  <li><strong>Update Architecture:</strong> Designed complex technical update flows and global architecture for application components and infrastructure.</li>
-                  <li><strong>Technical Governance:</strong> Developed comprehensive technical documentation and administered both staging and production environments.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Macro-Banking • Infrastructure Design • Team Leadership • API Architecture</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Gosuslugi</h3>
-                    <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">TECH ANALYST</v-chip>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Digital Government Services</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Sept 2020 — April 2021</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Feedback System:</strong> Development of the core feedback subsystem and related services.</li>
-                  <li><strong>Fault Tolerance:</strong> Deep optimization and profiling to ensure system stability under extreme high-load conditions.</li>
-                  <li><strong>System Refactoring:</strong> Structural refactoring of core system components for better maintainability and performance.</li>
-                  <li><strong>System Integration:</strong> Orchestrating complex integrations with both internal and external third-party systems.</li>
-                  <li><strong>State Auth Integration:</strong> Implementation of transparent SSO and authorization via ESIA (National Auth System).</li>
-                  <li><strong>Data Normalization:</strong> Bringing complex data schemas to normal forms to ensure data integrity and performance.</li>
-                  <li><strong>ROI Integration:</strong> Integration with ROI (Return on Investment) tracking and analytical systems.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">ESIA • High-Load Profiling • Data Normalization • System Integration</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80">Senior Software Engineer</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Feb 2018 — July 2020</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Internal Product Development:</strong> Engineering and maintenance of the company's core internal ecosystem and software products.</li>
-                  <li><strong>Data Synchronization:</strong> Debugging and fine-tuning complex data synchronization processes between various system components.</li>
-                  <li><strong>Search Engineering:</strong> Implementation of high-performance search functionality and all related search-driven features.</li>
-                  <li><strong>Service Innovation:</strong> Developed and launched several new services, including product feed generators, analytical monitoring systems, link shorteners, and QR-code generation engines.</li>
-                  <li><strong>MarTech Evolution:</strong> Continuous development and scaling of marketing-focused services and promotional tools.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Backend Development • Data Sync • Search Engines • MarTech Services</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">JivoChat (JivoSite)</h3>
-                    <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">TEAM LEAD</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">SaaS / Real-time Communication</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">April 2016 — Nov 2017</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Engineering Leadership:</strong> Managed a team of 6 people, overseeing architectural planning, code quality, and hands-on development for mission-critical business projects.</li>
-                  <li><strong>Process Transformation:</strong> Implemented Scrum (tailored to team needs) including estimation, forecasting, and retrospectives. Automated major parts of the system to increase operational transparency.</li>
-                  <li><strong>Efficiency Breakthrough:</strong> Boosted team productivity from 70% (missed deadlines) to 120% (over-delivery) through process optimization and workflow alignment.</li>
-                  <li><strong>Stakeholder Management:</strong> Orchestrated communication between IT and other departments, ensuring a unified information field across all teams and stakeholders.</li>
-                  <li><strong>Release Engineering:</strong> Owned the full release management cycle and deployment processes.</li>
-                  <li><strong>Team Growth & Mentorship:</strong> Reorganized the team structure, leading to a significant increase in both individual and collective competencies. </li>
-                  <li><strong>Knowledge Sharing:</strong> Achieved team interchangeability through cross-training; organized and led internal seminars, conferences, and technical workshops.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Scrum Implementation • Team Reorganization • Release Management • High-Performance Culture</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">VK (Vkontakte)</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <v-chip size="x-small" color="grey" variant="outlined">NDA PROJECTS</v-chip>
-                </div>
-                <div class="text-body-2 font-weight-bold text-white">Jan 2016 — March 2016</div>
-              </div>
-              <div class="exp-content pl-6">
-                <p class="text-body-2 text-grey-lighten-1">PHP Development for high-load specialized projects under strict NDA.</p>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Activizm.ru</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">E-commerce</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Aug 2014 — Dec 2015</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Feature Engineering:</strong> Developed new core features and provided comprehensive support for the existing platform functionality.</li>
-                  <li><strong>AdTech Integration:</strong> Seamlessly integrated Google AdWords and Yandex.Direct APIs for automated marketing management.</li>
-                  <li><strong>Data Syndication:</strong> Managed large-scale data exports to Google Merchant Center (Content Center) for product listing ads.</li>
-                  <li><strong>Marketing Ecosystem:</strong> Engineered product feed generation systems and integrated them with various external marketing services.</li>
-                  <li><strong>Performance Engineering:</strong> Conducted deep code refactoring, system profiling, and database optimization to improve platform stability.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">PHP • Google AdWords API • Data Feed Engineering • Profiling & Optimization</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Mamba</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Social Discovery</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Nov 2013 — July 2014</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>High-Load Engineering:</strong> Developed features and core functionality for a massive social platform serving tens of millions of active users.</li>
-                  <li><strong>Notification Engine:</strong> Designed and implemented a high-performance notification delivery system.</li>
-                  <li><strong>Low-Level Integration:</strong> Integrated and debugged system interactions with custom-built C-based daemons to ensure low-latency processing.</li>
-                  <li><strong>Mail Service Refactoring:</strong> Architected a complete refactor of the email interaction system and mail gateway protocols.</li>
-                  <li><strong>Abuse & Subscription Logic:</strong> Enhanced the processing systems for user complaints, reports, and automated unsubscription flows.</li>
-                  <li><strong>Database Performance:</strong> Optimized complex database operations utilizing both SQL and RRDtool (Round Robin Database) for time-series data.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">High-Load • C Daemons • RRDtool • SQL Optimization • Notification Systems</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Enter.ru</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Multi-channel Retailer</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">May 2012 — Aug 2013</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Core Architecture:</strong> Development of the core information infrastructure and engineering of external APIs.</li>
-                  <li><strong>Fintech Integration:</strong> Integrated credit brokerage systems to enable real-time online installment and credit purchases.</li>
-                  <li><strong>Enterprise Systems:</strong> Orchestrated deep integration with 1C enterprise management systems.</li>
-                  <li><strong>Marketing Automation:</strong> Integrated the Ofsys mailing system for automated customer communications.</li>
-                  <li><strong>CMS & Extensions:</strong> Deployed WordPress as a CMS solution, integrated it into the main site, and developed numerous custom plugins.</li>
-                  <li><strong>Legacy Decommissioning:</strong> Performed a comprehensive site refactoring, including the architectural migration to remove Symfony dependencies.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Core Engineering • Fintech API • 1C Integration • Symfony Migration</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">Wikimart</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">E-commerce Marketplace</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Aug 2009 — April 2012</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Billing Infrastructure:</strong> Designed and developed the core billing system from the ground up.</li>
-                  <li><strong>Database Engineering:</strong> Performed comprehensive refactoring of database trigger systems and complex stored procedures.</li>
-                  <li><strong>Data Ingestion Services:</strong> Engineered high-throughput services for importing <strong>YML and CSV</strong> data feeds containing massive product catalogs from various merchants.</li>
-                  <li><strong>Search & Merchandising:</strong> Developed the site-wide search engine and built merchandising systems (promotions, special offers, and virtual storefronts).</li>
-                  <li><strong>Growth Tools:</strong> Developed the affiliate program platform and contributed to the internal <strong>CRM system</strong> development.</li>
-                  <li><strong>Full-Stack Evolution:</strong> Led the total site redesign and participated in global system architecture planning, delivering numerous full-stack features.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                  <div class="tech-stack-mini">Billing Systems • DB Optimization • Search Engines • ETL / Data Import</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="exp-item mb-12">
-              <div class="exp-dot"></div>
-              <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                <div>
-                  <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                    <h3 class="text-h4 font-weight-black">MIF</h3>
-                    <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                  </div>
-                  <div class="text-subtitle-2 text-error font-weight-bold">Security & Low-Level Systems Researcher</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
-                </div>
-              </div>
-
-              <div class="exp-content pl-6">
-                <ul class="custom-list">
-                  <li><strong>Remote Administration Tools:</strong> Developed high-performance remote management applications and handler scripts using <strong>C, COM, and Lua</strong>.</li>
-                  <li><strong>Cryptography & Obfuscation:</strong> Engineered a web-based cryptographic system featuring a custom <strong>multi-language translator</strong> (Python/JS to pseudocode) for code protection and execution abstraction.</li>
-                  <li><strong>Vulnerability Research:</strong> Conducted deep-level security audits of major web browsers and PDF readers. Identified vulnerabilities and developed <strong>Proof-of-Concept (PoC) for RCE</strong> (Remote Code Execution) using <strong>WinDbg, Assembler</strong>, and JavaScript.</li>
-                  <li><strong>Distributed Systems:</strong> Architected decentralized SEO promotion networks based on "ring" and "pyramid" topology principles using Python.</li>
-                  <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                  <li><strong>Full-Stack Origins:</strong> Engineered online video streaming services (Python/PHP) and custom e-commerce solutions.</li>
-                </ul>
-
-                <div class="mt-4 d-flex align-center">
-                  <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
-                  <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
-                </div>
-              </div>
-            </div>
-
+            <v-alert
+                density="compact"
+                variant="tonal"
+                color="primary"
+                class="text-caption border-opacity-25 py-2 px-4"
+                style="max-width: fit-content; border-left: 4px solid !important;"
+            >
+              <v-icon :icon="mdiInformationOutline" size="14" class="mr-2" />
+              <strong>Note:</strong> This section highlights roles with the highest architectural impact. For full chronology, see the full experience below.
+            </v-alert>
           </div>
+
+          <div class="featured-works-path">
+            <v-card class="experience-card mb-6 highlight-border" variant="flat">
+
+              <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
+                <div class="card-badge">Selected Case</div>
+
+                <v-card-text class="pa-6">
+                  <div class="exp-item mb-12">
+                    <div class="exp-dot"></div>
+                    <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
+                      <div>
+                        <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                          <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
+                          <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
+                          <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        </div>
+                        <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
+                      </div>
+                    </div>
+
+                    <div class="exp-content pl-6">
+                      <ul class="custom-list">
+                        <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
+                        <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
+                        <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
+                        <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
+                        <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
+                        <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
+                        <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
+                      </ul>
+
+                      <div class="mt-4 d-flex align-center">
+                        <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                        <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
+                      </div>
+                    </div>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+
+              <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
+                <div class="card-badge">Selected Case</div>
+
+                <v-card-text class="pa-6">
+                  <div class="exp-item mb-12">
+                    <div class="exp-dot"></div>
+                    <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                      <div>
+                        <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                          <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
+                          <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                        </div>
+                        <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
+                      </div>
+                    </div>
+
+                    <div class="exp-content pl-6">
+                      <ul class="custom-list">
+                        <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
+                        <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
+                        <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
+                        <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
+                        <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
+                        <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
+                        <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
+                      </ul>
+
+                      <div class="mt-4 d-flex align-center">
+                        <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                        <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
+                      </div>
+                    </div>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+              <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
+                <div class="card-badge">Selected Case</div>
+
+                <v-card-text class="pa-6">
+                  <div class="exp-item mb-12">
+                    <div class="exp-dot"></div>
+                    <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                      <div>
+                        <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                          <h3 class="text-h4 font-weight-black">MIF</h3>
+                          <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        </div>
+                        <div class="text-subtitle-2 text-error font-weight-bold">Security & Low-Level Systems Researcher</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
+                      </div>
+                    </div>
+
+                    <div class="exp-content pl-6">
+                      <ul class="custom-list">
+                        <li><strong>Remote Administration Tools:</strong> Developed high-performance remote management applications and handler scripts using <strong>C, COM, and Lua</strong>.</li>
+                        <li><strong>Cryptography & Obfuscation:</strong> Engineered a web-based cryptographic system featuring a custom <strong>multi-language translator</strong> (Python/JS to pseudocode) for code protection and execution abstraction.</li>
+                        <li><strong>Vulnerability Research:</strong> Conducted deep-level security audits of major web browsers and PDF readers. Identified vulnerabilities and developed <strong>Proof-of-Concept (PoC) for RCE</strong> (Remote Code Execution) using <strong>WinDbg, Assembler</strong>, and JavaScript.</li>
+                        <li><strong>Distributed Systems:</strong> Architected decentralized SEO promotion networks based on "ring" and "pyramid" topology principles using Python.</li>
+                        <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
+                        <li><strong>Full-Stack Origins:</strong> Engineered online video streaming services (Python/PHP) and custom e-commerce solutions.</li>
+                      </ul>
+
+                      <div class="mt-4 d-flex align-center">
+                        <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
+                        <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
+                      </div>
+                    </div>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+
+
+
+
+
+
+
+            </v-card>
+          </div>
+
+          <div class="d-flex justify-center my-8">
+            <v-btn
+                variant="outlined"
+                color="primary"
+                size="large"
+                :append-icon="showFullExperience ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+                @click="showFullExperience = !showFullExperience"
+                class="full-exp-btn"
+            >
+              {{ showFullExperience ? 'Hide Detailed History' : 'Show Full Experience' }}
+            </v-btn>
+          </div>
+
+          <v-expand-transition>
+            <div v-show="showFullExperience" class="full-experience-path">
+              <div class="experience-timeline pl-2">
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Aventus IT</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Fintech</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">July 2024 — October 2025</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Engineering Management:</strong> Leading and mentoring a backend development team of 7 people.</li>
+                      <li><strong>Business Process Organization:</strong> Establishing and streamlining internal workflows and cross-departmental operations.</li>
+                      <li><strong>System Architecture:</strong> Designing robust architectures for complex projects and high-performance services.</li>
+                      <li><strong>CI/CD Excellence:</strong> Integrating and optimizing continuous integration and delivery pipelines to accelerate deployment.</li>
+                      <li><strong>Core Development:</strong> Direct contribution to large-scale flagship projects and their interconnected microservices ecosystem.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">PHP • MySQL • Microservices • CI/CD</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
+                      <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
+                      <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
+                      <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
+                      <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
+                      <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
+                      <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">MTS (Mobile TeleSystems)</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80">Telecom / ISP / Internet Services</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">July 2022 — Sept 2022</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Bitrix Development:</strong> Engineering and implementation of new functional modules within the Bitrix framework.</li>
+                      <li><strong>Legacy Migration:</strong> Architectural transition and migration of legacy Bitrix functionality to new microservices using a modern technology stack.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Bitrix • Legacy Migration • Microservices Refactoring</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
+                      <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
+                      <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
+                      <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
+                      <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
+                      <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
+                      <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Silverbird</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">HEAD OF DEVELOPMENT</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Fintech / Banking Infrastructure</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Sept 2020 — April 2021</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Banking Platform:</strong> Orchestrated the end-to-end creation and implementation of the core banking platform, infrastructure, and essential services.</li>
+                      <li><strong>Operational Leadership:</strong> Assembled the engineering team from scratch; established business processes, administration protocols, and organizational workflows.</li>
+                      <li><strong>Strategic Partnership:</strong> Managed cross-company interactions with partners, including joint strategic planning, training, and deep integration.</li>
+                      <li><strong>Project Launch:</strong> Designed and launched ~10 mission-critical projects from the ground up, including API services, microservices, and integration layers.</li>
+                      <li><strong>Macro-Banking Integration:</strong> Audited and deployed multi-level macro-banking platforms across diverse technology stacks, ensuring seamless platform enhancements.</li>
+                      <li><strong>Update Architecture:</strong> Designed complex technical update flows and global architecture for application components and infrastructure.</li>
+                      <li><strong>Technical Governance:</strong> Developed comprehensive technical documentation and administered both staging and production environments.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Macro-Banking • Infrastructure Design • Team Leadership • API Architecture</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Gosuslugi</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">TECH ANALYST</v-chip>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Digital Government Services</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Sept 2020 — April 2021</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Feedback System:</strong> Development of the core feedback subsystem and related services.</li>
+                      <li><strong>Fault Tolerance:</strong> Deep optimization and profiling to ensure system stability under extreme high-load conditions.</li>
+                      <li><strong>System Refactoring:</strong> Structural refactoring of core system components for better maintainability and performance.</li>
+                      <li><strong>System Integration:</strong> Orchestrating complex integrations with both internal and external third-party systems.</li>
+                      <li><strong>State Auth Integration:</strong> Implementation of transparent SSO and authorization via ESIA (National Auth System).</li>
+                      <li><strong>Data Normalization:</strong> Bringing complex data schemas to normal forms to ensure data integrity and performance.</li>
+                      <li><strong>ROI Integration:</strong> Integration with ROI (Return on Investment) tracking and analytical systems.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">ESIA • High-Load Profiling • Data Normalization • System Integration</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80">Senior Software Engineer</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Feb 2018 — July 2020</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Internal Product Development:</strong> Engineering and maintenance of the company's core internal ecosystem and software products.</li>
+                      <li><strong>Data Synchronization:</strong> Debugging and fine-tuning complex data synchronization processes between various system components.</li>
+                      <li><strong>Search Engineering:</strong> Implementation of high-performance search functionality and all related search-driven features.</li>
+                      <li><strong>Service Innovation:</strong> Developed and launched several new services, including product feed generators, analytical monitoring systems, link shorteners, and QR-code generation engines.</li>
+                      <li><strong>MarTech Evolution:</strong> Continuous development and scaling of marketing-focused services and promotional tools.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Backend Development • Data Sync • Search Engines • MarTech Services</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">JivoChat (JivoSite)</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">TEAM LEAD</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">SaaS / Real-time Communication</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">April 2016 — Nov 2017</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Engineering Leadership:</strong> Managed a team of 6 people, overseeing architectural planning, code quality, and hands-on development for mission-critical business projects.</li>
+                      <li><strong>Process Transformation:</strong> Implemented Scrum (tailored to team needs) including estimation, forecasting, and retrospectives. Automated major parts of the system to increase operational transparency.</li>
+                      <li><strong>Efficiency Breakthrough:</strong> Boosted team productivity from 70% (missed deadlines) to 120% (over-delivery) through process optimization and workflow alignment.</li>
+                      <li><strong>Stakeholder Management:</strong> Orchestrated communication between IT and other departments, ensuring a unified information field across all teams and stakeholders.</li>
+                      <li><strong>Release Engineering:</strong> Owned the full release management cycle and deployment processes.</li>
+                      <li><strong>Team Growth & Mentorship:</strong> Reorganized the team structure, leading to a significant increase in both individual and collective competencies. </li>
+                      <li><strong>Knowledge Sharing:</strong> Achieved team interchangeability through cross-training; organized and led internal seminars, conferences, and technical workshops.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Scrum Implementation • Team Reorganization • Release Management • High-Performance Culture</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">VK (Vkontakte)</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <v-chip size="x-small" color="grey" variant="outlined">NDA PROJECTS</v-chip>
+                    </div>
+                    <div class="text-body-2 font-weight-bold text-white">Jan 2016 — March 2016</div>
+                  </div>
+                  <div class="exp-content pl-6">
+                    <p class="text-body-2 text-grey-lighten-1">PHP Development for high-load specialized projects under strict NDA.</p>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Activizm.ru</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">E-commerce</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Aug 2014 — Dec 2015</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Feature Engineering:</strong> Developed new core features and provided comprehensive support for the existing platform functionality.</li>
+                      <li><strong>AdTech Integration:</strong> Seamlessly integrated Google AdWords and Yandex.Direct APIs for automated marketing management.</li>
+                      <li><strong>Data Syndication:</strong> Managed large-scale data exports to Google Merchant Center (Content Center) for product listing ads.</li>
+                      <li><strong>Marketing Ecosystem:</strong> Engineered product feed generation systems and integrated them with various external marketing services.</li>
+                      <li><strong>Performance Engineering:</strong> Conducted deep code refactoring, system profiling, and database optimization to improve platform stability.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">PHP • Google AdWords API • Data Feed Engineering • Profiling & Optimization</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Mamba</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Social Discovery</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Nov 2013 — July 2014</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>High-Load Engineering:</strong> Developed features and core functionality for a massive social platform serving tens of millions of active users.</li>
+                      <li><strong>Notification Engine:</strong> Designed and implemented a high-performance notification delivery system.</li>
+                      <li><strong>Low-Level Integration:</strong> Integrated and debugged system interactions with custom-built C-based daemons to ensure low-latency processing.</li>
+                      <li><strong>Mail Service Refactoring:</strong> Architected a complete refactor of the email interaction system and mail gateway protocols.</li>
+                      <li><strong>Abuse & Subscription Logic:</strong> Enhanced the processing systems for user complaints, reports, and automated unsubscription flows.</li>
+                      <li><strong>Database Performance:</strong> Optimized complex database operations utilizing both SQL and RRDtool (Round Robin Database) for time-series data.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">High-Load • C Daemons • RRDtool • SQL Optimization • Notification Systems</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Enter.ru</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Multi-channel Retailer</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">May 2012 — Aug 2013</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Core Architecture:</strong> Development of the core information infrastructure and engineering of external APIs.</li>
+                      <li><strong>Fintech Integration:</strong> Integrated credit brokerage systems to enable real-time online installment and credit purchases.</li>
+                      <li><strong>Enterprise Systems:</strong> Orchestrated deep integration with 1C enterprise management systems.</li>
+                      <li><strong>Marketing Automation:</strong> Integrated the Ofsys mailing system for automated customer communications.</li>
+                      <li><strong>CMS & Extensions:</strong> Deployed WordPress as a CMS solution, integrated it into the main site, and developed numerous custom plugins.</li>
+                      <li><strong>Legacy Decommissioning:</strong> Performed a comprehensive site refactoring, including the architectural migration to remove Symfony dependencies.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Core Engineering • Fintech API • 1C Integration • Symfony Migration</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Wikimart</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">E-commerce Marketplace</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Aug 2009 — April 2012</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Billing Infrastructure:</strong> Designed and developed the core billing system from the ground up.</li>
+                      <li><strong>Database Engineering:</strong> Performed comprehensive refactoring of database trigger systems and complex stored procedures.</li>
+                      <li><strong>Data Ingestion Services:</strong> Engineered high-throughput services for importing <strong>YML and CSV</strong> data feeds containing massive product catalogs from various merchants.</li>
+                      <li><strong>Search & Merchandising:</strong> Developed the site-wide search engine and built merchandising systems (promotions, special offers, and virtual storefronts).</li>
+                      <li><strong>Growth Tools:</strong> Developed the affiliate program platform and contributed to the internal <strong>CRM system</strong> development.</li>
+                      <li><strong>Full-Stack Evolution:</strong> Led the total site redesign and participated in global system architecture planning, delivering numerous full-stack features.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Billing Systems • DB Optimization • Search Engines • ETL / Data Import</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">MIF</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-error font-weight-bold">Security & Low-Level Systems Researcher</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Remote Administration Tools:</strong> Developed high-performance remote management applications and handler scripts using <strong>C, COM, and Lua</strong>.</li>
+                      <li><strong>Cryptography & Obfuscation:</strong> Engineered a web-based cryptographic system featuring a custom <strong>multi-language translator</strong> (Python/JS to pseudocode) for code protection and execution abstraction.</li>
+                      <li><strong>Vulnerability Research:</strong> Conducted deep-level security audits of major web browsers and PDF readers. Identified vulnerabilities and developed <strong>Proof-of-Concept (PoC) for RCE</strong> (Remote Code Execution) using <strong>WinDbg, Assembler</strong>, and JavaScript.</li>
+                      <li><strong>Distributed Systems:</strong> Architected decentralized SEO promotion networks based on "ring" and "pyramid" topology principles using Python.</li>
+                      <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
+                      <li><strong>Full-Stack Origins:</strong> Engineered online video streaming services (Python/PHP) and custom e-commerce solutions.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
+                      <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </v-expand-transition>
         </section>
 
         <section class="publications-section mt-16 mb-12">
@@ -1642,5 +1825,60 @@ import zendImage from '@/public/img/zend.png'
     page-break-inside: avoid;
     break-inside: avoid;
   }
+}
+
+.experience-card {
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.full-exp-btn {
+  border-radius: 12px !important;
+  text-transform: none !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
+  border-width: 2px !important;
+}
+
+.section-icon-wrap {
+  background: rgba(var(--v-theme-primary), 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(var(--v-theme-primary), 0.2);
+}
+
+/* Стилизация для печати PDF: разворачиваем всё автоматически */
+@media print {
+  .full-experience-path {
+    display: block !important;
+  }
+  .full-exp-btn {
+    display: none !important;
+  }
+}
+
+.card-badge {
+  position: absolute;
+  top: 35px;
+  right: -30px;
+  background: rgb(var(--v-theme-primary));
+  color: black;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 2px 30px;
+  transform: rotate(45deg);
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.experience-card {
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 </style>

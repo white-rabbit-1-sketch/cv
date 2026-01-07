@@ -11,24 +11,9 @@ services:
     networks:
       - external-network
 
-  app:
-    image: caddy:2.10.0-alpine
-    container_name: app
-    restart: unless-stopped
-    volumes:
-      - ./docker/app/Caddyfile:/etc/caddy/Caddyfile
-      - ./dist/app/target/web/core:/usr/share/caddy/app
-      - app_caddy_data:/data
-      - app_caddy_config:/config
-    networks:
-      - external-network
-
-
 volumes:
   web_caddy_data:
   web_caddy_config:
-  app_caddy_data:
-  app_caddy_config:
 
 networks:
   external-network:
