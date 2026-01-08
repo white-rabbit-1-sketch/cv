@@ -61,11 +61,21 @@ import {
   mdiCertificateOutline,
   mdiCounter
 } from "@mdi/js"
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import zendImage from '@/public/img/zend.png'
+
+const route = useRoute()
 
 const showFullExperience = ref(false)
 const showFullStack = ref(false)
+
+onMounted(() => {
+  if (route.query.expand !== undefined) {
+    showFullExperience.value = true
+    showFullStack.value = true
+  }
+})
 </script>
 
 <template>
