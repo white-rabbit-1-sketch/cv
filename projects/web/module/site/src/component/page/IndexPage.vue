@@ -136,11 +136,17 @@ onMounted(() => {
                 Engineering Resilience for <span class="text-primary">High-Load Web Platforms</span>.
               </h2>
 
-              <p class="hero-desc mb-8 text-grey-lighten-1" style="max-width: 650px; font-size: 1.1rem; line-height: 1.6;">
+              <p class="hero-desc mb-6 text-grey-lighten-1" style="max-width: 650px; font-size: 1.1rem; line-height: 1.6;">
                 I bridge the gap between low-level system engineering and scalable web architecture.
                 Leveraging 17+ years of experience, I build mission-critical backend ecosystems
                 where performance, security, and stability are solved at the foundation.
               </p>
+
+              <div class="dna-block mb-8 py-3 px-4" style="border-left: 3px solid #64ffda; background: rgba(100, 255, 218, 0.05); max-width: 650px;">
+                <p class="text-white mb-0" style="font-size: 0.95rem; font-style: italic;">
+                  My career began with reverse engineering and 0-day vulnerability research (WinDbg, x86 Assembly). This "under-the-hood" foundation allows me to master any stack within weeks and build architectures that are secure and performant by design.
+                </p>
+              </div>
 
               <div class="d-flex flex-wrap gap-4">
                 <v-btn variant="flat" color="white" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold black-text">
@@ -702,12 +708,12 @@ onMounted(() => {
 
                     <div class="exp-content pl-6">
                       <ul class="custom-list">
-                        <li><strong>Remote Administration Tools:</strong> Developed high-performance remote management applications and handler scripts using <strong>C, COM, and Lua</strong>.</li>
-                        <li><strong>Cryptography & Obfuscation:</strong> Engineered a web-based cryptographic system featuring a custom <strong>multi-language translator</strong> (Python/JS to pseudocode) for code protection and execution abstraction.</li>
-                        <li><strong>Vulnerability Research:</strong> Conducted deep-level security audits of major web browsers and PDF readers. Identified vulnerabilities and developed <strong>Proof-of-Concept (PoC) for RCE</strong> (Remote Code Execution) using <strong>WinDbg, Assembler</strong>, and JavaScript.</li>
-                        <li><strong>Distributed Systems:</strong> Architected decentralized SEO promotion networks based on "ring" and "pyramid" topology principles using Python.</li>
+                        <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed <strong>functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept)</strong> to demonstrate critical memory corruption flaws using <strong>WinDbg, x86 Assembly</strong>, and advanced heap-spraying techniques.</li>
+                        <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using <strong>C (WinAPI) and Lua</strong>. Focus on extreme binary optimization and stealthy network communication.</li>
+                        <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
+                        <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
                         <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                        <li><strong>Full-Stack Origins:</strong> Engineered online video streaming services (Python/PHP) and custom e-commerce solutions.</li>
+                        <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
                       </ul>
 
                       <div class="mt-4 d-flex align-center">
@@ -1163,14 +1169,14 @@ onMounted(() => {
                   </div>
 
                   <div class="exp-content pl-6">
-                    <ul class="custom-list">
-                      <li><strong>Remote Administration Tools:</strong> Developed high-performance remote management applications and handler scripts using <strong>C, COM, and Lua</strong>.</li>
-                      <li><strong>Cryptography & Obfuscation:</strong> Engineered a web-based cryptographic system featuring a custom <strong>multi-language translator</strong> (Python/JS to pseudocode) for code protection and execution abstraction.</li>
-                      <li><strong>Vulnerability Research:</strong> Conducted deep-level security audits of major web browsers and PDF readers. Identified vulnerabilities and developed <strong>Proof-of-Concept (PoC) for RCE</strong> (Remote Code Execution) using <strong>WinDbg, Assembler</strong>, and JavaScript.</li>
-                      <li><strong>Distributed Systems:</strong> Architected decentralized SEO promotion networks based on "ring" and "pyramid" topology principles using Python.</li>
-                      <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                      <li><strong>Full-Stack Origins:</strong> Engineered online video streaming services (Python/PHP) and custom e-commerce solutions.</li>
-                    </ul>
+                      <ul class="custom-list">
+                        <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed <strong>functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept)</strong> to demonstrate critical memory corruption flaws using <strong>WinDbg, x86 Assembly</strong>, and advanced heap-spraying techniques.</li>
+                        <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using <strong>C (WinAPI) and Lua</strong>. Focus on extreme binary optimization and stealthy network communication.</li>
+                        <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
+                        <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
+                        <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
+                        <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
+                      </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
