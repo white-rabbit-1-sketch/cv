@@ -142,12 +142,6 @@ onMounted(() => {
                 where performance, security, and stability are solved at the foundation.
               </p>
 
-              <div class="dna-block mb-8 py-3 px-4" style="border-left: 3px solid #64ffda; background: rgba(100, 255, 218, 0.05); max-width: 650px;">
-                <p class="text-white mb-0" style="font-size: 0.95rem; font-style: italic;">
-                  My career began with reverse engineering and 0-day vulnerability research (WinDbg, x86 Assembly). This low-level foundation defines my architectural approach today: I build backend ecosystems where security and performance are integrated at the deepest level, not added as an afterthought.
-                </p>
-              </div>
-
               <div class="d-flex flex-wrap gap-4">
                 <v-btn variant="flat" color="white" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold black-text">
                   <template v-slot:prepend><v-icon :icon="mdiSend" /></template>
@@ -541,12 +535,12 @@ onMounted(() => {
                   <v-avatar color="rgba(244, 67, 54, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiShieldCheckOutline" color="error" />
                   </v-avatar>
-                  <h3 class="text-h6 font-weight-bold">Security & Research</h3>
+                  <h3 class="text-h6 font-weight-bold">Systems Research & Security</h3>
                 </div>
                 <ul class="achievement-list text-body-2 text-grey-lighten-1">
-                  <li><strong>0-Day Research:</strong> History of discovering remote code execution (RCE) vulnerabilities in browsers and PDF readers (purely for research).</li>
-                  <li><strong>Low-Level Debugging:</strong> Custom kernel patching for Linux Wi-Fi modules and binary patching for legacy engines.</li>
-                  <li>Implemented transparent authentication with ESIA (GosUslugi) for government-scale banking infrastructure.</li>
+                  <li><strong>Vulnerability Analysis:</strong> Conducted end-to-end research on browser engines and PDF readers. Developed PoC RCE exploits for memory corruption flaws using <strong>WinDbg, x86 Assembly, and heap-spraying</strong>.</li>
+                  <li><strong>Binary Optimization:</strong> Engineered ultra-lightweight remote management agents (4KB) and C2 infrastructures (C/WinAPI, Lua) with focus on extreme stealth and network efficiency.</li>
+                  <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated code protector featuring a custom translator (Python/JS to pseudocode) to bypass heuristic analysis.</li>
                 </ul>
               </v-card>
             </v-col>
