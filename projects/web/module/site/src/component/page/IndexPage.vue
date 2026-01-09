@@ -197,7 +197,7 @@ onMounted(() => {
                       What I Solve
                     </h2>
                     <p class="text-body-1 text-grey-lighten-1 mb-6" style="line-height: 1.8;">
-                      I specialize in designing and implementing fault-tolerant high-load web services from scratch. My key advantage is absolute independence: I can single-handedly design and implement systems capable of handling 1M+ RPS, covering every layer of the technology stack.
+                      I specialize in designing and implementing fault-tolerant high-load web services from scratch. My key advantage is absolute independence: I can single-handedly design and implement hi-load systems, covering every layer of the technology stack.
 
                     </p>
                     <div class="d-flex flex-column gap-3">
