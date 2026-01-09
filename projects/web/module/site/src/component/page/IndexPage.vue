@@ -144,7 +144,7 @@ onMounted(() => {
 
               <div class="dna-block mb-8 py-3 px-4" style="border-left: 3px solid #64ffda; background: rgba(100, 255, 218, 0.05); max-width: 650px;">
                 <p class="text-white mb-0" style="font-size: 0.95rem; font-style: italic;">
-                  My career began with reverse engineering and 0-day vulnerability research (WinDbg, x86 Assembly). This "under-the-hood" foundation allows me to master any stack within weeks and build architectures that are secure and performant by design.
+                  My career began with reverse engineering and 0-day vulnerability research (WinDbg, x86 Assembly). This low-level foundation defines my architectural approach today: I build backend ecosystems where security and performance are integrated at the deepest level, not added as an afterthought.
                 </p>
               </div>
 
