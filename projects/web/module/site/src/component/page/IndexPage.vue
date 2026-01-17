@@ -202,7 +202,7 @@ onMounted(() => {
 
           <v-row>
             <v-col cols="12">
-              <v-card variant="flat" class="role-focus-card pa-8">
+              <v-card variant="outlined" class="role-focus-card pa-8">
                 <v-row>
                   <v-col cols="12" md="6">
                     <h2 class="text-h4 font-weight-black mb-6 d-flex align-center">
@@ -288,7 +288,7 @@ onMounted(() => {
 
           <v-row>
             <v-col cols="12" md="4">
-              <v-card variant="flat" class="stack-card h-100 pa-6">
+              <v-card variant="outlined" class="stack-card h-100 pa-6">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(119, 123, 180, 0.1)" rounded="lg" size="48" class="mr-4">
                     <v-icon :icon="mdiLanguagePhp" color="#777BB4" size="32" />
@@ -310,7 +310,7 @@ onMounted(() => {
             </v-col>
 
             <v-col cols="12" md="4">
-              <v-card variant="flat" class="stack-card h-100 pa-6">
+              <v-card variant="outlined" class="stack-card h-100 pa-6">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(0, 173, 216, 0.1)" rounded="lg" size="48" class="mr-4">
                     <v-icon :icon="mdiLanguageGo" color="#00ADD8" size="32" />
@@ -333,7 +333,7 @@ onMounted(() => {
             </v-col>
 
             <v-col cols="12" md="4">
-              <v-card variant="flat" class="stack-card h-100 pa-6">
+              <v-card variant="outlined" class="stack-card h-100 pa-6">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(55, 118, 171, 0.1)" rounded="lg" size="48" class="mr-4">
                     <v-icon :icon="mdiLanguagePython" color="#3776AB" size="32" />
@@ -373,130 +373,128 @@ onMounted(() => {
 
           <v-expand-transition>
             <div v-show="showFullStack">
-              <v-card variant="flat" class="secondary-stack-card pa-8">
-                <div class="d-flex align-center mb-8 info-banner pa-4">
-                  <v-icon :icon="mdiInformationOutline" color="primary" class="mr-3" />
-                  <span class="text-body-2 text-grey-lighten-1">
+              <div class="d-flex align-center mb-8 info-banner pa-4">
+                <v-icon :icon="mdiInformationOutline" color="primary" class="mr-3" />
+                <span class="text-body-2 text-grey-lighten-1">
                     <strong>Note:</strong> The technologies below represent my broader ecosystem. While not my primary daily drivers,
                     I have practical experience with them and can effectively implement, debug, or lead projects using these tools as needed.
                   </span>
-                </div>
+              </div>
 
-                <div class="full-stack-content">
-                  <v-row class="g-4">
-                    <v-col cols="12" lg="4">
-                      <v-card variant="flat" class="tech-card h-100 pa-6">
-                        <div class="d-flex align-center mb-6">
-                          <v-icon :icon="mdiCodeBraces" color="#7C4DFF" class="mr-3" />
-                          <span class="text-overline tracking-widest font-weight-bold">Languages & Core</span>
+              <div class="full-stack-content">
+                <v-row class="g-4">
+                  <v-col cols="12" lg="4">
+                    <v-card variant="outlined" class="tech-card h-100 pa-6">
+                      <div class="d-flex align-center mb-6">
+                        <v-icon :icon="mdiCodeBraces" color="#7C4DFF" class="mr-3" />
+                        <span class="text-overline tracking-widest font-weight-bold">Languages & Core</span>
+                      </div>
+
+                      <div class="tech-group mb-6">
+                        <div class="d-flex justify-space-between align-center mb-2">
+                          <span class="group-title">PHP / Go / Java</span>
+
                         </div>
-
-                        <div class="tech-group mb-6">
-                          <div class="d-flex justify-space-between align-center mb-2">
-                            <span class="group-title">PHP / Go / Java</span>
-
-                          </div>
-                          <div class="tech-tags">
-                            Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs •
-                            High-perf Microservices • Concurrency • Spring Security/Boot/Social • Hibernate •
-                            Apache JBI/ESB/JMS/Service Mix/ActiveMQ/Camel
-                          </div>
+                        <div class="tech-tags">
+                          Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs •
+                          High-perf Microservices • Concurrency • Spring Security/Boot/Social • Hibernate •
+                          Apache JBI/ESB/JMS/Service Mix/ActiveMQ/Camel
                         </div>
+                      </div>
 
-                        <div class="tech-group mb-6">
-                          <span class="group-title">Python / TypeScript / Lua / Gdscript (Godot)</span>
-                          <div class="tech-tags">
-                            Django • SQLAlchemy • Vue • Vuetify • Angular • Electron/Ionic/Capacitor •  Webpack • Lua Stdl/COM/fs/socket/C API
-                          </div>
+                      <div class="tech-group mb-6">
+                        <span class="group-title">Python / TypeScript / Lua / Gdscript (Godot)</span>
+                        <div class="tech-tags">
+                          Django • SQLAlchemy • Vue • Vuetify • Angular • Electron/Ionic/Capacitor •  Webpack • Lua Stdl/COM/fs/socket/C API
                         </div>
+                      </div>
 
-                        <div class="tech-group">
-                          <span class="group-title">C / C++ / ASM / TCL / Delphi / VBA / Bash</span>
-                          <div class="tech-tags">
-                            Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers
-                          </div>
+                      <div class="tech-group">
+                        <span class="group-title">C / C++ / ASM / TCL / Delphi / VBA / Bash</span>
+                        <div class="tech-tags">
+                          Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers
                         </div>
-                      </v-card>
-                    </v-col>
+                      </div>
+                    </v-card>
+                  </v-col>
 
-                    <v-col cols="12" lg="4">
-                      <v-card variant="flat" class="tech-card h-100 pa-6 border-primary-low">
-                        <div class="d-flex align-center mb-6">
-                          <v-icon :icon="mdiServerNetwork" color="#00C853" class="mr-3" />
-                          <span class="text-overline tracking-widest font-weight-bold">Systems & High Load</span>
+                  <v-col cols="12" lg="4">
+                    <v-card variant="outlined" class="tech-card h-100 pa-6">
+                      <div class="d-flex align-center mb-6">
+                        <v-icon :icon="mdiServerNetwork" color="#00C853" class="mr-3" />
+                        <span class="text-overline tracking-widest font-weight-bold">Systems & High Load</span>
+                      </div>
+
+                      <div class="tech-group mb-6">
+                        <span class="group-title">Databases (1B+ Records)</span>
+                        <div class="tech-tags">
+                          PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto
+                          • Hash • Cardinality • Constraints • Replication • Sharding
+                          • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
                         </div>
+                      </div>
 
-                        <div class="tech-group mb-6">
-                          <span class="group-title">Databases (1B+ Records)</span>
-                          <div class="tech-tags">
-                            PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto
-                            • Hash • Cardinality • Constraints • Replication • Sharding
-                            • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
-                          </div>
+                      <div class="tech-group mb-6">
+                        <span class="group-title">CI/CD</span>
+                        <div class="tech-tags">
+                          Docker • Ansible • Github Actions
                         </div>
+                      </div>
 
-                        <div class="tech-group mb-6">
-                          <span class="group-title">CI/CD</span>
-                          <div class="tech-tags">
-                            Docker • Ansible • Github Actions
-                          </div>
+                      <div class="tech-group mb-6">
+                        <span class="group-title">Infrastructure</span>
+                        <div class="tech-tags">
+                          Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy
+                          • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
                         </div>
+                      </div>
 
-                        <div class="tech-group mb-6">
-                          <span class="group-title">Infrastructure</span>
-                          <div class="tech-tags">
-                            Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy
-                            • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
-                          </div>
+                      <div class="tech-group">
+                        <span class="group-title">Architecture</span>
+                        <div class="tech-tags">
+                          Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
                         </div>
+                      </div>
+                    </v-card>
+                  </v-col>
 
-                        <div class="tech-group">
-                          <span class="group-title">Architecture</span>
-                          <div class="tech-tags">
-                            Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
-                          </div>
+                  <v-col cols="12" lg="4">
+                    <v-card variant="outlined" class="tech-card h-100 pa-6">
+                      <div class="d-flex align-center mb-6">
+                        <v-icon :icon="mdiShieldBugOutline" color="#FF5252" class="mr-3" />
+                        <span class="text-overline tracking-widest font-weight-bold">Security & Low-Level</span>
+                      </div>
+
+                      <div class="tech-group mb-6">
+                        <span class="group-title">Sec Research & Audits</span>
+                        <div class="tech-tags">
+                          0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
                         </div>
-                      </v-card>
-                    </v-col>
+                      </div>
 
-                    <v-col cols="12" lg="4">
-                      <v-card variant="flat" class="tech-card h-100 pa-6">
-                        <div class="d-flex align-center mb-6">
-                          <v-icon :icon="mdiShieldBugOutline" color="#FF5252" class="mr-3" />
-                          <span class="text-overline tracking-widest font-weight-bold">Security & Low-Level</span>
+                      <div class="tech-group mb-6">
+                        <span class="group-title">Reverse Engineering</span>
+                        <div class="tech-tags">
+                          OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
                         </div>
+                      </div>
 
-                        <div class="tech-group mb-6">
-                          <span class="group-title">Sec Research & Audits</span>
-                          <div class="tech-tags">
-                            0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
-                          </div>
+                      <div class="tech-group">
+                        <span class="group-title">Deep Debugging</span>
+                        <div class="tech-tags">
+                          Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
                         </div>
+                      </div>
+                    </v-card>
+                  </v-col>
+                </v-row>
 
-                        <div class="tech-group mb-6">
-                          <span class="group-title">Reverse Engineering</span>
-                          <div class="tech-tags">
-                            OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
-                          </div>
-                        </div>
-
-                        <div class="tech-group">
-                          <span class="group-title">Deep Debugging</span>
-                          <div class="tech-tags">
-                            Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
-                          </div>
-                        </div>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-
-                  <v-card variant="flat" class="fundamentals-bar mt-4 pa-4 d-flex flex-wrap justify-center align-center">
-                    <span class="text-caption text-mono mx-4 opacity-60">ALGORITHMS & STRUCTURES: B-Tree, Red-Black Tree, Binary Search Tree, QuickSort, Bubble Sort, Shaker Sort, Binary Search, Hash Tables, Queue, Deque, Stack, Singly Linked List, Doubly Linked List, System V IPC: Shared Memory, Multithreading, Graph Theory</span>
-                    <v-divider vertical class="mx-2 d-none d-md-block" opacity="0.1" />
-                    <span class="text-caption text-mono mx-4 opacity-60">PATTERNS & OTHER: SOLID, GoF, Undetermined State Machines, Trust Ring Architecture, Game/World Physics, Decorator, Singleton, Proxy, Outbox, Factory, Abstract Factory, Registry, Command, MVC, Prototype, Adapter, Facade, Workflow, KIS, Threads, Fork, UML, Late Static Binding, FIFO, LIFO</span>
-                  </v-card>
-                </div>
-              </v-card>
+                <v-card variant="flat" class="fundamentals-bar mt-4 pa-4 d-flex flex-wrap justify-center align-center">
+                  <span class="text-caption text-mono mx-4 opacity-60">ALGORITHMS & STRUCTURES: B-Tree, Red-Black Tree, Binary Search Tree, QuickSort, Bubble Sort, Shaker Sort, Binary Search, Hash Tables, Queue, Deque, Stack, Singly Linked List, Doubly Linked List, System V IPC: Shared Memory, Multithreading, Graph Theory</span>
+                  <v-divider vertical class="mx-2 d-none d-md-block" opacity="0.1" />
+                  <span class="text-caption text-mono mx-4 opacity-60">PATTERNS & OTHER: SOLID, GoF, Undetermined State Machines, Trust Ring Architecture, Game/World Physics, Decorator, Singleton, Proxy, Outbox, Factory, Abstract Factory, Registry, Command, MVC, Prototype, Adapter, Facade, Workflow, KIS, Threads, Fork, UML, Late Static Binding, FIFO, LIFO</span>
+                </v-card>
+              </div>
             </div>
           </v-expand-transition>
         </section>
@@ -516,7 +514,7 @@ onMounted(() => {
 
           <v-row>
             <v-col cols="12" md="6">
-              <v-card variant="flat" class="achievement-card pa-6 h-100">
+              <v-card variant="outlined" class="achievement-card pa-6 h-100">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiBankOutline" color="success" />
@@ -538,7 +536,7 @@ onMounted(() => {
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-card variant="flat" class="achievement-card pa-6 h-100">
+              <v-card variant="outlined" class="achievement-card pa-6 h-100">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(33, 150, 243, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiRocketLaunchOutline" color="blue" />
@@ -554,7 +552,7 @@ onMounted(() => {
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-card variant="flat" class="achievement-card pa-6 h-100">
+              <v-card variant="outlined" class="achievement-card pa-6 h-100">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(244, 67, 54, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiShieldCheckOutline" color="error" />
@@ -570,7 +568,7 @@ onMounted(() => {
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-card variant="flat" class="achievement-card pa-6 h-100">
+              <v-card variant="outlined" class="achievement-card pa-6 h-100">
                 <div class="d-flex align-center mb-4">
                   <v-avatar color="rgba(124, 77, 255, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiTrophyOutline" color="#7C4DFF" />
@@ -1762,15 +1760,18 @@ onMounted(() => {
 .legacy-panels :deep(.v-expansion-panel-title__overlay) { display: none; }
 
 .tech-card {
-  background: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
   transition: all 0.3s ease;
 }
 
 .tech-card:hover {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.tech-card {
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .border-primary-low {
@@ -2175,10 +2176,18 @@ onMounted(() => {
 }
 
 .role-focus-card {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(var(--v-theme-primary), 0.1) !important;
-  border-radius: 24px !important;
-  backdrop-filter: blur(10px);
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.3s ease;
+}
+
+.role-focus-card:hover {
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.role-focus-card {
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .focus-item {
@@ -2207,18 +2216,20 @@ onMounted(() => {
   -webkit-line-clamp: initial !important;
 }
 
+
 .stack-card {
+  border-radius: 16px !important;
   background: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 20px !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
 .stack-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.04) !important;
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.stack-card {
   border-color: rgba(var(--v-theme-primary), 0.3) !important;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .gap-2 { gap: 8px; }
@@ -2252,15 +2263,18 @@ onMounted(() => {
 }
 
 .achievement-card {
+  border-radius: 16px !important;
   background: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 20px !important;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .achievement-card:hover {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border-color: rgba(var(--v-theme-primary), 0.2) !important;
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.achievement-card {
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .achievement-list {
