@@ -2265,4 +2265,8 @@ onMounted(() => {
 .education-item:hover {
   border-left-color: rgba(var(--v-theme-primary), 1);
 }
+
+.text-h3 {
+  font-size: clamp(1.8rem, 1rem, 3rem) !important;
+}
 </style>
