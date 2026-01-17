@@ -33,10 +33,7 @@ onMounted(() => {
       color="rgba(18, 18, 18, 0.8)"
       style="backdrop-filter: blur(10px); border-bottom: 1px solid rgba(var(--v-theme-primary), 0.2) !important;"
   >
-    <v-container fluid class="d-flex align-center py-0 px-10">
-      <div class="text-h6 font-weight-black tracking-tighter cursor-pointer" @click="$router.push('/')">
-        <span class="text-primary">M</span>.CHULOSHNIKOV
-      </div>
+    <div class="d-flex align-center w-100 px-10">
 
       <v-spacer />
 
@@ -58,7 +55,7 @@ onMounted(() => {
           {{ t('l471') }}
         </v-btn>
       </div>
-    </v-container>
+    </div>
   </v-app-bar>
 
   <v-dialog v-model="isDialogVisible" max-width="450">
