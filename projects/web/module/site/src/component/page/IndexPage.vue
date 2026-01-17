@@ -286,6 +286,17 @@ onMounted(() => {
 
         <section class="mb-16 animate-up" style="animation-delay: 0.2s;">
 
+          <div class="d-flex align-center mb-4">
+            <div class="section-icon-wrap mr-4">
+              <v-icon :icon="mdiCpu64Bit" color="primary" size="32" />
+            </div>
+            <div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Tech stack</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">From low-level primitives to high-level abstractions</div>
+            </div>
+            <v-divider class="ml-6 border-opacity-25" />
+          </div>
+
           <v-row>
             <v-col cols="12" md="4">
               <v-card variant="outlined" class="stack-card h-100 pa-6">
