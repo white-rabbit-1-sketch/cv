@@ -33,7 +33,7 @@ onMounted(() => {
       color="rgba(18, 18, 18, 0.8)"
       style="backdrop-filter: blur(10px); border-bottom: 1px solid rgba(var(--v-theme-primary), 0.2) !important;"
   >
-    <div class="d-flex align-center w-100 px-10">
+    <div class="d-flex align-center w-100 px-4">
 
       <v-spacer />
 
