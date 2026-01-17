@@ -90,6 +90,15 @@ onMounted(() => {
             <v-col cols="12" md="8">
               <div class="d-flex flex-wrap align-center mb-4 gap-2">
                 <v-chip
+                    color="#FF9800"
+                    variant="flat"
+                    size="small"
+                    class="text-uppercase font-weight-bold tracking-widest px-4"
+                >
+                  Senior Developer
+                </v-chip>
+
+                <v-chip
                     color="#00C853"
                     variant="flat"
                     size="small"
@@ -98,14 +107,7 @@ onMounted(() => {
                   Principal Architect
                 </v-chip>
 
-                <v-chip
-                    color="#FF9800"
-                    variant="flat"
-                    size="small"
-                    class="text-uppercase font-weight-bold tracking-widest px-4"
-                >
-                  Senior Developer
-                </v-chip>
+
 
                 <v-chip
                     color="primary"
@@ -126,7 +128,6 @@ onMounted(() => {
                 </v-chip>
 
                 <span class="ml-2 text-grey text-caption d-none d-sm-inline opacity-60">
-          // 17+ years of expertise
         </span>
               </div>
 
@@ -138,7 +139,7 @@ onMounted(() => {
 
               <p class="hero-desc mb-6 text-grey-lighten-1" style="max-width: 650px; font-size: 1.1rem; line-height: 1.6;">
                 I bridge the gap between low-level system engineering and scalable web architecture.
-                Leveraging 17+ years of experience, I build mission-critical backend ecosystems
+                Leveraging <strong>17+ years of experience</strong>, I build mission-critical backend ecosystems
                 where performance, security, and stability are solved at the foundation.
               </p>
 
@@ -185,7 +186,6 @@ onMounted(() => {
         </section>
 
         <section class="mb-16 animate-up" style="animation-delay: 0.1s;">
-          <div class="section-label mb-8">Role & Strategic Focus</div>
 
           <v-row>
             <v-col cols="12">
@@ -198,22 +198,27 @@ onMounted(() => {
                     </h2>
                     <p class="text-body-1 text-grey-lighten-1 mb-6" style="line-height: 1.8;">
                       I specialize in designing and implementing fault-tolerant high-load web services from scratch. My key advantage is absolute independence: I can single-handedly design and implement hi-load systems, covering every layer of the technology stack.
-
                     </p>
+
+
+
+
                     <div class="d-flex flex-column gap-3">
-                      <div class="focus-item d-flex align-center">
+                      <div class=" d-flex align-center">
                         <v-icon :icon="mdiChartTimelineVariant" size="small" color="primary" class="mr-3" />
                         <span><strong>Zero-to-One:</strong> Building core infrastructure from scratch for startups.</span>
                       </div>
-                      <div class="focus-item d-flex align-center">
+                      <div class="d-flex align-center mt-4">
                         <v-icon :icon="mdiWall" size="small" color="primary" class="mr-3" />
                         <span><strong>Legacy-to-Modern:</strong> High-risk migrations and architectural refactoring.</span>
                       </div>
-                      <div class="focus-item d-flex align-center">
+                      <div class="d-flex align-center mt-4">
                         <v-icon :icon="mdiSecurity" size="small" color="primary" class="mr-3" />
                         <span><strong>System Hardening:</strong> Deep security audits and performance tuning.</span>
                       </div>
                     </div>
+
+
                   </v-col>
 
                   <v-col cols="12" md="6" class="border-left-md px-md-8">
@@ -267,7 +272,6 @@ onMounted(() => {
         </section>
 
         <section class="mb-16 animate-up" style="animation-delay: 0.2s;">
-          <div class="section-label mb-8">Primary Tech Stack</div>
 
           <v-row>
             <v-col cols="12" md="4">
@@ -323,7 +327,7 @@ onMounted(() => {
                   </v-avatar>
                   <div>
                     <div class="text-h6 font-weight-black">Python</div>
-                    <div class="text-caption text-green font-weight-bold uppercase">Proficient level</div>
+                    <div class="text-caption text-blue font-weight-bold uppercase">Proficient level</div>
                   </div>
                 </div>
                 <p class="text-body-2 text-grey-lighten-1 mb-4">
@@ -331,9 +335,9 @@ onMounted(() => {
                   Used for rapid prototyping and complex backend utility services.
                 </p>
                 <div class="d-flex flex-wrap gap-2">
-                  <v-chip size="x-small" variant="outlined" color="green">Scripting</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="green">Data Pipelines</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="green">DevOps</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">Scripting</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">Data Pipelines</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">DevOps</v-chip>
                 </div>
               </v-card>
             </v-col>
@@ -366,8 +370,6 @@ onMounted(() => {
                 </div>
 
                 <div class="full-stack-content">
-                  <div class="section-label mb-8">Expertise & Technical DNA</div>
-
                   <v-row class="g-4">
                     <v-col cols="12" lg="4">
                       <v-card variant="flat" class="tech-card h-100 pa-6">
@@ -379,7 +381,7 @@ onMounted(() => {
                         <div class="tech-group mb-6">
                           <div class="d-flex justify-space-between align-center mb-2">
                             <span class="group-title">PHP / Go / Java</span>
-                            <v-chip size="x-small" color="primary" variant="tonal" class="font-weight-black">ZEND CERTIFIED</v-chip>
+
                           </div>
                           <div class="tech-tags">
                             Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs •
@@ -460,7 +462,7 @@ onMounted(() => {
 
                         <div class="tech-group mb-6">
                           <span class="group-title">Reverse Engineering</span>
-                          <div class="tech-tags text-blue-lighten-3">
+                          <div class="tech-tags">
                             OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
                           </div>
                         </div>
@@ -488,7 +490,16 @@ onMounted(() => {
 
 
         <section class="mb-16 animate-up">
-          <div class="section-label mb-8">Selected Achievements & Impact</div>
+          <div class="d-flex align-center mb-4">
+            <div class="section-icon-wrap mr-4">
+              <v-icon :icon="mdiCheckDecagram" color="primary" size="32" />
+            </div>
+            <div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Achievements</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">Where code efficiency meets architectural excellence</div>
+            </div>
+            <v-divider class="ml-6 border-opacity-25" />
+          </div>
 
           <v-row>
             <v-col cols="12" md="6">
@@ -593,7 +604,6 @@ onMounted(() => {
             <v-card class="experience-card mb-6 highlight-border" variant="flat">
 
               <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-                <div class="card-badge">Selected Case</div>
 
                 <v-card-text class="pa-6">
                   <div class="exp-item mb-12">
@@ -634,7 +644,6 @@ onMounted(() => {
 
 
               <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-                <div class="card-badge">Selected Case</div>
 
                 <v-card-text class="pa-6">
                   <div class="exp-item mb-12">
@@ -673,7 +682,6 @@ onMounted(() => {
               </v-card>
 
               <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-                <div class="card-badge">Selected Case</div>
 
                 <v-card-text class="pa-6">
                   <div class="exp-item mb-12">
@@ -684,7 +692,7 @@ onMounted(() => {
                           <h3 class="text-h4 font-weight-black">MIF</h3>
                           <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
                         </div>
-                        <div class="text-subtitle-2 text-error font-weight-bold">Security & Low-Level Systems Researcher</div>
+                        <div class="text-subtitle-2 text-blue">Security & Low-Level Systems Researcher</div>
                       </div>
                       <div class="text-right">
                         <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
