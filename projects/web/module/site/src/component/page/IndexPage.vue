@@ -601,131 +601,121 @@ onMounted(() => {
           </div>
 
           <div class="featured-works-path">
-            <v-card class="experience-card mb-6 highlight-border" variant="flat">
+            <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
 
-              <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-
-                <v-card-text class="pa-6">
-                  <div class="exp-item mb-12">
-                    <div class="exp-dot"></div>
-                    <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
-                      <div>
-                        <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                          <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
-                          <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
-                          <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                        </div>
-                        <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
+              <v-card-text class="pa-6">
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
                       </div>
-                      <div class="text-right">
-                        <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
-                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
                     </div>
-
-                    <div class="exp-content pl-6">
-                      <ul class="custom-list">
-                        <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
-                        <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
-                        <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
-                        <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
-                        <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
-                        <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
-                        <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
-                      </ul>
-
-                      <div class="mt-4 d-flex align-center">
-                        <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                        <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
-                      </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
                     </div>
                   </div>
-                </v-card-text>
-              </v-card>
 
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
+                      <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
+                      <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
+                      <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
+                      <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
+                      <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
+                      <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
+                    </ul>
 
-              <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-
-                <v-card-text class="pa-6">
-                  <div class="exp-item mb-12">
-                    <div class="exp-dot"></div>
-                    <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                      <div>
-                        <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                          <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
-                          <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
-                        </div>
-                        <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
-                      </div>
-                      <div class="text-right">
-                        <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
-                      </div>
-                    </div>
-
-                    <div class="exp-content pl-6">
-                      <ul class="custom-list">
-                        <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
-                        <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
-                        <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
-                        <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
-                        <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
-                        <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
-                        <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
-                      </ul>
-
-                      <div class="mt-4 d-flex align-center">
-                        <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                        <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
-                      </div>
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
                     </div>
                   </div>
-                </v-card-text>
-              </v-card>
-
-              <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-
-                <v-card-text class="pa-6">
-                  <div class="exp-item mb-12">
-                    <div class="exp-dot"></div>
-                    <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                      <div>
-                        <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                          <h3 class="text-h4 font-weight-black">MIF</h3>
-                          <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                        </div>
-                        <div class="text-subtitle-2 text-blue">Security & Low-Level Systems Researcher</div>
-                      </div>
-                      <div class="text-right">
-                        <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
-                      </div>
-                    </div>
-
-                    <div class="exp-content pl-6">
-                      <ul class="custom-list">
-                        <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed <strong>functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept)</strong> to demonstrate critical memory corruption flaws using <strong>WinDbg, x86 Assembly</strong>, and advanced heap-spraying techniques.</li>
-                        <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using <strong>C (WinAPI) and Lua</strong>. Focus on extreme binary optimization and stealthy network communication.</li>
-                        <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
-                        <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
-                        <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                        <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
-                      </ul>
-
-                      <div class="mt-4 d-flex align-center">
-                        <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
-                        <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
-                      </div>
-                    </div>
-                  </div>
-                </v-card-text>
-              </v-card>
-
-
-
-
-
-
-
-
+                </div>
+              </v-card-text>
             </v-card>
+
+
+            <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
+
+              <v-card-text class="pa-6">
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
+                      <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
+                      <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
+                      <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
+                      <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
+                      <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
+                      <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
+                    </div>
+                  </div>
+                </div>
+              </v-card-text>
+            </v-card>
+
+            <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
+
+              <v-card-text class="pa-6">
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">MIF</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-blue">Security & Low-Level Systems Researcher</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed <strong>functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept)</strong> to demonstrate critical memory corruption flaws using <strong>WinDbg, x86 Assembly</strong>, and advanced heap-spraying techniques.</li>
+                      <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using <strong>C (WinAPI) and Lua</strong>. Focus on extreme binary optimization and stealthy network communication.</li>
+                      <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
+                      <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
+                      <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
+                      <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
+                      <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
+                    </div>
+                  </div>
+                </div>
+              </v-card-text>
+            </v-card>
+
           </div>
 
           <div class="d-flex justify-center my-8">
@@ -1154,7 +1144,7 @@ onMounted(() => {
                         <h3 class="text-h4 font-weight-black">MIF</h3>
                         <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-error font-weight-bold">Security & Low-Level Systems Researcher</div>
+                      <div class="text-subtitle-2 text-blue font-weight-bold">Security & Low-Level Systems Researcher</div>
                     </div>
                     <div class="text-right">
                       <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
@@ -1201,8 +1191,7 @@ onMounted(() => {
                   href="https://levelup.gitconnected.com/buffer-overflow-for-beginners-edf9f9d593e2"
                   target="_blank"
                   class="pub-card h-100 pa-6 d-flex flex-column"
-                  variant="flat"
-                  color="grey-darken-4"
+                  variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
                   <v-chip color="error" size="x-small" variant="flat" class="font-weight-bold">EXPLOIT DEV</v-chip>
@@ -1223,8 +1212,7 @@ onMounted(() => {
                   href="https://levelup.gitconnected.com/the-fundamental-vulnerability-of-networks-arp-spoofing-172d51947872"
                   target="_blank"
                   class="pub-card h-100 pa-6 d-flex flex-column"
-                  variant="flat"
-                  color="grey-darken-4"
+                  variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
                   <v-chip color="warning" size="x-small" variant="flat" class="font-weight-bold">NETWORK SECURITY</v-chip>
@@ -1245,8 +1233,7 @@ onMounted(() => {
                   href="https://medium.com/gitconnected/the-power-of-udf-functions-in-mysql-data-encryption-using-c-and-openssl-484f511eff98"
                   target="_blank"
                   class="pub-card h-100 pa-6 d-flex flex-column"
-                  variant="flat"
-                  color="grey-darken-4"
+                  variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
                   <v-chip color="info" size="x-small" variant="flat" class="font-weight-bold">DATABASE CRYPTO</v-chip>
@@ -1255,6 +1242,27 @@ onMounted(() => {
                 <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">The Power of UDF in MySQL</h3>
                 <p class="text-body-2 text-grey-lighten-1 mb-6 flex-grow-1">
                   Extending MySQL capabilities with C and OpenSSL to implement robust field-level data encryption.
+                </p>
+                <div class="text-button text-primary d-flex align-center">
+                  Read Article <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
+                </div>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" lg="4" md="6">
+              <v-card
+                  href="https://medium.com/@mikhail.chuloshnikov/file-based-hash-map-using-as-persistent-data-storage-33b849cc8e41"
+                  target="_blank"
+                  class="pub-card h-100 pa-6 d-flex flex-column"
+                  variant="outlined"
+              >
+                <div class="d-flex justify-space-between align-start mb-4">
+                  <v-chip color="green" size="x-small" variant="flat" class="font-weight-bold">DATA STRUCTURES</v-chip>
+                  <v-icon :icon="mdiPostOutline" size="24" class="opacity-50" />
+                </div>
+                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">File-based hash map</h3>
+                <p class="text-body-2 text-grey-lighten-1 mb-6 flex-grow-1">
+                  Using PHP file hash map as persistent data storage.
                 </p>
                 <div class="text-button text-primary d-flex align-center">
                   Read Article <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
@@ -1271,7 +1279,7 @@ onMounted(() => {
               <v-icon :icon="mdiCodeBrackets" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Code Portfolio</h2>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Code</h2>
               <div class="text-subtitle-2 text-primary opacity-70">Open Source Projects & Technical Snippets</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
@@ -1453,27 +1461,28 @@ onMounted(() => {
 
 
         <section class="mb-16 animate-up">
-          <div class="section-label mb-8">Education</div>
+          <div class="d-flex align-center mb-8">
+            <div class="section-icon-wrap mr-4">
+              <v-icon :icon="mdiSchoolOutline" color="primary" size="32" />
+            </div>
+            <div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Academic Background</h2>
+            </div>
+            <v-divider class="ml-6 border-opacity-25" />
+          </div>
+
 
           <v-row>
             <v-col cols="12" md="12">
-              <v-card variant="flat" class="education-card pa-6">
-                <div class="d-flex align-center mb-6">
-                  <v-avatar color="rgba(var(--v-theme-primary), 0.1)" rounded="lg" class="mr-4">
-                    <v-icon :icon="mdiSchoolOutline" color="primary" />
-                  </v-avatar>
-                  <h3 class="text-h6 font-weight-bold">Academic Background</h3>
-                </div>
-
+              <v-card variant="outlined" class="education-card pa-6">
                 <div class="education-item mb-6 pl-4 border-left">
                   <div class="d-flex justify-space-between align-start flex-wrap">
                     <div>
                       <div class="text-subtitle-1 font-weight-bold text-white">Moscow University of Industry and Finance "Synergy"</div>
-                      <div class="text-body-2 text-primary mb-1">Software Engineering & Information Systems Administration</div>
+                      <div class="text-body-2 text-grey-lighten-1 mb-1">Fullstack Development</div>
                     </div>
-                    <v-chip size="small" variant="tonal" color="primary">2026 (Expected)</v-chip>
+                    <v-chip size="small" variant="tonal" color="grey">2026</v-chip>
                   </div>
-                  <div class="text-caption text-grey">Specialization: Fullstack Development</div>
                 </div>
 
                 <div class="education-item mb-6 pl-4 border-left">
@@ -1494,7 +1503,6 @@ onMounted(() => {
                     </div>
                     <v-chip size="small" variant="tonal" color="grey">2008</v-chip>
                   </div>
-                  <div class="text-caption text-grey">The foundation of my CS background, algorithms, and low-level logic.</div>
                 </div>
               </v-card>
             </v-col>
@@ -1523,7 +1531,7 @@ onMounted(() => {
                   variant="outlined"
                   border="primary"
               >
-                <div class="cert-image-container bg-grey-darken-4">
+                <div class="cert-image-container">
                   <v-img
                       :src="zendImage"
                       alt="Zend PHP Certification"
@@ -1584,7 +1592,7 @@ onMounted(() => {
             <v-divider class="ml-6 border-opacity-25" />
           </div>
 
-          <v-card class="pa-8 backstory-card" variant="flat" color="grey-darken-4">
+          <v-card class="pa-8 backstory-card" variant="outlined" color="grey-darken-4">
             <v-row>
               <v-col cols="12" md="6" class="mb-6">
                 <h4 class="text-h6 font-weight-bold text-white mb-4 d-flex align-center">
@@ -1843,16 +1851,15 @@ onMounted(() => {
 }
 
 .pub-card {
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 16px !important;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.3s ease;
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .pub-card:hover {
-  transform: translateY(-8px);
-  background: rgba(var(--v-theme-primary), 0.08) !important;
-  border-color: rgba(var(--v-theme-primary), 0.3) !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(var(--v-theme-primary), 0.05) !important;
 }
 
 .line-height-tight {
@@ -2018,10 +2025,21 @@ onMounted(() => {
 }
 
 .backstory-card {
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 24px !important;
-  background: linear-gradient(165deg, rgba(30,30,30,1) 0%, rgba(10,10,10,1) 100%) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.3s ease;
 }
+
+.backstory-card:hover {
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.backstory-card {
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
+}
+
+
 
 .pinba-box {
   background: rgba(255, 152, 0, 0.05);
@@ -2052,15 +2070,15 @@ onMounted(() => {
 }
 
 .cert-card-full {
-  border-radius: 24px !important;
-  background: rgba(var(--v-theme-primary), 0.02) !important;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  transition: all 0.3s ease;
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .cert-card-full:hover {
-  transform: translateY(-8px);
-  border-color: rgba(var(--v-theme-primary), 0.8) !important;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5) !important;
+  background: rgba(var(--v-theme-primary), 0.05) !important;
 }
 
 .cert-image-container {
@@ -2251,9 +2269,18 @@ onMounted(() => {
 }
 
 .education-card {
+  border-radius: 16px !important;
   background: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
-  border-radius: 24px !important;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+}
+
+.education-card {
+  border-color: rgba(var(--v-theme-primary), 0.3) !important;
+  background: linear-gradient(145deg, rgba(var(--v-theme-primary), 0.05) 0%, rgba(0,0,0,0) 100%) !important;
 }
 
 .border-left {
