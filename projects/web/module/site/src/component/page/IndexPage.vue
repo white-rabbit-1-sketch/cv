@@ -226,22 +226,22 @@ onMounted(() => {
                     <v-list bg-color="transparent" class="pa-0">
                       <v-list-item class="px-0 mb-4">
                         <template v-slot:prepend>
-                          <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
-                            <v-icon :icon="mdiServerNetwork" color="#00C853" />
-                          </v-avatar>
-                        </template>
-                        <v-list-item-title class="text-h6 font-weight-bold">Principal Architect</v-list-item-title>
-                        <v-list-item-subtitle class="text-grey">Designing complex distributed systems & high-load backends.</v-list-item-subtitle>
-                      </v-list-item>
-
-                      <v-list-item class="px-0 mb-4">
-                        <template v-slot:prepend>
                           <v-avatar color="rgba(255, 152, 0, 0.1)" rounded="lg" class="mr-4">
                             <v-icon :icon="mdiCodeBraces" color="#FF9800" />
                           </v-avatar>
                         </template>
                         <v-list-item-title class="text-h6 font-weight-bold">Senior Developer</v-list-item-title>
                         <v-list-item-subtitle class="text-grey">Hands-on development of mission-critical core modules.</v-list-item-subtitle>
+                      </v-list-item>
+
+                      <v-list-item class="px-0 mb-4">
+                        <template v-slot:prepend>
+                          <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
+                            <v-icon :icon="mdiServerNetwork" color="#00C853" />
+                          </v-avatar>
+                        </template>
+                        <v-list-item-title class="text-h6 font-weight-bold">Principal Architect</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">Designing complex distributed systems & high-load backends.</v-list-item-subtitle>
                       </v-list-item>
 
                       <v-list-item class="px-0 mb-4">
