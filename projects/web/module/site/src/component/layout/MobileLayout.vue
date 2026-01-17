@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <v-layout class="layout">
+  <v-layout>
     <RouterView />
   </v-layout>
 </template>

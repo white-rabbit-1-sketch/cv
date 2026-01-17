@@ -464,5 +464,9 @@
   "l463": "Once spent 24 hours debugging a broken auth system. It turned out <strong>Pinba</strong> was corrupting the virtual function stack, shifting it by a few bytes. The interpreter was literally calling random methods. That’s why I don’t trust \"magic\" monitoring tools anymore.",
   "l464": "\"I love computers, I understand them, and they understand me.\"",
   "l465": "EN",
-  "l466": "RU"
+  "l466": "RU",
+  "l467": "Get in Touch",
+  "l468": "net",
+  "l469": "English Level:",
+  "l470": "Roles I'm Open To"
 }
