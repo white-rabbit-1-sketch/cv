@@ -572,16 +572,7 @@ onMounted(() => {
               </div>
               <div>
                 <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Experience</h2>
-                <div class="d-flex align-center">
-                  <v-chip
-                      color="primary"
-                      size="x-small"
-                      variant="flat"
-                      class="mr-2 font-weight-black"
-                      label
-                  >FEATURED</v-chip>
-                  <div class="text-subtitle-2 text-grey-lighten-1">Focusing on technical complexity, not timeline</div>
-                </div>
+                <div class="text-subtitle-2 text-primary opacity-70">Focusing on technical complexity, not timeline</div>
               </div>
               <v-divider class="ml-6 border-opacity-25" />
             </div>
@@ -2268,5 +2259,9 @@ onMounted(() => {
 
 .text-h3 {
   font-size: clamp(1.8rem, 1rem, 3rem) !important;
+}
+
+:deep(.v-list-item-title) {
+  white-space: initial !important;
 }
 </style>
