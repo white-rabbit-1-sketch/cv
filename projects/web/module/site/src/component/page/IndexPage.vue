@@ -174,7 +174,7 @@ onMounted(() => {
 
           <v-col cols="12" md="4" class="d-flex justify-md-end">
             <div class="status-box pa-6 w-100" style="max-width: 320px;">
-              <div class="text-overline text-grey-darken-1 mb-4 tracking-widest text-uppercase" style="font-size: 0.65rem;">Candidate Status</div>
+              <div class="text-overline text-grey-darken-1 mb-4 tracking-widest text-uppercase" style="font-size: 0.65rem;">{{t('l472')}}</div>
 
               <div class="d-flex align-center mb-3">
                 <v-icon :icon="mdiMapMarkerOutline" size="small" class="mr-3 text-primary" />
