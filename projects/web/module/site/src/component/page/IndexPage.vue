@@ -59,7 +59,7 @@ import {
   mdiBugCheckOutline,
   mdiSchoolOutline,
   mdiCertificateOutline,
-  mdiCounter
+  mdiCounter, mdiWhatsapp, mdiLinkedin
 } from "@mdi/js"
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
@@ -144,14 +144,27 @@ onMounted(() => {
               </p>
 
               <div class="d-flex flex-wrap gap-4">
-                <v-btn variant="flat" color="white" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold black-text">
-                  <template v-slot:prepend><v-icon :icon="mdiSend" /></template>
-                  Message on Telegram
-                </v-btn>
-                <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none border-white">
-                  <template v-slot:prepend><v-icon :icon="mdiEmail" /></template>
-                  Email Me
-                </v-btn>
+                <div class="d-flex flex-wrap gap-4">
+                  <v-btn variant="flat" color="white" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold black-text">
+                    <template v-slot:prepend><v-icon :icon="mdiSend" /></template>
+                    Telegram
+                  </v-btn>
+
+                  <v-btn variant="flat" color="#25D366" rounded="lg" size="large" href="https://wa.me/+37493510616" target="_blank" class="text-none font-weight-bold text-white">
+                    <template v-slot:prepend><v-icon :icon="mdiWhatsapp" /></template>
+                    WhatsApp
+                  </v-btn>
+
+                  <v-btn variant="flat" color="#0077B5" rounded="lg" size="large" href="https://www.linkedin.com/in/mikhail-chuloshnikov-176792286/" target="_blank" class="text-none font-weight-bold text-white">
+                    <template v-slot:prepend><v-icon :icon="mdiLinkedin" /></template>
+                    LinkedIn
+                  </v-btn>
+
+                  <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none border-white">
+                    <template v-slot:prepend><v-icon :icon="mdiEmail" /></template>
+                    Email
+                  </v-btn>
+                </div>
               </div>
             </v-col>
 
