@@ -55,7 +55,7 @@ onMounted(() => {
             class="ml-4 font-weight-bold"
             @click="isDialogVisible = true"
         >
-          Hire Me
+          {{ t('l471') }}
         </v-btn>
       </div>
     </v-container>
