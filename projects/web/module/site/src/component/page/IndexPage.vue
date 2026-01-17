@@ -61,7 +61,7 @@ import {
   mdiCertificateOutline,
   mdiCounter, mdiWhatsapp, mdiLinkedin,
   mdiChevronDown,
-  mdiChevronUp,
+  mdiChevronUp, mdiMenuUp, mdiMenuDown,
 } from "@mdi/js"
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
@@ -369,12 +369,13 @@ onMounted(() => {
                 variant="outlined"
                 color="primary"
                 size="large"
-                class="full-stack-btn"
+                :append-icon="showFullStack ? mdiChevronUp : mdiChevronDown"
                 @click="showFullStack = !showFullStack"
-                :prepend-icon="showFullStack ? mdiMenuUp : mdiMenuDown"
+                class="full-exp-btn"
             >
               {{ showFullStack ? t('l48') : t('l49') }}
             </v-btn>
+
           </div>
 
           <v-expand-transition>
