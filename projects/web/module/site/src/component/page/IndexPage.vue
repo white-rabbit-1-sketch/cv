@@ -64,6 +64,9 @@ import {
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import zendImage from '@/public/img/zend.png'
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 const route = useRoute()
 
@@ -95,7 +98,7 @@ onMounted(() => {
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  Senior Developer
+                  {{ t('l1') }}
                 </v-chip>
 
                 <v-chip
@@ -104,7 +107,7 @@ onMounted(() => {
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  Principal Architect
+                  {{ t('l2') }}
                 </v-chip>
 
 
@@ -115,7 +118,7 @@ onMounted(() => {
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  Team Lead
+                  {{ t('l3') }}
                 </v-chip>
 
                 <v-chip
@@ -124,45 +127,43 @@ onMounted(() => {
                     size="small"
                     class="text-uppercase font-weight-bold tracking-widest px-4"
                 >
-                  CTO
+                  {{ t('l4') }}
                 </v-chip>
 
                 <span class="ml-2 text-grey text-caption d-none d-sm-inline opacity-60">
         </span>
               </div>
 
-              <h1 class="name-title mb-4">Mikhail Chuloshnikov</h1>
+              <h1 class="name-title mb-4">{{ t('l5') }}</h1>
 
               <h2 class="text-h4 font-weight-bold text-white mb-6">
-                Engineering Resilience for <span class="text-primary">High-Load Web Platforms</span>.
+                <span v-html="t('l6')"></span>
               </h2>
 
               <p class="hero-desc mb-6 text-grey-lighten-1" style="max-width: 650px; font-size: 1.1rem; line-height: 1.6;">
-                I bridge the gap between low-level system engineering and scalable web architecture.
-                Leveraging <strong>17+ years of experience</strong>, I build mission-critical backend ecosystems
-                where performance, security, and stability are solved at the foundation.
+                <span v-html="t('l7')"></span>
               </p>
 
               <div class="d-flex flex-wrap gap-4">
                 <div class="d-flex flex-wrap gap-4">
                   <v-btn variant="flat" color="white" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold black-text">
                     <template v-slot:prepend><v-icon :icon="mdiSend" /></template>
-                    Telegram
+                    {{ t('l8') }}
                   </v-btn>
 
                   <v-btn variant="flat" color="#25D366" rounded="lg" size="large" href="https://wa.me/+37493510616" target="_blank" class="text-none font-weight-bold text-white">
                     <template v-slot:prepend><v-icon :icon="mdiWhatsapp" /></template>
-                    WhatsApp
+                    {{ t('l9') }}
                   </v-btn>
 
                   <v-btn variant="flat" color="#0077B5" rounded="lg" size="large" href="https://www.linkedin.com/in/mikhail-chuloshnikov-176792286/" target="_blank" class="text-none font-weight-bold text-white">
                     <template v-slot:prepend><v-icon :icon="mdiLinkedin" /></template>
-                    LinkedIn
+                    {{ t('l10') }}
                   </v-btn>
 
                   <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none border-white">
                     <template v-slot:prepend><v-icon :icon="mdiEmail" /></template>
-                    Email
+                    {{ t('l11') }}
                   </v-btn>
                 </div>
               </div>
@@ -174,7 +175,7 @@ onMounted(() => {
 
                 <div class="d-flex align-center mb-3">
                   <v-icon :icon="mdiMapMarkerOutline" size="small" class="mr-3 text-primary" />
-                  <span class="text-body-2 text-grey-lighten-2">Yerevan, Armenia / Remote OK</span>
+                  <span class="text-body-2 text-grey-lighten-2">{{ t('l12') }}</span>
                 </div>
 
                 <div class="d-flex align-center mb-3">
@@ -184,14 +185,14 @@ onMounted(() => {
 
                 <div class="d-flex align-center mb-3">
                   <v-icon :icon="mdiFileDocumentOutline" size="small" class="mr-3 text-primary" />
-                  <span class="text-body-2 text-grey-lighten-2">B2B Contract</span>
+                  <span class="text-body-2 text-grey-lighten-2">{{ t('l13') }}</span>
                 </div>
 
                 <v-divider class="my-4" opacity="0.1" />
 
                 <div class="d-flex justify-space-between align-center">
                   <span class="text-caption text-grey">English Level:</span>
-                  <v-chip size="x-small" variant="tonal" color="success" class="font-weight-bold px-2">B2 Upper-Intermediate</v-chip>
+                  <v-chip size="x-small" variant="tonal" color="success" class="font-weight-bold px-2">{{ t('l14') }}</v-chip>
                 </div>
               </div>
             </v-col>
@@ -207,27 +208,24 @@ onMounted(() => {
                   <v-col cols="12" md="6">
                     <h2 class="text-h4 font-weight-black mb-6 d-flex align-center">
                       <v-icon :icon="mdiTarget" color="primary" class="mr-3" />
-                      What I Solve
+                      {{ t('l15') }}
                     </h2>
                     <p class="text-body-1 text-grey-lighten-1 mb-6" style="line-height: 1.8;">
-                      I specialize in designing and implementing fault-tolerant high-load web services from scratch. My key advantage is absolute independence: I can single-handedly design and implement hi-load systems, covering every layer of the technology stack.
+                      {{ t('l16') }}
                     </p>
-
-
-
 
                     <div class="d-flex flex-column gap-3">
                       <div class=" d-flex align-center">
                         <v-icon :icon="mdiChartTimelineVariant" size="small" color="primary" class="mr-3" />
-                        <span><strong>Zero-to-One:</strong> Building core infrastructure from scratch for startups.</span>
+                        <span v-html="t('l17')"></span>
                       </div>
                       <div class="d-flex align-center mt-4">
                         <v-icon :icon="mdiWall" size="small" color="primary" class="mr-3" />
-                        <span><strong>Legacy-to-Modern:</strong> High-risk migrations and architectural refactoring.</span>
+                        <span v-html="t('l18')"></span>
                       </div>
                       <div class="d-flex align-center mt-4">
                         <v-icon :icon="mdiSecurity" size="small" color="primary" class="mr-3" />
-                        <span><strong>System Hardening:</strong> Deep security audits and performance tuning.</span>
+                        <span v-html="t('l19')"></span>
                       </div>
                     </div>
 
@@ -243,8 +241,8 @@ onMounted(() => {
                             <v-icon :icon="mdiCodeBraces" color="#FF9800" />
                           </v-avatar>
                         </template>
-                        <v-list-item-title class="text-h6 font-weight-bold">Senior Developer</v-list-item-title>
-                        <v-list-item-subtitle class="text-grey">Hands-on development of mission-critical core modules.</v-list-item-subtitle>
+                        <v-list-item-title class="text-h6 font-weight-bold">{{ t('l20') }}</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">{{ t('l21') }}</v-list-item-subtitle>
                       </v-list-item>
 
                       <v-list-item class="px-0 mb-4">
@@ -253,8 +251,8 @@ onMounted(() => {
                             <v-icon :icon="mdiServerNetwork" color="#00C853" />
                           </v-avatar>
                         </template>
-                        <v-list-item-title class="text-h6 font-weight-bold">Principal Architect</v-list-item-title>
-                        <v-list-item-subtitle class="text-grey">Designing complex distributed systems & high-load backends.</v-list-item-subtitle>
+                        <v-list-item-title class="text-h6 font-weight-bold">{{ t('l22') }}</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">{{ t('l23') }}</v-list-item-subtitle>
                       </v-list-item>
 
                       <v-list-item class="px-0 mb-4">
@@ -263,8 +261,8 @@ onMounted(() => {
                             <v-icon :icon="mdiAccountGroupOutline" color="primary" />
                           </v-avatar>
                         </template>
-                        <v-list-item-title class="text-h6 font-weight-bold">Head of Engineering / Team Lead</v-list-item-title>
-                        <v-list-item-subtitle class="text-grey">Mentoring, process excellence, and team scaling.</v-list-item-subtitle>
+                        <v-list-item-title class="text-h6 font-weight-bold">{{ t('l24') }}</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">{{ t('l25') }}</v-list-item-subtitle>
                       </v-list-item>
 
                       <v-list-item class="px-0">
@@ -273,8 +271,8 @@ onMounted(() => {
                             <v-icon :icon="mdiCogs" color="#7C4DFF" />
                           </v-avatar>
                         </template>
-                        <v-list-item-title class="text-h6 font-weight-bold">CTO / Technical Founder</v-list-item-title>
-                        <v-list-item-subtitle class="text-grey">Tech strategy, hiring, and 0-to-1 execution.</v-list-item-subtitle>
+                        <v-list-item-title class="text-h6 font-weight-bold">{{ t('l26') }}</v-list-item-title>
+                        <v-list-item-subtitle class="text-grey">{{ t('l27') }}</v-list-item-subtitle>
                       </v-list-item>
                     </v-list>
                   </v-col>
@@ -291,8 +289,8 @@ onMounted(() => {
               <v-icon :icon="mdiCpu64Bit" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Tech stack</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">From low-level primitives to high-level abstractions</div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l28') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l29') }}</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
@@ -305,17 +303,15 @@ onMounted(() => {
                     <v-icon :icon="mdiLanguagePhp" color="#777BB4" size="32" />
                   </v-avatar>
                   <div>
-                    <div class="text-h6 font-weight-black">PHP</div>
-                    <div class="text-caption text-primary font-weight-bold uppercase">Expert Level</div>
+                    <div class="text-h6 font-weight-black">{{ t('l30') }}</div>
+                    <div class="text-caption text-primary font-weight-bold uppercase">{{ t('l31') }}</div>
                   </div>
                 </div>
-                <p class="text-body-2 text-grey-lighten-1 mb-4">
-                  17+ years of experience. High-load architecture, Symfony, and custom core engines.
-                </p>
+                <p class="text-body-2 text-grey-lighten-1 mb-4">{{ t('l32') }}</p>
                 <div class="d-flex flex-wrap gap-2">
-                  <v-chip size="x-small" variant="outlined" color="primary">High-Load</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="primary">Symfony</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="primary">Architecture</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="primary">{{ t('l33') }}</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="primary">{{ t('l34') }}</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="primary">{{ t('l35') }}</v-chip>
                 </div>
               </v-card>
             </v-col>
@@ -327,18 +323,15 @@ onMounted(() => {
                     <v-icon :icon="mdiLanguageGo" color="#00ADD8" size="32" />
                   </v-avatar>
                   <div>
-                    <div class="text-h6 font-weight-black">Golang</div>
-                    <div class="text-caption text-blue font-weight-bold uppercase">Proficient level</div>
+                    <div class="text-h6 font-weight-black">{{ t('l36') }}</div>
+                    <div class="text-caption text-blue font-weight-bold uppercase">{{ t('l37') }}</div>
                   </div>
                 </div>
-                <p class="text-body-2 text-grey-lighten-1 mb-4">
-                  Building ultra-fast microservices, concurrent processing, and networking tools.
-                  Focus on performance and memory efficiency in distributed systems.
-                </p>
+                <p class="text-body-2 text-grey-lighten-1 mb-4">{{ t('l38') }}</p>
                 <div class="d-flex flex-wrap gap-2">
-                  <v-chip size="x-small" variant="outlined" color="blue">Microservices</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="blue">Concurrency</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="blue">gRPC</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">{{ t('l39') }}</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">{{ t('l40') }}</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">{{ t('l41') }}</v-chip>
                 </div>
               </v-card>
             </v-col>
@@ -350,18 +343,15 @@ onMounted(() => {
                     <v-icon :icon="mdiLanguagePython" color="#3776AB" size="32" />
                   </v-avatar>
                   <div>
-                    <div class="text-h6 font-weight-black">Python</div>
-                    <div class="text-caption text-blue font-weight-bold uppercase">Proficient level</div>
+                    <div class="text-h6 font-weight-black">{{ t('l42') }}</div>
+                    <div class="text-caption text-blue font-weight-bold uppercase">{{ t('l37') }}</div>
                   </div>
                 </div>
-                <p class="text-body-2 text-grey-lighten-1 mb-4">
-                  Data processing pipelines, automation scripts, and integration layers.
-                  Used for rapid prototyping and complex backend utility services.
-                </p>
+                <p class="text-body-2 text-grey-lighten-1 mb-4">{{ t('l44') }}</p>
                 <div class="d-flex flex-wrap gap-2">
-                  <v-chip size="x-small" variant="outlined" color="blue">Scripting</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="blue">Data Pipelines</v-chip>
-                  <v-chip size="x-small" variant="outlined" color="blue">DevOps</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">{{ t('l45') }}</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">{{ t('l46') }}</v-chip>
+                  <v-chip size="x-small" variant="outlined" color="blue">{{ t('l47') }}</v-chip>
                 </div>
               </v-card>
             </v-col>
@@ -378,7 +368,7 @@ onMounted(() => {
                 @click="showFullStack = !showFullStack"
                 :prepend-icon="showFullStack ? mdiMenuUp : mdiMenuDown"
             >
-              {{ showFullStack ? 'Hide Broad Stack' : 'View Broad Stack & Tools' }}
+              {{ showFullStack ? t('l48') : t('l49') }}
             </v-btn>
           </div>
 
@@ -387,9 +377,8 @@ onMounted(() => {
               <div class="d-flex align-center mb-8 info-banner pa-4">
                 <v-icon :icon="mdiInformationOutline" color="primary" class="mr-3" />
                 <span class="text-body-2 text-grey-lighten-1">
-                    <strong>Note:</strong> The technologies below represent my broader ecosystem. While not my primary daily drivers,
-                    I have practical experience with them and can effectively implement, debug, or lead projects using these tools as needed.
-                  </span>
+            <strong>{{ t('l50') }}</strong> {{ t('l51') }}
+          </span>
               </div>
 
               <div class="full-stack-content">
@@ -398,32 +387,29 @@ onMounted(() => {
                     <v-card variant="outlined" class="tech-card h-100 pa-6">
                       <div class="d-flex align-center mb-6">
                         <v-icon :icon="mdiCodeBraces" color="#7C4DFF" class="mr-3" />
-                        <span class="text-overline tracking-widest font-weight-bold">Languages & Core</span>
+                        <span class="text-overline tracking-widest font-weight-bold">{{ t('l52') }}</span>
                       </div>
 
                       <div class="tech-group mb-6">
                         <div class="d-flex justify-space-between align-center mb-2">
-                          <span class="group-title">PHP / Go / Java</span>
-
+                          <span class="group-title">{{ t('l53') }}</span>
                         </div>
                         <div class="tech-tags">
-                          Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs •
-                          High-perf Microservices • Concurrency • Spring Security/Boot/Social • Hibernate •
-                          Apache JBI/ESB/JMS/Service Mix/ActiveMQ/Camel
+                          {{ t('l54') }}
                         </div>
                       </div>
 
                       <div class="tech-group mb-6">
-                        <span class="group-title">Python / TypeScript / Lua / Gdscript (Godot)</span>
+                        <span class="group-title">{{ t('l55') }}</span>
                         <div class="tech-tags">
-                          Django • SQLAlchemy • Vue • Vuetify • Angular • Electron/Ionic/Capacitor •  Webpack • Lua Stdl/COM/fs/socket/C API
+                          {{ t('l56') }}
                         </div>
                       </div>
 
                       <div class="tech-group">
-                        <span class="group-title">C / C++ / ASM / TCL / Delphi / VBA / Bash</span>
+                        <span class="group-title">{{ t('l57') }}</span>
                         <div class="tech-tags">
-                          Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers
+                          {{ t('l58') }}
                         </div>
                       </div>
                     </v-card>
@@ -433,37 +419,34 @@ onMounted(() => {
                     <v-card variant="outlined" class="tech-card h-100 pa-6">
                       <div class="d-flex align-center mb-6">
                         <v-icon :icon="mdiServerNetwork" color="#00C853" class="mr-3" />
-                        <span class="text-overline tracking-widest font-weight-bold">Systems & High Load</span>
+                        <span class="text-overline tracking-widest font-weight-bold">{{ t('l59') }}</span>
                       </div>
 
                       <div class="tech-group mb-6">
-                        <span class="group-title">Databases (1B+ Records)</span>
+                        <span class="group-title">{{ t('l60') }}</span>
                         <div class="tech-tags">
-                          PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto
-                          • Hash • Cardinality • Constraints • Replication • Sharding
-                          • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
+                          {{ t('l61') }}
                         </div>
                       </div>
 
                       <div class="tech-group mb-6">
-                        <span class="group-title">CI/CD</span>
+                        <span class="group-title">{{ t('l62') }}</span>
                         <div class="tech-tags">
-                          Docker • Ansible • Github Actions
+                          {{ t('l63') }}
                         </div>
                       </div>
 
                       <div class="tech-group mb-6">
-                        <span class="group-title">Infrastructure</span>
+                        <span class="group-title">{{ t('l64') }}</span>
                         <div class="tech-tags">
-                          Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy
-                          • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
+                          {{ t('l65') }}
                         </div>
                       </div>
 
                       <div class="tech-group">
-                        <span class="group-title">Architecture</span>
+                        <span class="group-title">{{ t('l66') }}</span>
                         <div class="tech-tags">
-                          Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
+                          {{ t('l67') }}
                         </div>
                       </div>
                     </v-card>
@@ -473,27 +456,27 @@ onMounted(() => {
                     <v-card variant="outlined" class="tech-card h-100 pa-6">
                       <div class="d-flex align-center mb-6">
                         <v-icon :icon="mdiShieldBugOutline" color="#FF5252" class="mr-3" />
-                        <span class="text-overline tracking-widest font-weight-bold">Security & Low-Level</span>
+                        <span class="text-overline tracking-widest font-weight-bold">{{ t('l68') }}</span>
                       </div>
 
                       <div class="tech-group mb-6">
-                        <span class="group-title">Sec Research & Audits</span>
+                        <span class="group-title">{{ t('l69') }}</span>
                         <div class="tech-tags">
-                          0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
+                          {{ t('l70') }}
                         </div>
                       </div>
 
                       <div class="tech-group mb-6">
-                        <span class="group-title">Reverse Engineering</span>
+                        <span class="group-title">{{ t('l71') }}</span>
                         <div class="tech-tags">
-                          OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
+                          {{ t('l72') }}
                         </div>
                       </div>
 
                       <div class="tech-group">
-                        <span class="group-title">Deep Debugging</span>
+                        <span class="group-title">{{ t('l73') }}</span>
                         <div class="tech-tags">
-                          Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
+                          {{ t('l74') }}
                         </div>
                       </div>
                     </v-card>
@@ -501,9 +484,9 @@ onMounted(() => {
                 </v-row>
 
                 <v-card variant="flat" class="fundamentals-bar mt-4 pa-4 d-flex flex-wrap justify-center align-center">
-                  <span class="text-caption text-mono mx-4 opacity-60">ALGORITHMS & STRUCTURES: B-Tree, Red-Black Tree, Binary Search Tree, QuickSort, Bubble Sort, Shaker Sort, Binary Search, Hash Tables, Queue, Deque, Stack, Singly Linked List, Doubly Linked List, System V IPC: Shared Memory, Multithreading, Graph Theory</span>
+                  <span class="text-caption text-mono mx-4 opacity-60">{{ t('l75') }}</span>
                   <v-divider vertical class="mx-2 d-none d-md-block" opacity="0.1" />
-                  <span class="text-caption text-mono mx-4 opacity-60">PATTERNS & OTHER: SOLID, GoF, Undetermined State Machines, Trust Ring Architecture, Game/World Physics, Decorator, Singleton, Proxy, Outbox, Factory, Abstract Factory, Registry, Command, MVC, Prototype, Adapter, Facade, Workflow, KIS, Threads, Fork, UML, Late Static Binding, FIFO, LIFO</span>
+                  <span class="text-caption text-mono mx-4 opacity-60">{{ t('l76') }}</span>
                 </v-card>
               </div>
             </div>
@@ -517,8 +500,8 @@ onMounted(() => {
               <v-icon :icon="mdiCheckDecagram" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Achievements</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">Where code efficiency meets architectural excellence</div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l77') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l78') }}</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
@@ -530,17 +513,17 @@ onMounted(() => {
                   <v-avatar color="rgba(0, 200, 83, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiBankOutline" color="success" />
                   </v-avatar>
-                  <h3 class="text-h6 font-weight-bold">Fintech & Core Banking</h3>
+                  <h3 class="text-h6 font-weight-bold">{{ t('l79') }}</h3>
                 </div>
                 <ul class="achievement-list text-body-2 text-grey-lighten-1">
                   <li>
-                    <strong>Silverbird:</strong> Architected and built the core processing engine for FX, multi-currency routing, and high-load payment gateways from scratch.
+                    <strong>{{ t('l80') }}</strong> {{ t('l81') }}
                   </li>
                   <li>
-                    <strong>Banking Platform Launch:</strong> Led the end-to-end creation of a banking infrastructure, including team assembly, business process automation, and core service design.
+                    <strong>{{ t('l82') }}</strong> {{ t('l83') }}
                   </li>
                   <li>
-                    <strong>Compliance & Security:</strong> Implemented high-security payment schemes (SWIFT, SEPA).
+                    <strong>{{ t('l84') }}</strong> {{ t('l85') }}
                   </li>
                 </ul>
               </v-card>
@@ -552,12 +535,12 @@ onMounted(() => {
                   <v-avatar color="rgba(33, 150, 243, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiRocketLaunchOutline" color="blue" />
                   </v-avatar>
-                  <h3 class="text-h6 font-weight-bold">Scale & Performance</h3>
+                  <h3 class="text-h6 font-weight-bold">{{ t('l86') }}</h3>
                 </div>
                 <ul class="achievement-list text-body-2 text-grey-lighten-1">
-                  <li><strong>TSUM (High-Load):</strong> Managed a cluster of 6+ services handling <strong>1 Billion+ data records</strong>.</li>
-                  <li><strong>JivoSite:</strong> Reorganized the dev team and processes, increasing team velocity from 70% to <strong>120% efficiency</strong> using modified Scrum.</li>
-                  <li><strong>Mamba:</strong> Optimized notification systems and database interactions for a platform with <strong>tens of millions of active users</strong>.</li>
+                  <li v-html="`<strong>${t('l87')}</strong> ${t('l88')}`"></li>
+                  <li v-html="`<strong>${t('l89')}</strong> ${t('l90')}`"></li>
+                  <li v-html="`<strong>${t('l91')}</strong> ${t('l92')}`"></li>
                 </ul>
               </v-card>
             </v-col>
@@ -568,12 +551,12 @@ onMounted(() => {
                   <v-avatar color="rgba(244, 67, 54, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiShieldCheckOutline" color="error" />
                   </v-avatar>
-                  <h3 class="text-h6 font-weight-bold">Systems Research & Security</h3>
+                  <h3 class="text-h6 font-weight-bold">{{ t('l93') }}</h3>
                 </div>
                 <ul class="achievement-list text-body-2 text-grey-lighten-1">
-                  <li><strong>Vulnerability Analysis:</strong> Conducted end-to-end research on browser engines and PDF readers. Developed PoC RCE exploits for memory corruption flaws using <strong>WinDbg, x86 Assembly, and heap-spraying</strong>.</li>
-                  <li><strong>Binary Optimization:</strong> Engineered ultra-lightweight remote management agents (4KB) and C2 infrastructures (C/WinAPI, Lua) with focus on extreme stealth and network efficiency.</li>
-                  <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated code protector featuring a custom translator (Python/JS to pseudocode) to bypass heuristic analysis.</li>
+                  <li v-html="`<strong>${t('l94')}</strong> ${t('l95')}`"></li>
+                  <li v-html="`<strong>${t('l96')}</strong> ${t('l97')}`"></li>
+                  <li v-html="`<strong>${t('l98')}</strong> ${t('l99')}`"></li>
                 </ul>
               </v-card>
             </v-col>
@@ -584,12 +567,16 @@ onMounted(() => {
                   <v-avatar color="rgba(124, 77, 255, 0.1)" rounded="lg" class="mr-4">
                     <v-icon :icon="mdiTrophyOutline" color="#7C4DFF" />
                   </v-avatar>
-                  <h3 class="text-h6 font-weight-bold">Zero-to-One Launch</h3>
+                  <h3 class="text-h6 font-weight-bold">{{ t('l100') }}</h3>
                 </div>
                 <ul class="achievement-list text-body-2 text-grey-lighten-1">
-                  <li><strong>Infrastructure from Scratch:</strong> Built the entire IT department and business processes for a banking platform (team, environments, CI/CD, documentation).</li>
-                  <li><strong>Wikimart:</strong> Developed the billing system and search engine architecture during the platform's hyper-growth phase.</li>
-                  <li>Expertise in building decentralized trust-ring networks and anti-censorship systems.</li>
+                  <li>
+                    <strong>{{ t('l101') }}</strong> {{ t('l102') }}
+                  </li>
+                  <li>
+                    <strong>{{ t('l103') }}</strong> {{ t('l104') }}
+                  </li>
+                  <li>{{ t('l105') }}</li>
                 </ul>
               </v-card>
             </v-col>
@@ -604,8 +591,8 @@ onMounted(() => {
                 <v-icon :icon="mdiBriefcaseVariantOutline" color="primary" size="32" />
               </div>
               <div>
-                <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Experience</h2>
-                <div class="text-subtitle-2 text-primary opacity-70">Focusing on technical complexity, not timeline</div>
+                <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l106') }}</h2>
+                <div class="text-subtitle-2 text-primary opacity-70">{{ t('l107') }}</div>
               </div>
               <v-divider class="ml-6 border-opacity-25" />
             </div>
@@ -618,50 +605,86 @@ onMounted(() => {
                 style="max-width: fit-content; border-left: 4px solid !important;"
             >
               <v-icon :icon="mdiInformationOutline" size="14" class="mr-2" />
-              <strong>Note:</strong> This section highlights roles with the highest architectural impact. For full chronology, see the full experience below.
+              <strong>{{ t('l108') }}</strong> {{ t('l109') }}
             </v-alert>
           </div>
 
           <div class="featured-works-path">
             <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-
               <v-card-text class="pa-6">
                 <div class="exp-item mb-12">
                   <div class="exp-dot"></div>
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l110') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l111') }}</v-chip>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
+                      <div class="text-subtitle-2 text-primary opacity-80">{{ t('l113') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l114') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
-                      <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
-                      <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
-                      <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
-                      <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
-                      <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
-                      <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
+                      <li><strong>{{ t('l115') }}</strong> {{ t('l116') }}</li>
+                      <li><strong>{{ t('l117') }}</strong> {{ t('l118') }}</li>
+                      <li><strong>{{ t('l119') }}</strong> {{ t('l120') }}</li>
+                      <li><strong>{{ t('l121') }}</strong> {{ t('l122') }}</li>
+                      <li><strong>{{ t('l123') }}</strong> {{ t('l124') }}</li>
+                      <li><strong>{{ t('l125') }}</strong> {{ t('l126') }}</li>
+                      <li v-html="`<strong>${t('l127')}</strong> ${t('l128')}`"></li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
+                      <div class="tech-stack-mini">{{ t('l129') }}</div>
                     </div>
                   </div>
                 </div>
               </v-card-text>
             </v-card>
 
+
+            <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
+              <v-card-text class="pa-6">
+                <div class="exp-item mb-12">
+                  <div class="exp-dot"></div>
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                    <div>
+                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
+                        <h3 class="text-h4 font-weight-black">{{ t('l130') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l131') }}</v-chip>
+                      </div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l132') }}</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l133') }}</div>
+                    </div>
+                  </div>
+
+                  <div class="exp-content pl-6">
+                    <ul class="custom-list">
+                      <li><strong>{{ t('l134') }}</strong> {{ t('l135') }}</li>
+                      <li v-html="`<strong>${t('l136')}</strong> ${t('l137')}`"></li>
+                      <li v-html="`<strong>${t('l138')}</strong> ${t('l139')}`"></li>
+                      <li><strong>{{ t('l140') }}</strong> {{ t('l141') }}</li>
+                      <li><strong>{{ t('l142') }}</strong> {{ t('l143') }}</li>
+                      <li><strong>{{ t('l144') }}</strong> {{ t('l145') }}</li>
+                      <li><strong>{{ t('l146') }}</strong> {{ t('l147') }}</li>
+                    </ul>
+
+                    <div class="mt-4 d-flex align-center">
+                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
+                      <div class="tech-stack-mini">{{ t('l148') }}</div>
+                    </div>
+                  </div>
+                </div>
+              </v-card-text>
+            </v-card>
 
             <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
 
@@ -671,67 +694,29 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l149') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
+                      <div class="text-subtitle-2 text-blue">{{ t('l150') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l151') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
-                      <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
-                      <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
-                      <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
-                      <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
-                      <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
-                      <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
-                    </ul>
-
-                    <div class="mt-4 d-flex align-center">
-                      <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
-                    </div>
-                  </div>
-                </div>
-              </v-card-text>
-            </v-card>
-
-            <v-card class="experience-card position-relative overflow-hidden mb-6" variant="outlined">
-
-              <v-card-text class="pa-6">
-                <div class="exp-item mb-12">
-                  <div class="exp-dot"></div>
-                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
-                    <div>
-                      <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">MIF</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
-                      </div>
-                      <div class="text-subtitle-2 text-blue">Security & Low-Level Systems Researcher</div>
-                    </div>
-                    <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
-                    </div>
-                  </div>
-
-                  <div class="exp-content pl-6">
-                    <ul class="custom-list">
-                      <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed <strong>functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept)</strong> to demonstrate critical memory corruption flaws using <strong>WinDbg, x86 Assembly</strong>, and advanced heap-spraying techniques.</li>
-                      <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using <strong>C (WinAPI) and Lua</strong>. Focus on extreme binary optimization and stealthy network communication.</li>
-                      <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
-                      <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
-                      <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                      <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
+                      <li v-html="`<strong>${t('l152')}</strong> ${t('l153')}`"></li>
+                      <li v-html="`<strong>${t('l154')}</strong> ${t('l155')}`"></li>
+                      <li v-html="`<strong>${t('l156')}</strong> ${t('l157')}`"></li>
+                      <li v-html="`<strong>${t('l158')}</strong> ${t('l159')}`"></li>
+                      <li v-html="`<strong>${t('l160')}</strong> ${t('l161')}`"></li>
+                      <li v-html="`<strong>${t('l162')}</strong> ${t('l163')}`"></li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
-                      <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
+                      <div class="tech-stack-mini">{{ t('l164') }}</div>
                     </div>
                   </div>
                 </div>
@@ -749,7 +734,7 @@ onMounted(() => {
                 @click="showFullExperience = !showFullExperience"
                 class="full-exp-btn"
             >
-              {{ showFullExperience ? 'Hide Detailed History' : 'Show Full Experience' }}
+              {{ showFullExperience ? t('l165') : t('l166') }}
             </v-btn>
           </div>
 
@@ -762,28 +747,28 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Aventus IT</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l167') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l168') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Fintech</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l169') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">July 2024 — October 2025</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l170') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Engineering Management:</strong> Leading and mentoring a backend development team of 7 people.</li>
-                      <li><strong>Business Process Organization:</strong> Establishing and streamlining internal workflows and cross-departmental operations.</li>
-                      <li><strong>System Architecture:</strong> Designing robust architectures for complex projects and high-performance services.</li>
-                      <li><strong>CI/CD Excellence:</strong> Integrating and optimizing continuous integration and delivery pipelines to accelerate deployment.</li>
-                      <li><strong>Core Development:</strong> Direct contribution to large-scale flagship projects and their interconnected microservices ecosystem.</li>
+                      <li><strong>{{ t('l171') }}</strong> {{ t('l172') }}</li>
+                      <li><strong>{{ t('l173') }}</strong> {{ t('l174') }}</li>
+                      <li><strong>{{ t('l175') }}</strong> {{ t('l176') }}</li>
+                      <li><strong>{{ t('l177') }}</strong> {{ t('l178') }}</li>
+                      <li><strong>{{ t('l179') }}</strong> {{ t('l180') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">PHP • MySQL • Microservices • CI/CD</div>
+                      <div class="tech-stack-mini">{{ t('l181') }}</div>
                     </div>
                   </div>
                 </div>
@@ -793,31 +778,31 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Silverbird (Theropod LTD)</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">PROJECT LEAD</v-chip>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l183') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l184') }}</v-chip>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l185') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80">Fintech / Banking / Payments</div>
+                      <div class="text-subtitle-2 text-primary opacity-80">{{ t('l186') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Oct 2022 — March 2024</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l187') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
-                      <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
-                      <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
-                      <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
-                      <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
-                      <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
-                      <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: <strong>SWIFT, SEPA, Faster Payments, T2</strong>, and platforms like <strong>TUUM / Integrated Finance</strong>.</li>
+                      <li><strong>{{ t('l188') }}</strong> {{ t('l189') }}</li>
+                      <li><strong>{{ t('l190') }}</strong> {{ t('l191') }}</li>
+                      <li><strong>{{ t('l192') }}</strong> {{ t('l193') }}</li>
+                      <li><strong>{{ t('l194') }}</strong> {{ t('l195') }}</li>
+                      <li><strong>{{ t('l196') }}</strong> {{ t('l197') }}</li>
+                      <li><strong>{{ t('l198') }}</strong> {{ t('l199') }}</li>
+                      <li v-html="`<strong>${t('l200')}</strong> ${t('l201')}`"></li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Fintech Infrastructure • FX Processing • SWIFT/SEPA • Security Audit</div>
+                      <div class="tech-stack-mini">{{ t('l202') }}</div>
                     </div>
                   </div>
                 </div>
@@ -827,25 +812,25 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">MTS (Mobile TeleSystems)</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l203') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80">Telecom / ISP / Internet Services</div>
+                      <div class="text-subtitle-2 text-primary opacity-80">{{ t('l204') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">July 2022 — Sept 2022</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l205') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Bitrix Development:</strong> Engineering and implementation of new functional modules within the Bitrix framework.</li>
-                      <li><strong>Legacy Migration:</strong> Architectural transition and migration of legacy Bitrix functionality to new microservices using a modern technology stack.</li>
+                      <li><strong>{{ t('l206') }}</strong> {{ t('l207') }}</li>
+                      <li><strong>{{ t('l208') }}</strong> {{ t('l209') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Bitrix • Legacy Migration • Microservices Refactoring</div>
+                      <div class="tech-stack-mini">{{ t('l210') }}</div>
                     </div>
                   </div>
                 </div>
@@ -855,30 +840,30 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">TEAM LEAD</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l211') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l131') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">High-Load E-commerce / Fashion Retail</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l212') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">April 2021 — April 2022</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l213') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
-                      <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly <strong>1 Billion data records</strong>.</li>
-                      <li><strong>Service Ownership:</strong> Full accountability for <strong>6+ mission-critical services</strong> within the e-commerce ecosystem.</li>
-                      <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
-                      <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
-                      <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
-                      <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
+                      <li><strong>{{ t('l214') }}</strong> {{ t('l215') }}</li>
+                      <li v-html="`<strong>${t('l216')}</strong> ${t('l217')}`"></li>
+                      <li v-html="`<strong>${t('l218')}</strong> ${t('l219')}`"></li>
+                      <li><strong>{{ t('l220') }}</strong> {{ t('l221') }}</li>
+                      <li><strong>{{ t('l222') }}</strong> {{ t('l223') }}</li>
+                      <li><strong>{{ t('l224') }}</strong> {{ t('l225') }}</li>
+                      <li><strong>{{ t('l226') }}</strong> {{ t('l227') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">High-Load (1B+ Records) • Management • MarTech • Strategic Planning</div>
+                      <div class="tech-stack-mini">{{ t('l228') }}</div>
                     </div>
                   </div>
                 </div>
@@ -888,30 +873,30 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Silverbird</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">HEAD OF DEVELOPMENT</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l229') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l230') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Fintech / Banking Infrastructure</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l231') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Sept 2020 — April 2021</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l232') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Banking Platform:</strong> Orchestrated the end-to-end creation and implementation of the core banking platform, infrastructure, and essential services.</li>
-                      <li><strong>Operational Leadership:</strong> Assembled the engineering team from scratch; established business processes, administration protocols, and organizational workflows.</li>
-                      <li><strong>Strategic Partnership:</strong> Managed cross-company interactions with partners, including joint strategic planning, training, and deep integration.</li>
-                      <li><strong>Project Launch:</strong> Designed and launched ~10 mission-critical projects from the ground up, including API services, microservices, and integration layers.</li>
-                      <li><strong>Macro-Banking Integration:</strong> Audited and deployed multi-level macro-banking platforms across diverse technology stacks, ensuring seamless platform enhancements.</li>
-                      <li><strong>Update Architecture:</strong> Designed complex technical update flows and global architecture for application components and infrastructure.</li>
-                      <li><strong>Technical Governance:</strong> Developed comprehensive technical documentation and administered both staging and production environments.</li>
+                      <li><strong>{{ t('l233') }}</strong> {{ t('l234') }}</li>
+                      <li><strong>{{ t('l235') }}</strong> {{ t('l236') }}</li>
+                      <li><strong>{{ t('l237') }}</strong> {{ t('l238') }}</li>
+                      <li><strong>{{ t('l239') }}</strong> {{ t('l240') }}</li>
+                      <li><strong>{{ t('l241') }}</strong> {{ t('l242') }}</li>
+                      <li><strong>{{ t('l243') }}</strong> {{ t('l244') }}</li>
+                      <li><strong>{{ t('l245') }}</strong> {{ t('l246') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Macro-Banking • Infrastructure Design • Team Leadership • API Architecture</div>
+                      <div class="tech-stack-mini">{{ t('l247') }}</div>
                     </div>
                   </div>
                 </div>
@@ -921,31 +906,31 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Gosuslugi</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">TECH ANALYST</v-chip>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l248') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l249') }}</v-chip>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Digital Government Services</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l250') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Sept 2020 — April 2021</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l232') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Feedback System:</strong> Development of the core feedback subsystem and related services.</li>
-                      <li><strong>Fault Tolerance:</strong> Deep optimization and profiling to ensure system stability under extreme high-load conditions.</li>
-                      <li><strong>System Refactoring:</strong> Structural refactoring of core system components for better maintainability and performance.</li>
-                      <li><strong>System Integration:</strong> Orchestrating complex integrations with both internal and external third-party systems.</li>
-                      <li><strong>State Auth Integration:</strong> Implementation of transparent SSO and authorization via ESIA (National Auth System).</li>
-                      <li><strong>Data Normalization:</strong> Bringing complex data schemas to normal forms to ensure data integrity and performance.</li>
-                      <li><strong>ROI Integration:</strong> Integration with ROI (Return on Investment) tracking and analytical systems.</li>
+                      <li><strong>{{ t('l251') }}</strong> {{ t('l252') }}</li>
+                      <li><strong>{{ t('l253') }}</strong> {{ t('l254') }}</li>
+                      <li><strong>{{ t('l255') }}</strong> {{ t('l256') }}</li>
+                      <li><strong>{{ t('l257') }}</strong> {{ t('l258') }}</li>
+                      <li><strong>{{ t('l259') }}</strong> {{ t('l260') }}</li>
+                      <li><strong>{{ t('l261') }}</strong> {{ t('l262') }}</li>
+                      <li><strong>{{ t('l263') }}</strong> {{ t('l264') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">ESIA • High-Load Profiling • Data Normalization • System Integration</div>
+                      <div class="tech-stack-mini">{{ t('l265') }}</div>
                     </div>
                   </div>
                 </div>
@@ -955,28 +940,28 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">TSUM (Mercury Group)</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l211') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80">Senior Software Engineer</div>
+                      <div class="text-subtitle-2 text-primary opacity-80">{{ t('l266') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Feb 2018 — July 2020</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l267') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Internal Product Development:</strong> Engineering and maintenance of the company's core internal ecosystem and software products.</li>
-                      <li><strong>Data Synchronization:</strong> Debugging and fine-tuning complex data synchronization processes between various system components.</li>
-                      <li><strong>Search Engineering:</strong> Implementation of high-performance search functionality and all related search-driven features.</li>
-                      <li><strong>Service Innovation:</strong> Developed and launched several new services, including product feed generators, analytical monitoring systems, link shorteners, and QR-code generation engines.</li>
-                      <li><strong>MarTech Evolution:</strong> Continuous development and scaling of marketing-focused services and promotional tools.</li>
+                      <li><strong>{{ t('l268') }}</strong> {{ t('l269') }}</li>
+                      <li><strong>{{ t('l270') }}</strong> {{ t('l271') }}</li>
+                      <li><strong>{{ t('l272') }}</strong> {{ t('l273') }}</li>
+                      <li><strong>{{ t('l274') }}</strong> {{ t('l275') }}</li>
+                      <li><strong>{{ t('l276') }}</strong> {{ t('l277') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Backend Development • Data Sync • Search Engines • MarTech Services</div>
+                      <div class="tech-stack-mini">{{ t('l278') }}</div>
                     </div>
                   </div>
                 </div>
@@ -986,30 +971,30 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">JivoChat (JivoSite)</h3>
-                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">TEAM LEAD</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l279') }}</h3>
+                        <v-chip color="primary" size="small" variant="flat" class="font-weight-bold uppercase">{{ t('l131') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">SaaS / Real-time Communication</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l280') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">April 2016 — Nov 2017</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l281') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Engineering Leadership:</strong> Managed a team of 6 people, overseeing architectural planning, code quality, and hands-on development for mission-critical business projects.</li>
-                      <li><strong>Process Transformation:</strong> Implemented Scrum (tailored to team needs) including estimation, forecasting, and retrospectives. Automated major parts of the system to increase operational transparency.</li>
-                      <li><strong>Efficiency Breakthrough:</strong> Boosted team productivity from 70% (missed deadlines) to 120% (over-delivery) through process optimization and workflow alignment.</li>
-                      <li><strong>Stakeholder Management:</strong> Orchestrated communication between IT and other departments, ensuring a unified information field across all teams and stakeholders.</li>
-                      <li><strong>Release Engineering:</strong> Owned the full release management cycle and deployment processes.</li>
-                      <li><strong>Team Growth & Mentorship:</strong> Reorganized the team structure, leading to a significant increase in both individual and collective competencies. </li>
-                      <li><strong>Knowledge Sharing:</strong> Achieved team interchangeability through cross-training; organized and led internal seminars, conferences, and technical workshops.</li>
+                      <li><strong>{{ t('l282') }}</strong> {{ t('l283') }}</li>
+                      <li><strong>{{ t('l284') }}</strong> {{ t('l285') }}</li>
+                      <li><strong>{{ t('l286') }}</strong> {{ t('l287') }}</li>
+                      <li><strong>{{ t('l288') }}</strong> {{ t('l289') }}</li>
+                      <li><strong>{{ t('l290') }}</strong> {{ t('l291') }}</li>
+                      <li><strong>{{ t('l292') }}</strong> {{ t('l293') }}</li>
+                      <li><strong>{{ t('l294') }}</strong> {{ t('l295') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Scrum Implementation • Team Reorganization • Release Management • High-Performance Culture</div>
+                      <div class="tech-stack-mini">{{ t('l296') }}</div>
                     </div>
                   </div>
                 </div>
@@ -1019,45 +1004,45 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">VK (Vkontakte)</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l297') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <v-chip size="x-small" color="grey" variant="outlined">NDA PROJECTS</v-chip>
+                      <v-chip size="x-small" color="grey" variant="outlined">{{ t('l298') }}</v-chip>
                     </div>
-                    <div class="text-body-2 font-weight-bold text-white">Jan 2016 — March 2016</div>
+                    <div class="text-body-2 font-weight-bold text-white">{{ t('l299') }}</div>
                   </div>
                   <div class="exp-content pl-6">
-                    <p class="text-body-2 text-grey-lighten-1">PHP Development for high-load specialized projects under strict NDA.</p>
+                    <p class="text-body-2 text-grey-lighten-1">{{ t('l300') }}</p>
                   </div>
                 </div>
 
                 <div class="exp-item mb-12">
                   <div class="exp-dot"></div>
-                  <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
+                  <div class="exp-header d-flex justify-space-between align-start flex-wrap gap-2 mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Activizm.ru</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l301') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">E-commerce</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l302') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Aug 2014 — Dec 2015</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l303') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Feature Engineering:</strong> Developed new core features and provided comprehensive support for the existing platform functionality.</li>
-                      <li><strong>AdTech Integration:</strong> Seamlessly integrated Google AdWords and Yandex.Direct APIs for automated marketing management.</li>
-                      <li><strong>Data Syndication:</strong> Managed large-scale data exports to Google Merchant Center (Content Center) for product listing ads.</li>
-                      <li><strong>Marketing Ecosystem:</strong> Engineered product feed generation systems and integrated them with various external marketing services.</li>
-                      <li><strong>Performance Engineering:</strong> Conducted deep code refactoring, system profiling, and database optimization to improve platform stability.</li>
+                      <li><strong>{{ t('l304') }}</strong> {{ t('l305') }}</li>
+                      <li><strong>{{ t('l306') }}</strong> {{ t('l307') }}</li>
+                      <li><strong>{{ t('l308') }}</strong> {{ t('l309') }}</li>
+                      <li><strong>{{ t('l310') }}</strong> {{ t('l311') }}</li>
+                      <li><strong>{{ t('l312') }}</strong> {{ t('l313') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">PHP • Google AdWords API • Data Feed Engineering • Profiling & Optimization</div>
+                      <div class="tech-stack-mini">{{ t('l314') }}</div>
                     </div>
                   </div>
                 </div>
@@ -1067,29 +1052,29 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Mamba</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l315') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Social Discovery</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l316') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Nov 2013 — July 2014</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l317') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>High-Load Engineering:</strong> Developed features and core functionality for a massive social platform serving tens of millions of active users.</li>
-                      <li><strong>Notification Engine:</strong> Designed and implemented a high-performance notification delivery system.</li>
-                      <li><strong>Low-Level Integration:</strong> Integrated and debugged system interactions with custom-built C-based daemons to ensure low-latency processing.</li>
-                      <li><strong>Mail Service Refactoring:</strong> Architected a complete refactor of the email interaction system and mail gateway protocols.</li>
-                      <li><strong>Abuse & Subscription Logic:</strong> Enhanced the processing systems for user complaints, reports, and automated unsubscription flows.</li>
-                      <li><strong>Database Performance:</strong> Optimized complex database operations utilizing both SQL and RRDtool (Round Robin Database) for time-series data.</li>
+                      <li><strong>{{ t('l318') }}</strong> {{ t('l319') }}</li>
+                      <li><strong>{{ t('l320') }}</strong> {{ t('l321') }}</li>
+                      <li><strong>{{ t('l322') }}</strong> {{ t('l323') }}</li>
+                      <li><strong>{{ t('l324') }}</strong> {{ t('l325') }}</li>
+                      <li><strong>{{ t('l326') }}</strong> {{ t('l327') }}</li>
+                      <li><strong>{{ t('l328') }}</strong> {{ t('l329') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">High-Load • C Daemons • RRDtool • SQL Optimization • Notification Systems</div>
+                      <div class="tech-stack-mini">{{ t('l330') }}</div>
                     </div>
                   </div>
                 </div>
@@ -1099,29 +1084,29 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Enter.ru</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l331') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">Multi-channel Retailer</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l332') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">May 2012 — Aug 2013</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l333') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Core Architecture:</strong> Development of the core information infrastructure and engineering of external APIs.</li>
-                      <li><strong>Fintech Integration:</strong> Integrated credit brokerage systems to enable real-time online installment and credit purchases.</li>
-                      <li><strong>Enterprise Systems:</strong> Orchestrated deep integration with 1C enterprise management systems.</li>
-                      <li><strong>Marketing Automation:</strong> Integrated the Ofsys mailing system for automated customer communications.</li>
-                      <li><strong>CMS & Extensions:</strong> Deployed WordPress as a CMS solution, integrated it into the main site, and developed numerous custom plugins.</li>
-                      <li><strong>Legacy Decommissioning:</strong> Performed a comprehensive site refactoring, including the architectural migration to remove Symfony dependencies.</li>
+                      <li><strong>{{ t('l334') }}</strong> {{ t('l335') }}</li>
+                      <li><strong>{{ t('l336') }}</strong> {{ t('l337') }}</li>
+                      <li><strong>{{ t('l338') }}</strong> {{ t('l339') }}</li>
+                      <li><strong>{{ t('l340') }}</strong> {{ t('l341') }}</li>
+                      <li><strong>{{ t('l342') }}</strong> {{ t('l343') }}</li>
+                      <li><strong>{{ t('l344') }}</strong> {{ t('l345') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Core Engineering • Fintech API • 1C Integration • Symfony Migration</div>
+                      <div class="tech-stack-mini">{{ t('l346') }}</div>
                     </div>
                   </div>
                 </div>
@@ -1131,29 +1116,29 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">Wikimart</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l347') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">E-commerce Marketplace</div>
+                      <div class="text-subtitle-2 text-primary opacity-80 tracking-wide">{{ t('l348') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Aug 2009 — April 2012</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l349') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
                     <ul class="custom-list">
-                      <li><strong>Billing Infrastructure:</strong> Designed and developed the core billing system from the ground up.</li>
-                      <li><strong>Database Engineering:</strong> Performed comprehensive refactoring of database trigger systems and complex stored procedures.</li>
-                      <li><strong>Data Ingestion Services:</strong> Engineered high-throughput services for importing <strong>YML and CSV</strong> data feeds containing massive product catalogs from various merchants.</li>
-                      <li><strong>Search & Merchandising:</strong> Developed the site-wide search engine and built merchandising systems (promotions, special offers, and virtual storefronts).</li>
-                      <li><strong>Growth Tools:</strong> Developed the affiliate program platform and contributed to the internal <strong>CRM system</strong> development.</li>
-                      <li><strong>Full-Stack Evolution:</strong> Led the total site redesign and participated in global system architecture planning, delivering numerous full-stack features.</li>
+                      <li><strong>{{ t('l350') }}</strong> {{ t('l351') }}</li>
+                      <li><strong>{{ t('l352') }}</strong> {{ t('l353') }}</li>
+                      <li v-html="`<strong>${t('l354')}</strong> ${t('l355')}`"></li>
+                      <li><strong>{{ t('l356') }}</strong> {{ t('l357') }}</li>
+                      <li v-html="`<strong>${t('l358')}</strong> ${t('l359')}`"></li>
+                      <li><strong>{{ t('l360') }}</strong> {{ t('l361') }}</li>
                     </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiCodeTags" size="14" color="primary" class="mr-2" />
-                      <div class="tech-stack-mini">Billing Systems • DB Optimization • Search Engines • ETL / Data Import</div>
+                      <div class="tech-stack-mini">{{ t('l362') }}</div>
                     </div>
                   </div>
                 </div>
@@ -1163,29 +1148,29 @@ onMounted(() => {
                   <div class="exp-header d-flex justify-space-between align-start flex-wrap mb-4">
                     <div>
                       <div class="d-flex align-center flex-wrap gap-2 mb-1">
-                        <h3 class="text-h4 font-weight-black">MIF</h3>
-                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">SENIOR DEV</v-chip>
+                        <h3 class="text-h4 font-weight-black">{{ t('l363') }}</h3>
+                        <v-chip color="secondary" size="small" variant="flat" class="font-weight-bold">{{ t('l112') }}</v-chip>
                       </div>
-                      <div class="text-subtitle-2 text-blue font-weight-bold">Security & Low-Level Systems Researcher</div>
+                      <div class="text-subtitle-2 text-blue font-weight-bold">{{ t('l364') }}</div>
                     </div>
                     <div class="text-right">
-                      <div class="text-body-2 font-weight-bold text-white">Sept 2008 — Aug 2009</div>
+                      <div class="text-body-2 font-weight-bold text-white">{{ t('l365') }}</div>
                     </div>
                   </div>
 
                   <div class="exp-content pl-6">
-                      <ul class="custom-list">
-                        <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed <strong>functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept)</strong> to demonstrate critical memory corruption flaws using <strong>WinDbg, x86 Assembly</strong>, and advanced heap-spraying techniques.</li>
-                        <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using <strong>C (WinAPI) and Lua</strong>. Focus on extreme binary optimization and stealthy network communication.</li>
-                        <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
-                        <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
-                        <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                        <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
-                      </ul>
+                    <ul class="custom-list">
+                      <li v-html="`<strong>${t('l366')}</strong> ${t('l367')}`"></li>
+                      <li v-html="`<strong>${t('l368')}</strong> ${t('l369')}`"></li>
+                      <li v-html="`<strong>${t('l370')}</strong> ${t('l371')}`"></li>
+                      <li v-html="`<strong>${t('l372')}</strong> ${t('l373')}`"></li>
+                      <li v-html="`<strong>${t('l374')}</strong> ${t('l375')}`"></li>
+                      <li v-html="`<strong>${t('l376')}</strong> ${t('l377')}`"></li>
+                    </ul>
 
                     <div class="mt-4 d-flex align-center">
                       <v-icon :icon="mdiShieldBug" size="14" color="error" class="mr-2" />
-                      <div class="tech-stack-mini">Reverse Engineering • RCE • WinDbg • Assembler • Crypto • C/C++</div>
+                      <div class="tech-stack-mini">{{ t('l378') }}</div>
                     </div>
                   </div>
                 </div>
@@ -1201,8 +1186,8 @@ onMounted(() => {
               <v-icon :icon="mdiBookOpenVariant" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Publications</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">Deep Tech & Security Research</div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l379') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l380') }}</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
@@ -1216,15 +1201,15 @@ onMounted(() => {
                   variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
-                  <v-chip color="error" size="x-small" variant="flat" class="font-weight-bold">EXPLOIT DEV</v-chip>
+                  <v-chip color="error" size="x-small" variant="flat" class="font-weight-bold">{{ t('l381') }}</v-chip>
                   <v-icon :icon="mdiPostOutline" size="24" class="opacity-50" />
                 </div>
-                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">Buffer Overflow for Beginners</h3>
+                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">{{ t('l382') }}</h3>
                 <p class="text-body-2 text-grey-lighten-1 mb-6 flex-grow-1">
-                  Technical deep-dive into memory corruption, stack smashing, and the fundamentals of writing exploit code.
+                  {{ t('l383') }}
                 </p>
                 <div class="text-button text-primary d-flex align-center">
-                  Read Article <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
+                  {{ t('l384') }} <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
                 </div>
               </v-card>
             </v-col>
@@ -1237,15 +1222,15 @@ onMounted(() => {
                   variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
-                  <v-chip color="warning" size="x-small" variant="flat" class="font-weight-bold">NETWORK SECURITY</v-chip>
+                  <v-chip color="warning" size="x-small" variant="flat" class="font-weight-bold">{{ t('l385') }}</v-chip>
                   <v-icon :icon="mdiPostOutline" size="24" class="opacity-50" />
                 </div>
-                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">ARP Spoofing: Network Vulnerability</h3>
+                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">{{ t('l386') }}</h3>
                 <p class="text-body-2 text-grey-lighten-1 mb-6 flex-grow-1">
-                  Analysis of fundamental local network weaknesses and practical demonstration of MITM (Man-in-the-Middle) concepts.
+                  {{ t('l387') }}
                 </p>
                 <div class="text-button text-primary d-flex align-center">
-                  Read Article <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
+                  {{ t('l384') }} <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
                 </div>
               </v-card>
             </v-col>
@@ -1258,15 +1243,15 @@ onMounted(() => {
                   variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
-                  <v-chip color="info" size="x-small" variant="flat" class="font-weight-bold">DATABASE CRYPTO</v-chip>
+                  <v-chip color="info" size="x-small" variant="flat" class="font-weight-bold">{{ t('l388') }}</v-chip>
                   <v-icon :icon="mdiPostOutline" size="24" class="opacity-50" />
                 </div>
-                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">The Power of UDF in MySQL</h3>
+                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">{{ t('l389') }}</h3>
                 <p class="text-body-2 text-grey-lighten-1 mb-6 flex-grow-1">
-                  Extending MySQL capabilities with C and OpenSSL to implement robust field-level data encryption.
+                  {{ t('l390') }}
                 </p>
                 <div class="text-button text-primary d-flex align-center">
-                  Read Article <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
+                  {{ t('l384') }} <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
                 </div>
               </v-card>
             </v-col>
@@ -1279,15 +1264,15 @@ onMounted(() => {
                   variant="outlined"
               >
                 <div class="d-flex justify-space-between align-start mb-4">
-                  <v-chip color="green" size="x-small" variant="flat" class="font-weight-bold">DATA STRUCTURES</v-chip>
+                  <v-chip color="green" size="x-small" variant="flat" class="font-weight-bold">{{ t('l391') }}</v-chip>
                   <v-icon :icon="mdiPostOutline" size="24" class="opacity-50" />
                 </div>
-                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">File-based hash map</h3>
+                <h3 class="text-h5 font-weight-bold mb-3 line-height-tight">{{ t('l392') }}</h3>
                 <p class="text-body-2 text-grey-lighten-1 mb-6 flex-grow-1">
-                  Using PHP file hash map as persistent data storage.
+                  {{ t('l393') }}
                 </p>
                 <div class="text-button text-primary d-flex align-center">
-                  Read Article <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
+                  {{ t('l384') }} <v-icon :icon="mdiArrowRight" size="16" class="ml-2" />
                 </div>
               </v-card>
             </v-col>
@@ -1301,8 +1286,8 @@ onMounted(() => {
               <v-icon :icon="mdiCodeBrackets" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Code</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">Open Source Projects & Technical Snippets</div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l394') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l395') }}</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
@@ -1311,19 +1296,19 @@ onMounted(() => {
             <v-col cols="12" md="6" lg="4">
               <div class="repo-group-label mb-4 d-flex align-center">
                 <v-icon :icon="mdiLanguageCpp" color="blue" class="mr-2" />
-                <span class="font-weight-bold uppercase">C / C++ (Systems & Security)</span>
+                <span class="font-weight-bold uppercase">{{ t('l396') }}</span>
               </div>
               <div class="repo-list">
                 <a
                     v-for="repo in [
-                        { name: 'Algorithms', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/alghoritms' },
-            { name: 'MySQL OpenSSL Plugin', link: 'https://github.com/white-rabbit-1-sketch/mysql-openssl' },
-            { name: 'ARP Spoofer (Security)', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/arp-spoofer' },
-            { name: 'Shellcode Generator', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/shellcode-generator' },
-            { name: 'YansDB (NoSQL Storage)', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/yansdb' },
-            { name: 'TCP/IP Broadcast Server', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/broadcasting-server' },
-            { name: 'Lightness HID Tool', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness-hid' },
-          ]"
+              { name: t('l399'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/alghoritms' },
+              { name: t('l400'), link: 'https://github.com/white-rabbit-1-sketch/mysql-openssl' },
+              { name: t('l401'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/arp-spoofer' },
+              { name: t('l402'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/shellcode-generator' },
+              { name: t('l403'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/yansdb' },
+              { name: t('l404'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/broadcasting-server' },
+              { name: t('l405'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness-hid' },
+            ]"
                     :key="repo.link" :href="repo.link" target="_blank" class="repo-item d-flex align-center pa-3 mb-2"
                 >
                   <v-icon :icon="mdiGithub" size="18" class="mr-3 opacity-50" />
@@ -1337,20 +1322,19 @@ onMounted(() => {
             <v-col cols="12" md="6" lg="4">
               <div class="repo-group-label mb-4 d-flex align-center">
                 <v-icon :icon="mdiLanguagePython" color="yellow-darken-2" class="mr-2" />
-                <span class="font-weight-bold uppercase">Python, Go, Lua</span>
+                <span class="font-weight-bold uppercase">{{ t('l397') }}</span>
               </div>
               <div class="repo-list">
                 <a
                     v-for="repo in [
-            { name: 'Go: Concurrent Crawler', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler' },
-             { name: 'Python: Helicopter Game', link: 'https://github.com/white-rabbit-1-sketch/helicopter' },
-             { name: 'L2 Lottery Bot', link: 'https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot' },
-             { name: 'Python: Web Cryptor', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/web-cryptor' },
-            { name: 'Python: Lightness Monitor', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness' },
-
-            { name: 'Lua: Simple Installer', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/lua-installer' },
-            { name: 'Godot: Fox Wild Hunt', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/cute_fox_wild_hunt' }
-          ]"
+              { name: t('l406'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler' },
+              { name: t('l407'), link: 'https://github.com/white-rabbit-1-sketch/helicopter' },
+              { name: t('l408'), link: 'https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot' },
+              { name: t('l409'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/web-cryptor' },
+              { name: t('l410'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness' },
+              { name: t('l411'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/lua-installer' },
+              { name: t('l412'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/cute_fox_wild_hunt' }
+            ]"
                     :key="repo.link" :href="repo.link" target="_blank" class="repo-item d-flex align-center pa-3 mb-2"
                 >
                   <v-icon :icon="mdiGithub" size="18" class="mr-3 opacity-50" />
@@ -1364,18 +1348,18 @@ onMounted(() => {
             <v-col cols="12" md="6" lg="4">
               <div class="repo-group-label mb-4 d-flex align-center">
                 <v-icon :icon="mdiElephant" color="indigo-lighten-2" class="mr-2" />
-                <span class="font-weight-bold uppercase">PHP, Java, TypeScript</span>
+                <span class="font-weight-bold uppercase">{{ t('l398') }}</span>
               </div>
               <div class="repo-list">
                 <a
                     v-for="repo in [
-                         { name: 'PHP: File Hash Map', link: 'https://github.com/white-rabbit-1-sketch/php-file-hash-map' },
-            { name: 'PHP: Worker Pool (System V)', link: 'https://github.com/white-rabbit-1-sketch/php-worker-pool' },
-            { name: 'Email alias: Java Backend', link: 'https://github.com/white-rabbit-1-sketch/alunea-alias-backend' },
-            { name: 'Email alias: Angular Front', link: 'https://github.com/white-rabbit-1-sketch/alunea-alias-frontend' },
-            { name: 'Email alias: Ansible CI/CD', link: 'https://github.com/white-rabbit-1-sketch/alunea-alias-ansible' },
-            { name: 'Various PHP Snippets', link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/php-snippets' }
-          ]"
+              { name: t('l413'), link: 'https://github.com/white-rabbit-1-sketch/php-file-hash-map' },
+              { name: t('l414'), link: 'https://github.com/white-rabbit-1-sketch/php-worker-pool' },
+              { name: t('l415'), link: 'https://github.com/white-rabbit-1-sketch/alunea-alias-backend' },
+              { name: t('l416'), link: 'https://github.com/white-rabbit-1-sketch/alunea-alias-frontend' },
+              { name: t('l417'), link: 'https://github.com/white-rabbit-1-sketch/alunea-alias-ansible' },
+              { name: t('l418'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/php-snippets' }
+            ]"
                     :key="repo.link" :href="repo.link" target="_blank" class="repo-item d-flex align-center pa-3 mb-2"
                 >
                   <v-icon :icon="mdiGithub" size="18" class="mr-3 opacity-50" />
@@ -1394,8 +1378,8 @@ onMounted(() => {
               <v-icon :icon="mdiAutoFix" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Current Venture</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">Founder & Lead Architect • <a href="https://alunea.io" target="_blank" class="text-primary text-decoration-none">alunea.io</a></div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l419') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l420') }} • <a href="https://alunea.io" target="_blank" class="text-primary text-decoration-none">alunea.io</a></div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
@@ -1405,46 +1389,42 @@ onMounted(() => {
               <v-col cols="12" lg="8">
                 <div class="d-flex align-center mb-4">
                   <h3 class="text-h4 font-weight-black mr-4">Alunea</h3>
-                  <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">AI LANGUAGE LEARNING</v-chip>
+                  <v-chip color="primary" size="small" variant="flat" class="font-weight-bold">{{ t('l421') }}</v-chip>
                 </div>
 
-                <p class="text-body-1 text-grey-lighten-2 mb-6 line-height-relaxed">
-                  An advanced learning ecosystem that bridges the gap between passive content consumption and active speaking.
-                  Alunea transforms streaming platforms into personal classrooms using <strong>AI-driven subtitles</strong> and
-                  <strong>voice-interactive tutors</strong>.
-                </p>
+                <p class="text-body-1 text-grey-lighten-2 mb-6 line-height-relaxed" v-html="t('l422')"></p>
 
                 <v-row class="mb-6">
                   <v-col cols="12" sm="6">
                     <div class="feature-item mb-4">
                       <div class="d-flex align-center mb-1">
                         <v-icon :icon="mdiMicrophone" color="primary" size="20" class="mr-2" />
-                        <span class="text-h6 font-weight-bold">AI Voice Tutor "Violet"</span>
+                        <span class="text-h6 font-weight-bold">{{ t('l423') }}</span>
                       </div>
-                      <p class="text-caption text-grey">Interactive AI calls for speaking practice, utilizing saved vocabulary from shows for active recall.</p>
+                      <p class="text-caption text-grey">{{ t('l424') }}</p>
                     </div>
                     <div class="feature-item">
                       <div class="d-flex align-center mb-1">
                         <v-icon :icon="mdiClosedCaption" color="primary" size="20" class="mr-2" />
-                        <span class="text-h6 font-weight-bold">Real-time AI Subtitles</span>
+                        <span class="text-h6 font-weight-bold">{{ t('l425') }}</span>
                       </div>
-                      <p class="text-caption text-grey">Context-aware dual subtitles and on-the-fly generation for Netflix, YouTube, and Disney+.</p>
+                      <p class="text-caption text-grey">{{ t('l426') }}</p>
                     </div>
                   </v-col>
                   <v-col cols="12" sm="6">
                     <div class="feature-item mb-4">
                       <div class="d-flex align-center mb-1">
                         <v-icon :icon="mdiSync" color="primary" size="20" class="mr-2" />
-                        <span class="text-h6 font-weight-bold">Unified Ecosystem</span>
+                        <span class="text-h6 font-weight-bold">{{ t('l427') }}</span>
                       </div>
-                      <p class="text-caption text-grey">Instant word-sync between browser extension, mobile apps (iOS/Android), and AI backend.</p>
+                      <p class="text-caption text-grey">{{ t('l428') }}</p>
                     </div>
                     <div class="feature-item">
                       <div class="d-flex align-center mb-1">
                         <v-icon :icon="mdiBrain" color="primary" size="20" class="mr-2" />
-                        <span class="text-h6 font-weight-bold">Adaptive Learning</span>
+                        <span class="text-h6 font-weight-bold">{{ t('l429') }}</span>
                       </div>
-                      <p class="text-caption text-grey">System analyzes skill levels to tailor conversation difficulty and recommendation logic.</p>
+                      <p class="text-caption text-grey">{{ t('l430') }}</p>
                     </div>
                   </v-col>
                 </v-row>
@@ -1464,10 +1444,10 @@ onMounted(() => {
                 <div class="pa-4">
                   <v-img src="https://alunea.io/assets/logo-white.png" height="80" contain class="mb-6 opacity-80" />
                   <v-btn block color="primary" size="large" variant="flat" href="https://alunea.io" target="_blank" class="mb-4 font-weight-bold">
-                    Visit alunea.io
+                    {{ t('l431') }}
                   </v-btn>
                   <div class="text-center">
-                    <div class="text-overline mb-2 text-grey">Infrastructure</div>
+                    <div class="text-overline mb-2 text-grey">{{ t('l432') }}</div>
                     <div class="d-flex justify-center gap-3">
                       <v-icon :icon="mdiApple" size="20" color="grey" />
                       <v-icon :icon="mdiAndroid" size="20" color="grey" />
@@ -1481,18 +1461,16 @@ onMounted(() => {
           </v-card>
         </section>
 
-
         <section class="mb-16 animate-up">
           <div class="d-flex align-center mb-8">
             <div class="section-icon-wrap mr-4">
               <v-icon :icon="mdiSchoolOutline" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Academic Background</h2>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l433') }}</h2>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
-
 
           <v-row>
             <v-col cols="12" md="12">
@@ -1500,8 +1478,8 @@ onMounted(() => {
                 <div class="education-item mb-6 pl-4 border-left">
                   <div class="d-flex justify-space-between align-start flex-wrap">
                     <div>
-                      <div class="text-subtitle-1 font-weight-bold text-white">Moscow University of Industry and Finance "Synergy"</div>
-                      <div class="text-body-2 text-grey-lighten-1 mb-1">Fullstack Development</div>
+                      <div class="text-subtitle-1 font-weight-bold text-white">{{ t('l434') }}</div>
+                      <div class="text-body-2 text-grey-lighten-1 mb-1">{{ t('l435') }}</div>
                     </div>
                     <v-chip size="small" variant="tonal" color="grey">2026</v-chip>
                   </div>
@@ -1510,8 +1488,8 @@ onMounted(() => {
                 <div class="education-item mb-6 pl-4 border-left">
                   <div class="d-flex justify-space-between align-start flex-wrap">
                     <div>
-                      <div class="text-subtitle-1 font-weight-bold text-white">Modern Technical Institute</div>
-                      <div class="text-body-2 text-grey-lighten-1 mb-1">Service</div>
+                      <div class="text-subtitle-1 font-weight-bold text-white">{{ t('l436') }}</div>
+                      <div class="text-body-2 text-grey-lighten-1 mb-1">{{ t('l437') }}</div>
                     </div>
                     <v-chip size="small" variant="tonal" color="grey">2015</v-chip>
                   </div>
@@ -1520,16 +1498,14 @@ onMounted(() => {
                 <div class="education-item pl-4 border-left">
                   <div class="d-flex justify-space-between align-start flex-wrap">
                     <div>
-                      <div class="text-subtitle-1 font-weight-bold text-white">Moscow College of Mathematics</div>
-                      <div class="text-body-2 text-grey-lighten-1 mb-1">Computer Programming & Automated Systems</div>
+                      <div class="text-subtitle-1 font-weight-bold text-white">{{ t('l438') }}</div>
+                      <div class="text-body-2 text-grey-lighten-1 mb-1">{{ t('l439') }}</div>
                     </div>
                     <v-chip size="small" variant="tonal" color="grey">2008</v-chip>
                   </div>
                 </div>
               </v-card>
             </v-col>
-
-
           </v-row>
         </section>
 
@@ -1540,26 +1516,17 @@ onMounted(() => {
               <v-icon :icon="mdiCertificate" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">Certifications</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">Industry-Recognized Professional Credentials</div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l440') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l441') }}</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
 
           <v-row justify="start">
             <v-col cols="12" md="10" lg="8">
-              <v-card
-                  class="cert-card-full overflow-hidden"
-                  variant="outlined"
-                  border="primary"
-              >
+              <v-card class="cert-card-full overflow-hidden" variant="outlined" border="primary">
                 <div class="cert-image-container">
-                  <v-img
-                      :src="zendImage"
-                      alt="Zend PHP Certification"
-                      class="cert-img-full"
-                      width="100%"
-                  >
+                  <v-img :src="zendImage" alt="Zend PHP Certification" class="cert-img-full" width="100%">
                     <template v-slot:placeholder>
                       <v-row class="fill-height ma-0" align="center" justify="center">
                         <v-progress-circular indeterminate color="primary" />
@@ -1567,27 +1534,22 @@ onMounted(() => {
                     </template>
                   </v-img>
                 </div>
-
                 <v-divider class="border-opacity-25"></v-divider>
-
                 <v-card-item class="pa-6">
                   <v-row align="center" no-gutters>
                     <v-col>
                       <div class="text-overline font-weight-bold text-primary mb-1">Zend Technologies</div>
-                      <h3 class="text-h5 font-weight-black mb-1">Zend PHP Certified Engineer</h3>
-
+                      <h3 class="text-h5 font-weight-black mb-1">{{ t('l442') }}</h3>
                       <div class="text-body-2 text-grey-lighten-1 d-flex align-center mt-2">
                         <v-icon :icon="mdiShieldCheck" size="16" class="mr-2 text-success" />
-                        Verified Professional Certification • Industry Standard for PHP Engineering
+                        {{ t('l443') }}
                       </div>
                     </v-col>
-
                   </v-row>
-
                   <div class="d-flex flex-wrap gap-2 mt-4">
-                    <v-chip size="small" color="primary" variant="outlined">Zend Framework Mastery</v-chip>
-                    <v-chip size="small" color="primary" variant="outlined">Core PHP Internals</v-chip>
-                    <v-chip size="small" color="primary" variant="outlined">Security Best Practices</v-chip>
+                    <v-chip size="small" color="primary" variant="outlined">{{ t('l444') }}</v-chip>
+                    <v-chip size="small" color="primary" variant="outlined">{{ t('l445') }}</v-chip>
+                    <v-chip size="small" color="primary" variant="outlined">{{ t('l446') }}</v-chip>
                   </div>
                 </v-card-item>
               </v-card>
@@ -1595,21 +1557,14 @@ onMounted(() => {
           </v-row>
         </section>
 
-
-
-
-
-
-
-
         <section class="backstory-section mt-16 mb-12">
           <div class="d-flex align-center mb-8">
             <div class="section-icon-wrap mr-4">
               <v-icon :icon="mdiHistory" color="primary" size="32" />
             </div>
             <div>
-              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">The Backstory</h2>
-              <div class="text-subtitle-2 text-primary opacity-70">From Delphi to High-Load Architect</div>
+              <h2 class="text-h3 font-weight-black text-uppercase tracking-widest mb-1">{{ t('l447') }}</h2>
+              <div class="text-subtitle-2 text-primary opacity-70">{{ t('l448') }}</div>
             </div>
             <v-divider class="ml-6 border-opacity-25" />
           </div>
@@ -1619,45 +1574,45 @@ onMounted(() => {
               <v-col cols="12" md="6" class="mb-6">
                 <h4 class="text-h6 font-weight-bold text-white mb-4 d-flex align-center">
                   <v-icon :icon="mdiXml" size="20" class="mr-2 text-primary" />
-                  Genesis & Early Exploits
+                  {{ t('l449') }}
                 </h4>
                 <div class="text-body-2 text-grey-lighten-1 line-height-relaxed">
-                  <p class="mb-3">Started at 14 with a <strong>Delphi</strong> book and no internet. By college, I was neck-deep in <strong>Pascal, VBA, Firebird</strong>, and hacking the lab's WinServer 2x network. My first big project? A <strong>WoW server (MaNGOS)</strong> on C++ where I learned the pain of patching binary files.</p>
-                  <p>The real fun started with <strong>Lineage 2</strong>. I built a custom <strong>Socks4/5 proxy layer</strong> to intercept and modify packets on-the-fly. It was pure raw socket magic—completely invisible to anti-cheat systems. Later, I built <strong>0-day exploits</strong> for Firefox and Adobe Reader by finding crashes via Google and spending nights in <strong>WinDbg/OllyDbg</strong>.</p>
+                  <p class="mb-3" v-html="t('l450')"></p>
+                  <p v-html="t('l451')"></p>
                 </div>
               </v-col>
 
               <v-col cols="12" md="6" class="mb-6">
                 <h4 class="text-h6 font-weight-bold text-white mb-4 d-flex align-center">
                   <v-icon :icon="mdiGhost" size="20" class="mr-2 text-primary" />
-                  The "Grey" Era & Lua Mastery
+                  {{ t('l452') }}
                 </h4>
                 <div class="text-body-2 text-grey-lighten-1 line-height-relaxed">
-                  <p class="mb-3">Developing botnets taught me extreme optimization. I integrated a <strong>Lua</strong> interpreter into a C-core, stripped the parser, and fed it raw bytecode—the result was a <strong>4KB binary</strong>. Try doing that with Python or PHP!</p>
-                  <p>I built my own <strong>custom cryptor</strong> based on a Python-to-Pseudocode translator with binary tree algorithms and heavy obfuscation. I even discovered that bypassing <strong>Kaspersky</strong> back then was possible just by using <strong>CMD/FTP</strong> for shellcode instead of standard WinAPI—it simply didn't hook the command line the same way.</p>
+                  <p class="mb-3" v-html="t('l453')"></p>
+                  <p v-html="t('l454')"></p>
                 </div>
               </v-col>
 
               <v-col cols="12">
                 <v-divider class="mb-8 border-opacity-25" />
-                <h4 class="text-h6 font-weight-bold text-primary mb-6 text-center text-uppercase">Architectural Philosophy & "Religion"</h4>
+                <h4 class="text-h6 font-weight-bold text-primary mb-6 text-center text-uppercase">{{ t('l455') }}</h4>
                 <v-row>
                   <v-col cols="12" md="4">
                     <div class="manifesto-item">
-                      <span class="font-weight-bold text-white d-block mb-1">Infrastructure:</span>
-                      <p class="text-caption text-grey"><strong>Debian</strong> is the only stable choice. Use <strong>UDP</strong> instead of TCP wherever real-time performance matters.</p>
+                      <span class="font-weight-bold text-white d-block mb-1">{{ t('l456') }}</span>
+                      <p class="text-caption text-grey" v-html="t('l457')"></p>
                     </div>
                   </v-col>
                   <v-col cols="12" md="4">
                     <div class="manifesto-item">
-                      <span class="font-weight-bold text-white d-block mb-1">Databases:</span>
-                      <p class="text-caption text-grey"><strong>Foreign Keys are evil</strong> (except for billing). Stop the subquery madness and stop treating the DB like a trash can. Use <strong>Redis/Memcached</strong> and proper composite indexes.</p>
+                      <span class="font-weight-bold text-white d-block mb-1">{{ t('l458') }}</span>
+                      <p class="text-caption text-grey" v-html="t('l459')"></p>
                     </div>
                   </v-col>
                   <v-col cols="12" md="4">
                     <div class="manifesto-item">
-                      <span class="font-weight-bold text-white d-block mb-1">Architecture:</span>
-                      <p class="text-caption text-grey">Thin clients (PHP) => High-speed Microservices (Go/Java Spring). No monoliths. I even designed a <strong>fully decentralized P2P trust ring</strong> that is impossible to shut down.</p>
+                      <span class="font-weight-bold text-white d-block mb-1">{{ t('l460') }}</span>
+                      <p class="text-caption text-grey" v-html="t('l461')"></p>
                     </div>
                   </v-col>
                 </v-row>
@@ -1667,7 +1622,7 @@ onMounted(() => {
                 <div class="pinba-box pa-4 rounded-lg">
                   <v-icon :icon="mdiBugOutline" size="18" class="mr-2 text-warning" />
                   <span class="text-caption font-italic text-grey-lighten-1">
-            <strong>The "Pinba" Incident:</strong> Once spent 24 hours debugging a broken auth system. It turned out <strong>Pinba</strong> was corrupting the virtual function stack, shifting it by a few bytes. The interpreter was literally calling random methods. That’s why I don’t trust "magic" monitoring tools anymore.
+                    <strong>{{ t('l462') }}</strong> <span v-html="t('l463')"></span>
           </span>
                 </div>
               </v-col>
@@ -1675,7 +1630,7 @@ onMounted(() => {
 
             <div class="mt-8 text-center">
               <div class="text-h5 font-weight-black text-primary italic-quote">
-                "I love computers, I understand them, and they understand me."
+                {{ t('l464') }}
               </div>
             </div>
           </v-card>
