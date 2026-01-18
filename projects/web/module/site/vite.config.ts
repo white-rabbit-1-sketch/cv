@@ -29,6 +29,14 @@ export default defineConfig(({mode}) => {
                         src: './../src/public/img/logo/transparent/logo-1024.png',
                         dest: './../../../dist/web/site/img/'
                     },
+                    {
+                        src: './../src/public/files/Chuloshnikov-Mikhail-Borisovich.en.pdf',
+                        dest: './../../../dist/web/site/files/'
+                    },
+                    {
+                        src: './../src/public/files/Chuloshnikov-Mikhail-Borisovich.ru.pdf',
+                        dest: './../../../dist/web/site/files/'
+                    },
                 ]
             }),
             {
