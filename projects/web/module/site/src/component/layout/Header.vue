@@ -7,7 +7,8 @@ import {
   mdiWhatsapp,
   mdiLinkedin,
   mdiEmail,
-  mdiClose
+  mdiClose,
+  mdiDownload
 } from '@mdi/js';
 import i18n from "../../../../../../common/src/i18n";
 
@@ -20,6 +21,10 @@ const toggleLanguage = () => {
   localStorage.setItem('user-locale', locale.value);
   console.log(locale.value);
 };
+
+function downloadPdf() {
+  window.location = '/public/Chuloshnikov-Mikhail-Borisovich.'+locale.value+'.pdf';
+}
 
 onMounted(() => {
   locale.value = localStorage.getItem('user-locale') ?? 'en';
@@ -43,6 +48,18 @@ onMounted(() => {
           <span :class="{ 'text-primary': locale === 'en' }">EN</span>
           <span class="mx-1 opacity-30">/</span>
           <span :class="{ 'text-primary': locale === 'ru' }">RU</span>
+        </v-btn>
+
+        <v-btn
+            variant="outlined"
+            size="small"
+            class="ml-4 pdf-download-btn"
+            color="primary"
+            @click="downloadPdf"
+            download
+        >
+          <v-icon :icon="mdiDownload" size="18" />
+          {{t('l699')}}
         </v-btn>
 
         <v-btn
@@ -111,5 +128,17 @@ onMounted(() => {
 .border-primary {
   border: 1px solid rgba(var(--v-theme-primary), 0.5) !important;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-download-btn {
+  border: 1px solid rgba(var(--v-theme-primary), 0.3) !important;
+  background: rgba(var(--v-theme-primary), 0.05);
+  transition: all 0.3s ease;
+}
+
+.pdf-download-btn:hover {
+  background: rgba(var(--v-theme-primary), 0.15);
+  box-shadow: 0 0 10px rgba(var(--v-theme-primary), 0.3);
+  transform: translateY(-1px);
 }
 </style>

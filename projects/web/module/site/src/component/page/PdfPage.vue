@@ -148,6 +148,16 @@ theme.global.name.value = 'light';
           </aside>
 
           <main class="experience-content">
+            <section class="summary-section">
+              <div class="experience-badge">
+                <span class="exp-years">{{ t('l698') }}</span>
+                <span class="exp-text">{{ t('l696') }}</span>
+              </div>
+              <p class="summary-text">
+                {{ t('l697') }}
+              </p>
+            </section>
+
             <h3 class="section-heading">{{ t('l521') }}</h3>
 
             <div class="case-card">
@@ -1033,5 +1043,43 @@ a.contact-item {
   border-top: 1px solid #e2e8f0;
   padding-top: 8px;
   font-style: italic;
+}
+
+.summary-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(var(--v-theme-primary), 0.05); /* Легкий акцентный фон */
+  border-left: 4px solid #1976D2; /* Цвет primary */
+  border-radius: 4px;
+}
+
+.experience-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.exp-years {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1976D2;
+}
+
+.exp-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.summary-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #2c3e50;
 }
 </style>
