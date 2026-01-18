@@ -4,6 +4,10 @@ import {
   mdiSchoolOutline, mdiCertificateOutline, mdiShieldCheckOutline, mdiCpu64Bit, mdiBankOutline, mdiRocketLaunchOutline, mdiSecurity
 } from "@mdi/js"
 import Header from "@/component/layout/Header.vue";
+import {useTheme} from "vuetify";
+
+const theme = useTheme();
+theme.global.name.value = 'light';
 </script>
 
 <template>
@@ -548,7 +552,7 @@ import Header from "@/component/layout/Header.vue";
 .pdf-resume-container {
   margin: 0 auto;
   padding: 20px 40px;
-  background: white;
+
   color: #2c3e50;
   font-family: 'Inter', sans-serif;
   font-size: 11.5px;
@@ -598,8 +602,7 @@ import Header from "@/component/layout/Header.vue";
 .chrono-period { flex: 0 0 75px; font-weight: 700; color: #94a3b8; }
 
 @media print {
-  @page { size: A4; margin: 10mm; }
-  .pdf-resume-container { padding: 0; width: 100%; }
+  .pdf-resume-container { padding: 30; width: 100%; }
   .case-card { page-break-inside: avoid; }
 }
 
