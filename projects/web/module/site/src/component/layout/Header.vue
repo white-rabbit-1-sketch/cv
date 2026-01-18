@@ -1,5 +1,5 @@
 <script setup>
-import {onActivated, onMounted, ref} from 'vue';
+import { onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import {
   mdiTranslate,
@@ -13,33 +13,34 @@ import {
 import i18n from "../../../../../../common/src/i18n";
 
 const { locale, t } = useI18n();
-const isDialogVisible = ref(false); // Состояние попапа
+const isDialogVisible = ref(false);
 
 const toggleLanguage = () => {
   locale.value = locale.value === 'en' ? 'ru' : 'en';
   i18n.global.locale = locale.value;
   localStorage.setItem('user-locale', locale.value);
-  console.log(locale.value);
 };
 
 function downloadPdf() {
-  window.location = '/public/Chuloshnikov-Mikhail-Borisovich.'+locale.value+'.pdf';
+  // Путь к файлам в папке public (например, public/Chuloshnikov-Mikhail.en.pdf)
+  const fileName = `Chuloshnikov-Mikhail-Borisovich.${locale.value}.pdf`;
+  const link = document.createElement('a');
+  link.href = `/public/${fileName}`;
+  link.download = fileName;
+  link.click();
 }
 
 onMounted(() => {
   locale.value = localStorage.getItem('user-locale') ?? 'en';
-  console.log(locale.value);
 });
 </script>
 
 <template>
   <v-app-bar
       flat
-      color="rgba(18, 18, 18, 0.8)"
-      style="backdrop-filter: blur(10px); border-bottom: 1px solid rgba(var(--v-theme-primary), 0.2) !important;"
+      class="resume-app-bar"
   >
     <div class="d-flex align-center w-100 px-4">
-
       <v-spacer />
 
       <div class="d-flex align-center">
@@ -53,13 +54,12 @@ onMounted(() => {
         <v-btn
             variant="outlined"
             size="small"
-            class="ml-4 pdf-download-btn"
+            class="ml-4 pdf-download-btn font-weight-bold"
             color="primary"
             @click="downloadPdf"
-            download
         >
-          <v-icon :icon="mdiDownload" size="18" />
-          {{t('l699')}}
+          <v-icon :icon="mdiDownload" size="18" class="mr-1" />
+          {{ t('l699') }}
         </v-btn>
 
         <v-btn
@@ -76,14 +76,21 @@ onMounted(() => {
   </v-app-bar>
 
   <v-dialog v-model="isDialogVisible" max-width="450">
-    <v-card class="pa-6 text-center border-primary" color="grey-darken-4" theme="dark" rounded="xl" variant="outlined" style="background: #121212 !important;">
+    <v-card
+        class="pa-6 text-center border-primary-modal"
+        color="surface"
+        rounded="xl"
+        variant="flat"
+    >
       <div class="d-flex justify-space-between align-center mb-6">
-        <h3 class="text-h5 font-weight-black uppercase tracking-widest text-primary">{{t('l467')}}</h3>
+        <h3 class="text-h5 font-weight-black uppercase tracking-widest text-primary">
+          {{ t('l467') }}
+        </h3>
         <v-btn :icon="mdiClose" variant="text" size="medium" color="primary" @click="isDialogVisible = false" />
       </div>
 
       <div class="d-flex flex-column gap-4">
-        <v-btn variant="flat" color="white" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold text-black">
+        <v-btn variant="flat" color="blue-darken-3" rounded="lg" size="large" href="https://t.me/dance_with_rabbit" target="_blank" class="text-none font-weight-bold">
           <template v-slot:prepend><v-icon :icon="mdiSend" /></template>
           {{ t('l8') }}
         </v-btn>
@@ -98,7 +105,7 @@ onMounted(() => {
           {{ t('l10') }}
         </v-btn>
 
-        <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none border-white text-white mt-2">
+        <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none mt-2">
           <template v-slot:prepend><v-icon :icon="mdiEmail" /></template>
           {{ t('l11') }}
         </v-btn>
@@ -108,37 +115,53 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.gap-4 {
-  gap: 16px;
+/* Адаптивный AppBar */
+.resume-app-bar {
+  background: rgba(var(--v-theme-surface), 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(var(--v-theme-primary), 0.2) !important;
 }
 
+/* Кнопка переключения языков */
 .lang-switcher-btn {
   letter-spacing: 1px;
   font-size: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Адаптивная граница Vuetify */
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   border-radius: 8px;
   min-width: auto;
 }
 
+/* Эффект свечения текста primary (мягче на светлой теме) */
 .text-primary {
-  text-shadow: 0 0 8px rgba(var(--v-theme-primary), 0.5);
+  text-shadow: 0 0 12px rgba(var(--v-theme-primary), 0.3);
 }
 
-/* Сделаем бордер модалки чуть ярче в стиле киберпанка */
-.border-primary {
-  border: 1px solid rgba(var(--v-theme-primary), 0.5) !important;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
+/* Кнопка скачивания PDF */
 .pdf-download-btn {
-  border: 1px solid rgba(var(--v-theme-primary), 0.3) !important;
-  background: rgba(var(--v-theme-primary), 0.05);
+  background: rgba(var(--v-theme-primary), 0.05) !important;
+  border: 1px solid rgba(var(--v-theme-primary), 0.4) !important;
   transition: all 0.3s ease;
 }
 
 .pdf-download-btn:hover {
-  background: rgba(var(--v-theme-primary), 0.15);
-  box-shadow: 0 0 10px rgba(var(--v-theme-primary), 0.3);
+  background: rgba(var(--v-theme-primary), 0.1) !important;
+  box-shadow: 0 4px 12px rgba(var(--v-theme-primary), 0.2);
   transform: translateY(-1px);
+}
+
+/* Контейнер для кнопок в модалке */
+.gap-4 {
+  gap: 16px;
+}
+
+/* Граница модалки */
+.border-primary-modal {
+  border: 1px solid rgba(var(--v-theme-primary), 0.3) !important;
+}
+
+/* Убираем лишние тени для чистоты дизайна на светлой теме */
+:deep(.v-toolbar__content) {
+  border-bottom: none !important;
 }
 </style>
