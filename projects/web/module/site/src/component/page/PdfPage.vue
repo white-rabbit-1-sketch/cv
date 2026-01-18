@@ -5,6 +5,9 @@ import {
 } from "@mdi/js"
 import Header from "@/component/layout/Header.vue";
 import {useTheme} from "vuetify";
+import {useI18n} from "vue-i18n";
+
+const { t } = useI18n();
 
 const theme = useTheme();
 theme.global.name.value = 'light';
@@ -12,18 +15,21 @@ theme.global.name.value = 'light';
 
 <template>
   <div class="layout">
-    <div class="content pt-0 pb-0">
+    <div class="header" id="header">
+      <Header />
+    </div>
+    <div class="content pb-0">
       <div class="pdf-resume-container">
         <header class="resume-header">
           <div class="header-main">
-            <h1 class="name">Mikhail Chuloshnikov</h1>
-            <div class="target-role">Senior Backend Engineer | Principal Architect | Team Lead | CTO | High-Load & Systems Researcher</div>
+            <h1 class="name">{{t('l5')}}</h1>
+            <div class="target-role" v-html="t('l500')"></div>
           </div>
 
           <div class="contact-grid">
             <div class="contact-item">
               <v-icon size="14" color="primary">{{ mdiMapMarkerOutline }}</v-icon>
-              Yerevan, Armenia
+              {{ t('l501') }}
             </div>
 
             <a href="https://t.me/dance_with_rabbit" target="_blank" class="contact-item link">
@@ -38,7 +44,7 @@ theme.global.name.value = 'light';
 
             <a href="https://www.linkedin.com/in/mikhail-chuloshnikov-176792286/" target="_blank" class="contact-item link">
               <v-icon size="14" color="#0077B5">{{ mdiLinkedin }}</v-icon>
-              LinkedIn Profile
+              {{ t('l502') }}
             </a>
 
             <a href="mailto:cv@fkitty.com" class="contact-item link">
@@ -51,9 +57,9 @@ theme.global.name.value = 'light';
         <div class="main-layout">
           <aside class="sidebar">
             <section class="sidebar-section">
-              <h3 class="side-title">TECHNICAL STACK</h3>
+              <h3 class="side-title">{{ t('l503') }}</h3>
               <div class="skill-category">
-                <div class="cat-name">Languages</div>
+                <div class="cat-name">{{ t('l504') }}</div>
                 <div class="skill-group">
                   <span class="skill-tag">PHP</span>
                   <span class="skill-tag">Go</span>
@@ -62,7 +68,7 @@ theme.global.name.value = 'light';
                 </div>
               </div>
               <div class="skill-category">
-                <div class="cat-name">Common</div>
+                <div class="cat-name">{{ t('l505') }}</div>
                 <div class="skill-group">
                   <span class="skill-tag">Symfony</span>
                   <span class="skill-tag">Doctrine</span>
@@ -103,68 +109,67 @@ theme.global.name.value = 'light';
             </section>
 
             <section class="sidebar-section">
-              <h3 class="side-title">EXPERTISE</h3>
+              <h3 class="side-title">{{ t('l506') }}</h3>
               <ul class="expert-list">
-                <li>Core Banking & Payments</li>
-                <li>High-Load</li>
-                <li>Reverse Engineering</li>
-                <li>Vulnerability Research</li>
-                <li>Team Leadership</li>
+                <li>{{ t('l507') }}</li>
+                <li>{{ t('l508') }}</li>
+                <li>{{ t('l509') }}</li>
+                <li>{{ t('l510') }}</li>
+                <li>{{ t('l511') }}</li>
               </ul>
             </section>
 
             <section class="sidebar-section">
-              <h3 class="side-title">Certifications</h3>
+              <h3 class="side-title">{{ t('l512') }}</h3>
 
               <div class="cert-item-detailed">
-                <div class="cert-name">Zend PHP Certified Engineer</div>
+                <div class="cert-name">{{ t('l513') }}</div>
               </div>
             </section>
 
             <section class="sidebar-section">
-              <h3 class="side-title">EDUCATION</h3>
+              <h3 class="side-title">{{ t('l514') }}</h3>
 
               <div class="edu-item-compact">
-                <div class="edu-uni"><strong>Synergy University</strong></div>
-                <div class="edu-spec">Fullstack Dev • 2026</div>
+                <div class="edu-uni"><strong>{{ t('l515') }}</strong></div>
+                <div class="edu-spec">{{ t('l516') }}</div>
               </div>
 
               <div class="edu-item-compact mt-3">
-                <div class="edu-uni"><strong>Modern Technical Inst.</strong></div>
-                <div class="edu-spec">Service • 2015</div>
+                <div class="edu-uni"><strong>{{ t('l517') }}</strong></div>
+                <div class="edu-spec">{{ t('l518') }}</div>
               </div>
 
               <div class="edu-item-compact mt-3">
-                <div class="edu-uni"><strong>Moscow College of Math</strong></div>
-                <div class="edu-spec">Programming & AS • 2008</div>
+                <div class="edu-uni"><strong>{{ t('l519') }}</strong></div>
+                <div class="edu-spec">{{ t('l520') }}</div>
               </div>
             </section>
           </aside>
 
           <main class="experience-content">
-            <h3 class="section-heading">SELECTED IMPACT CASES</h3>
+            <h3 class="section-heading">{{ t('l521') }}</h3>
 
             <div class="case-card">
               <div class="job-header">
                 <div class="company-info">
                   <v-icon color="primary" class="mr-1" size="18">{{ mdiBankOutline }}</v-icon>
                   <span class="company-name">Silverbird (Theropod LTD)</span>
-                  <span class="role-title">Project Lead / Senior Developer</span>
+                  <span class="role-title">{{ t('l522') }}</span>
                 </div>
-                <span class="period">Oct 2022 — March 2024</span>
+                <span class="period">{{ t('l523') }}</span>
               </div>
               <ul class="achievements">
-                <li><strong>Core Banking Development:</strong> Engineering of core banking engines and all related financial infrastructure.</li>
-                <li><strong>Multi-PSP Integration:</strong> Design and development of systems for seamless multi-PSP (Payment Service Provider) integration.</li>
-                <li><strong>Payment Processing Core:</strong> Architecture and development of the core engine for Inbound/Outbound payments, FX transactions, and intelligent payment routing.</li>
-                <li><strong>Leadership & Stakeholding:</strong> Acting as Team Lead and Stakeholder for the core banking and payment modules.</li>
-                <li><strong>External Ecosystems:</strong> Integration of external PSPs and development of specialized Beneficiary Modules.</li>
-                <li><strong>Security Auditing:</strong> Conducting comprehensive security audits for financial components.</li>
-                <li><strong>Banking Domain Expertise:</strong> Full-cycle implementation of payments, FX, and transactions. Deep integration with payment schemes: SWIFT, SEPA, Faster Payments, T2, and platforms like TUUM / Integrated Finance.</li>
-
+                <li><strong>{{ t('l524') }}</strong> {{ t('l525') }}</li>
+                <li><strong>{{ t('l526') }}</strong> {{ t('l527') }}</li>
+                <li><strong>{{ t('l528') }}</strong> {{ t('l529') }}</li>
+                <li><strong>{{ t('l530') }}</strong> {{ t('l531') }}</li>
+                <li><strong>{{ t('l532') }}</strong> {{ t('l533') }}</li>
+                <li><strong>{{ t('l534') }}</strong> {{ t('l535') }}</li>
+                <li><strong>{{ t('l536') }}</strong> {{ t('l537') }}</li>
               </ul>
               <div class="tag-row">
-                <span class="mini-tag">Fintech Infrastructure</span><span class="mini-tag">Payments Processing</span><span class="mini-tag">Security Audit</span>
+                <span class="mini-tag">{{ t('l538') }}</span><span class="mini-tag">{{ t('l539') }}</span><span class="mini-tag">{{ t('l540') }}</span>
               </div>
             </div>
 
@@ -173,21 +178,21 @@ theme.global.name.value = 'light';
                 <div class="company-info">
                   <v-icon color="primary" class="mr-1" size="18">{{ mdiRocketLaunchOutline }}</v-icon>
                   <span class="company-name">TSUM (Mercury Group)</span>
-                  <span class="role-title">Team Lead</span>
+                  <span class="role-title">{{ t('l541') }}</span>
                 </div>
-                <span class="period">April 2021 — April 2022</span>
+                <span class="period">{{ t('l542') }}</span>
               </div>
               <ul class="achievements">
-                <li><strong>Cross-functional Leadership:</strong> Managed a complete product cell including Developers, QA, Product Managers, and Business Analysts.</li>
-                <li><strong>Massive Scale:</strong> Managed High-Load systems handling nearly 1 Billion data records.</li>
-                <li><strong>Service Ownership:</strong> Full accountability for 6+ mission-critical services within the e-commerce ecosystem.</li>
-                <li><strong>Marketing-Tech Strategy:</strong> Spearheaded the Marketing product-engineering bridge, acting as a primary Stakeholder.</li>
-                <li><strong>Team Transformation:</strong> Completely rebuilt and upskilled the team to align with modern product requirements and tech standards.</li>
-                <li><strong>Innovation Driver:</strong> Initiated and oversaw the development of new services using cutting-edge technologies to solve specific business needs.</li>
-                <li><strong>Process Excellence:</strong> Built internal development workflows from scratch and streamlined interaction protocols between business units and external teams.</li>
+                <li><strong>{{ t('l543') }}</strong> {{ t('l544') }}</li>
+                <li><strong>{{ t('l545') }}</strong> {{ t('l546') }}</li>
+                <li><strong>{{ t('l547') }}</strong> {{ t('l548') }}</li>
+                <li><strong>{{ t('l549') }}</strong> {{ t('l550') }}</li>
+                <li><strong>{{ t('l551') }}</strong> {{ t('l552') }}</li>
+                <li><strong>{{ t('l553') }}</strong> {{ t('l554') }}</li>
+                <li><strong>{{ t('l555') }}</strong> {{ t('l556') }}</li>
               </ul>
               <div class="tag-row">
-                <span class="mini-tag">High-Load (1B+ Records)</span><span class="mini-tag">Management</span><span class="mini-tag">Strategic Planning</span>
+                <span class="mini-tag">{{ t('l557') }}</span><span class="mini-tag">{{ t('l558') }}</span><span class="mini-tag">{{ t('l559') }}</span>
               </div>
             </div>
 
@@ -196,282 +201,280 @@ theme.global.name.value = 'light';
                 <div class="company-info">
                   <v-icon color="primary" class="mr-1" size="18">{{ mdiSecurity }}</v-icon>
                   <span class="company-name">MIF</span>
-                  <span class="role-title">Security & Low-Level Systems Researcher</span>
+                  <span class="role-title">{{ t('l560') }}</span>
                 </div>
-                <span class="period">Sept 2008 — Aug 2009</span>
+                <span class="period">{{ t('l561') }}</span>
               </div>
               <ul class="achievements">
-                <li><strong>Full-Chain Vulnerability Analysis:</strong> Conducted end-to-end security research on major browser engines and Adobe Reader. Developed functional RCE (Remote Code Execution) exploits (Only Proof-of-Concept) to demonstrate critical memory corruption flaws using WinDbg, x86 Assembly, and advanced heap-spraying techniques.</li>
-                <li><strong>High-Concurrency C&C Architecture:</strong> Engineered ultra-lightweight remote management agents (4KB binaries) and command-and-control (C2) infrastructures using C (WinAPI) and Lua. Focus on extreme binary optimization and stealthy network communication.</li>
-                <li><strong>Polymorphic Code Protection:</strong> Developed a sophisticated machine-based obfuscator. It featured a custom code translator (Python/JS to pseudocode) designed to bypass heuristic analysis and static signature detection engines.</li>
-                <li><strong>Algorithmic Network Topology:</strong> Designed and implemented automated systems for large-scale content generation and inter-linked network structures (Ring & Pyramid topologies). Optimized link-graph algorithms to maximize search engine indexing efficiency.</li>
-                <li><strong>Infrastructure Monetization:</strong> Developed specialized platforms for client hardware resource acquisition and satellite site generation systems.</li>
-                <li><strong>Systems Mindset:</strong> This era defined my "low-level first" approach. Understanding memory corruption and CPU-level execution is what allows me today to build high-load systems that are inherently secure.</li>
+                <li><strong>{{ t('l562') }}</strong> {{ t('l563') }}</li>
+                <li><strong>{{ t('l564') }}</strong> {{ t('l565') }}</li>
+                <li><strong>{{ t('l566') }}</strong> {{ t('l567') }}</li>
+                <li><strong>{{ t('l568') }}</strong> {{ t('l569') }}</li>
+                <li><strong>{{ t('l570') }}</strong> {{ t('l571') }}</li>
+                <li><strong>{{ t('l572') }}</strong> {{ t('l573') }}</li>
               </ul>
               <div class="tag-row">
-                <span class="mini-tag">Reverse Engineering</span><span class="mini-tag">x86 Assembler</span><span class="mini-tag">Memory Corruption</span>
+                <span class="mini-tag">{{ t('l574') }}</span><span class="mini-tag">{{ t('l575') }}</span><span class="mini-tag">{{ t('l576') }}</span>
               </div>
             </div>
 
 
-            <h3 class="section-heading mt-6">CURRENT VENTURE</h3>
+            <h3 class="section-heading mt-6">{{ t('l577') }}</h3>
             <div class="alunea-card">
               <div class="job-header">
                 <div class="company-info">
                   <v-icon color="primary" class="mr-1" size="18">{{ mdiRocketLaunchOutline }}</v-icon>
                   <span class="company-name">Alunea</span>
-                  <span class="role-title">Founder & Lead Architect • <a href="https://alunea.io/" target="_blank">alunea.io</a></span>
+                  <span class="role-title">{{ t('l578') }} • <a href="https://alunea.io/" target="_blank">alunea.io</a></span>
                 </div>
-                <span class="period">2025 — Present</span>
+                <span class="period">{{ t('l579') }}</span>
               </div>
 
-              <p class="job-mini-desc">
-                An AI-driven language learning ecosystem that bridges passive content consumption with active speaking practice using <strong>Voice-Interactive Tutors</strong> and real-time subtitle processing.
+              <p class="job-mini-desc" v-html="t('l580')">
+
               </p>
 
               <ul class="achievements">
-                <li><strong>AI Tutor "Violet":</strong> Interactive voice calls for active recall using context-aware vocabulary.</li>
-                <li><strong>Smart Subtitles:</strong> Contextual dual subtitles for Netflix & YouTube with on-the-fly generation.</li>
-                <li><strong>Unified Sync:</strong> Real-time word-sync across Browser Extensions, iOS/Android apps, and Backend.</li>
+                <li><strong>{{ t('l581') }}</strong> {{ t('l582') }}</li>
+                <li><strong>{{ t('l583') }}</strong> {{ t('l584') }}</li>
+                <li><strong>{{ t('l585') }}</strong> {{ t('l586') }}</li>
               </ul>
 
               <div class="tag-row mt-2">
-                <span class="mini-tag">LLM Integration</span>
-                <span class="mini-tag">Voice AI</span>
-                <span class="mini-tag">Adaptive Learning</span>
-                <span class="mini-tag">Cross-Platform Sync</span>
+                <span class="mini-tag">{{ t('l587') }}</span>
+                <span class="mini-tag">{{ t('l588') }}</span>
+                <span class="mini-tag">{{ t('l589') }}</span>
+                <span class="mini-tag">{{ t('l590') }}</span>
               </div>
             </div>
 
 
 
 
-            <h3 class="section-heading mt-6">PROFESSIONAL CHRONOLOGY</h3>
+            <h3 class="section-heading mt-6">{{ t('l591') }}</h3>
             <div class="earlier-jobs-list">
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">July 2024 — Oct 2025</span>
-                  <span class="chrono-company"><strong>Aventus IT</strong> | Team Lead</span>
+                  <span class="chrono-period">{{ t('l592') }}</span>
+                  <span class="chrono-company"><strong>Aventus IT</strong> | {{ t('l593') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Leading/mentoring 7 backend devs. Streamlining internal workflows and cross-departmental operations. Designing robust architectures for high-performance services. CI/CD optimization. Direct contribution to flagship microservices.
+                  {{ t('l594') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Oct 2022 — March 2024</span>
-                  <span class="chrono-company"><strong>Silverbird (Theropod LTD)</strong> | Project Lead / Senior Dev</span>
+                  <span class="chrono-period">{{ t('l595') }}</span>
+                  <span class="chrono-company"><strong>Silverbird (Theropod LTD)</strong> | {{ t('l596') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Engineering of core banking engines, multi-PSP integration, and FX payment processing. Leadership for payment modules. Integration with SWIFT, SEPA, Faster Payments, T2, TUUM. Comprehensive security auditing.
+                  {{ t('l597') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">July 2022 — Sept 2022</span>
-                  <span class="chrono-company"><strong>MTS</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l598') }}</span>
+                  <span class="chrono-company"><strong>MTS</strong> | {{ t('l599') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Engineering and implementation of new functional modules within the Bitrix framework. Architectural migration of legacy Bitrix functionality to modern microservices.
+                  {{ t('l600') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">April 2021 — April 2022</span>
-                  <span class="chrono-company"><strong>TSUM (Mercury Group)</strong> | Team Lead</span>
+                  <span class="chrono-period">{{ t('l601') }}</span>
+                  <span class="chrono-company"><strong>TSUM (Mercury Group)</strong> | {{ t('l602') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Managed product cell (Dev, QA, PM, BA). Ownership of 6+ mission-critical services handling 1B+ records. Spearheaded Marketing-Tech strategy. Rebuilt and upskilled the team.
+                  {{ t('l603') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Sept 2020 — April 2021</span>
-                  <span class="chrono-company"><strong>Silverbird</strong> | Head of Development</span>
+                  <span class="chrono-period">{{ t('l604') }}</span>
+                  <span class="chrono-company"><strong>Silverbird</strong> | {{ t('l605') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Orchestrated end-to-end creation of banking platform. Assembled engineering team from scratch. Designed and launched ~10 projects (API, microservices, infra). Managed technical governance and global architecture.
+                  {{ t('l606') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Sept 2020 — April 2021</span>
-                  <span class="chrono-company"><strong>Gosuslugi</strong> | Tech Analyst / Senior Dev</span>
+                  <span class="chrono-period">{{ t('l607') }}</span>
+                  <span class="chrono-company"><strong>Gosuslugi</strong> | {{ t('l608') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Development of core feedback subsystem. Profiling and optimization for extreme high-load. Complex integration with ESIA (National SSO) and ROI analytical systems. Data normalization.
+                  {{ t('l609') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Feb 2018 — July 2020</span>
-                  <span class="chrono-company"><strong>TSUM (Mercury Group)</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l610') }}</span>
+                  <span class="chrono-company"><strong>TSUM (Mercury Group)</strong> | {{ t('l611') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Engineering of core internal ecosystem. Debugging complex data synchronization. Implementation of high-performance search and MarTech services (feed generators, QR engines).
+                  {{ t('l612') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">April 2016 — Nov 2017</span>
-                  <span class="chrono-company"><strong>JivoChat (JivoSite)</strong> | Team Lead</span>
+                  <span class="chrono-period">{{ t('l613') }}</span>
+                  <span class="chrono-company"><strong>JivoChat (JivoSite)</strong> | {{ t('l614') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Managed team of 6. Implemented Scrum, boosting productivity from 70% to 120%. Automated systems for transparency. Owned full release management cycle.
+                  {{ t('l615') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Jan 2016 — March 2016</span>
-                  <span class="chrono-company"><strong>VK</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l616') }}</span>
+                  <span class="chrono-company"><strong>VK</strong> | {{ t('l617') }}</span>
                 </div>
                 <div class="chrono-content">
-                  High-load specialized projects (NDA).
+                  {{ t('l618') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Aug 2014 — Dec 2015</span>
-                  <span class="chrono-company"><strong>Activizm.ru</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l619') }}</span>
+                  <span class="chrono-company"><strong>Activizm.ru</strong> | {{ t('l620') }}</span>
                 </div>
                 <div class="chrono-content">
-                  AdTech integration (Google AdWords/Yandex.Direct API), large-scale data exports to Merchant Centers, and system profiling.
+                  {{ t('l621') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Nov 2013 — July 2014</span>
-                  <span class="chrono-company"><strong>Mamba</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l622') }}</span>
+                  <span class="chrono-company"><strong>Mamba</strong> | {{ t('l623') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Developed notification engine for tens of millions of users. Integration with custom C-based daemons. Refactoring of mail gateway protocols. Database optimization (SQL, RRDtool).
+                  {{ t('l624') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">May 2012 — Aug 2013</span>
-                  <span class="chrono-company"><strong>Enter.ru</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l625') }}</span>
+                  <span class="chrono-company"><strong>Enter.ru</strong> | {{ t('l626') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Fintech integration for online credit purchases, 1C integration, Symfony migration.
+                  {{ t('l627') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Aug 2009 — Apr 2012</span>
-                  <span class="chrono-company"><strong>Wikimart</strong> | Senior Developer</span>
+                  <span class="chrono-period">{{ t('l628') }}</span>
+                  <span class="chrono-company"><strong>Wikimart</strong> | {{ t('l629') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Billing system from scratch, high-throughput ETL for massive product feeds.
+                  {{ t('l630') }}
                 </div>
               </div>
 
               <div class="chrono-item-detailed">
                 <div class="chrono-header">
-                  <span class="chrono-period">Sept 2008 — Aug 2009</span>
-                  <span class="chrono-company"><strong>MIF</strong> | Systems Researcher</span>
+                  <span class="chrono-period">{{ t('l631') }}</span>
+                  <span class="chrono-company"><strong>MIF</strong> | {{ t('l632') }}</span>
                 </div>
                 <div class="chrono-content">
-                  Vulnerability research (RCE PoCs), WinDbg, x86 Assembly. Engineering 4KB C/WinAPI remote agents. Polymorphic code obfuscation. Algorithmic network topology optimization.
+                  {{ t('l633') }}
                 </div>
               </div>
             </div>
 
-            <h3 class="section-heading mt-6">PUBLICATIONS</h3>
+            <h3 class="section-heading mt-6">{{ t('l634') }}</h3>
             <div class="publications-grid">
 
               <a href="https://levelup.gitconnected.com/buffer-overflow-for-beginners-edf9f9d593e2" target="_blank" class="pub-item">
-                <div class="pub-tag error">Security</div>
-                <div class="pub-title">Buffer Overflow for Beginners</div>
-                <div class="pub-desc">An in-depth look at memory corruption and stack smashing.</div>
+                <div class="pub-tag error">{{ t('l635') }}</div>
+                <div class="pub-title">{{ t('l636') }}</div>
+                <div class="pub-desc">{{ t('l637') }}</div>
               </a>
 
               <a href="https://levelup.gitconnected.com/the-fundamental-vulnerability-of-networks-arp-spoofing-172d51947872" target="_blank" class="pub-item">
-                <div class="pub-tag warning">Networks</div>
-                <div class="pub-title">The Fundamental Vulnerability: ARP Spoofing</div>
-                <div class="pub-desc">Analyzing low-level network protocol flaws and mitm attacks.</div>
+                <div class="pub-tag warning">{{ t('l638') }}</div>
+                <div class="pub-title">{{ t('l639') }}</div>
+                <div class="pub-desc">{{ t('l640') }}</div>
               </a>
 
               <a href="https://medium.com/gitconnected/the-power-of-udf-functions-in-mysql-data-encryption-using-c-and-openssl-484f511eff98" target="_blank" class="pub-item">
-                <div class="pub-tag info">Systems</div>
-                <div class="pub-title">The Power of UDF Functions in MySQL: Data Encryption Using C++ and OpenSSL</div>
-                <div class="pub-desc">Implementing custom UDF functions for high-performance crypto.</div>
+                <div class="pub-tag info">{{ t('l641') }}</div>
+                <div class="pub-title">{{ t('l642') }}</div>
+                <div class="pub-desc">{{ t('l643') }}</div>
               </a>
 
               <a href="https://medium.com/@mikhail.chuloshnikov/file-based-hash-map-using-as-persistent-data-storage-33b849cc8e41" target="_blank" class="pub-item">
-                <div class="pub-tag success">Storage</div>
-                <div class="pub-title">File-based hash map — using as persistent data storage</div>
-                <div class="pub-desc">Designing a high-performance hash map for disk-based data.</div>
+                <div class="pub-tag success">{{ t('l644') }}</div>
+                <div class="pub-title">{{ t('l645') }}</div>
+                <div class="pub-desc">{{ t('l646') }}</div>
               </a>
 
             </div>
 
-
-            <h3 class="section-heading mt-6">CODE</h3>
+            <h3 class="section-heading mt-6">{{ t('l647') }}</h3>
             <div class="code-portfolio-grid">
 
               <div class="repo-group">
-                <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> C / C++ (Systems & Security)</div>
+                <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> {{ t('l648') }}</div>
                 <div class="repo-links">
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/alghoritms" target="_blank">Algorithms</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/mysql-openssl" target="_blank">MySQL OpenSSL Plugin</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/arp-spoofer" target="_blank">ARP Spoofer (Security)</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/shellcode-generator" target="_blank">Shellcode Generator</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/yansdb" target="_blank">YansDB (NoSQL Storage)</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/broadcasting-server" target="_blank">TCP/IP Broadcast Server</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness-hid" target="_blank">Lightness HID Tool</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/alghoritms" target="_blank">{{ t('l649') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/mysql-openssl" target="_blank">{{ t('l650') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/arp-spoofer" target="_blank">{{ t('l651') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/shellcode-generator" target="_blank">{{ t('l652') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/yansdb" target="_blank">{{ t('l653') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/broadcasting-server" target="_blank">{{ t('l654') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness-hid" target="_blank">{{ t('l655') }}</a>
                 </div>
               </div>
 
               <div class="repo-group">
-                <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> Python, Go, Lua</div>
+                <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> {{ t('l656') }}</div>
                 <div class="repo-links">
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler" target="_blank">Go: Concurrent Crawler</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/helicopter" target="_blank">Python: Helicopter Game</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot" target="_blank">L2 Lottery Bot</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/web-cryptor" target="_blank">Python: Web Cryptor</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness" target="_blank">Python: Lightness Monitor</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/lua-installer" target="_blank">Lua: Simple Installer</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/cute_fox_wild_hunt" target="_blank">Godot: Fox Wild Hunt</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler" target="_blank">{{ t('l657') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/helicopter" target="_blank">{{ t('l658') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot" target="_blank">{{ t('l659') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/web-cryptor" target="_blank">{{ t('l660') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/lightness" target="_blank">{{ t('l661') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/lua-installer" target="_blank">{{ t('l662') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/cute_fox_wild_hunt" target="_blank">{{ t('l663') }}</a>
                 </div>
               </div>
 
               <div class="repo-group">
-                <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> PHP, Java, TypeScript</div>
+                <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> {{ t('l664') }}</div>
                 <div class="repo-links">
-                  <a href="https://github.com/white-rabbit-1-sketch/php-file-hash-map" target="_blank">PHP: File Hash Map</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/php-worker-pool" target="_blank">PHP: Worker Pool (System V)</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/alunea-alias-backend" target="_blank">Email Alias: Java Backend</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/alunea-alias-frontend" target="_blank">Email Alias: Angular front</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/alunea-alias-ansible" target="_blank">Email Alias: Ansible CI/CD</a>
-                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/php-snippets" target="_blank">Various PHP Snippets</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/php-file-hash-map" target="_blank">{{ t('l665') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/php-worker-pool" target="_blank">{{ t('l666') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/alunea-alias-backend" target="_blank">{{ t('l667') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/alunea-alias-frontend" target="_blank">{{ t('l668') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/alunea-alias-ansible" target="_blank">{{ t('l669') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/php-snippets" target="_blank">{{ t('l670') }}</a>
                 </div>
               </div>
 
             </div>
 
 
-            <h3 class="section-heading mt-6">BROAD STACK</h3>
-            <p class="eco-note">
-              <strong>Note:</strong> While not all of these are daily drivers, I possess the practical experience to implement, debug, or lead projects using this broader ecosystem.
+            <h3 class="section-heading mt-6">{{ t('l671') }}</h3>
+            <p class="eco-note" v-html="t('l672')">
             </p>
 
             <div class="eco-grid">
               <div class="eco-column">
-                <div class="eco-label">LANGUAGES & CORE</div>
+                <div class="eco-label">{{ t('l673') }}</div>
                 <div class="eco-block">
                   <strong>PHP / Go / Java</strong><br /> Symfony • Laravel • Yii • Zend • Custom Extensions (C) • Doctrine • Libs • High-perf Microservices • Concurrency • Spring Security/Boot/Social • Hibernate • Apache JBI/ESB/JMS/Service Mix/ActiveMQ/Camel
                   <br><strong>Python / TypeScript / Lua / Gdscript (Godot)</strong><br /> Django • SQLAlchemy • Vue • Vuetify • Angular • Electron/Ionic/Capacitor • Webpack • Lua Stdl/COM/fs/socket/C API
@@ -480,63 +483,59 @@ theme.global.name.value = 'light';
               </div>
 
               <div class="eco-column">
-                <div class="eco-label">SYSTEMS & HIGH-LOAD</div>
+                <div class="eco-label">{{ t('l674') }}</div>
                 <div class="eco-block">
-                  <strong>Databases</strong><br /> PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
+                  <strong>{{ t('l675') }}</strong><br /> PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
                   <br><strong>CI/CD</strong><br /> Docker • Ansible • Github Actions
                   <br><strong>Infrastructure</strong><br /> Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
-                  <br><strong>Architecture</strong><br /> Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
+                  <br><strong>{{ t('l676') }}</strong><br /> Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
                 </div>
               </div>
 
               <div class="eco-column">
-                <div class="eco-label">Security & Low-Level</div>
+                <div class="eco-label">{{ t('l677') }}</div>
                 <div class="eco-block">
-                  <strong>Sec Research & Audits</strong><br /> 0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
-                  <br><strong>Reverse Engineering</strong><br /> OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
-                  <br><strong>Deep Debugging</strong><br /> Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
+                  <strong>{{ t('l678') }}</strong><br /> 0-day Exploit Dev • RCE • XSS • Buffer Overflow • Cryptors • Shellcode
+                  <br><strong>{{ t('l679') }}</strong><br /> OllyDbg • WinDbg • GDB • Binary Patching • Deobfuscation • Import Table Recovery
+                  <br><strong>{{ t('l680') }}</strong><br /> Strace Expert • Kernel Module Patching • Raw Sockets • Packet Inspection (TCP/UDP)
                 </div>
               </div>
             </div>
 
 
-            <h3 class="section-heading mt-6">THE BACKSTORY: FROM DELPHI TO ARCHITECT</h3>
+            <h3 class="section-heading mt-6">{{ t('l681') }}</h3>
             <div class="backstory-container">
 
               <div class="story-grid">
                 <div class="story-cell">
-                  <div class="story-label">GENESIS & EARLY EXPLOITS</div>
-                  <p>
-                    Started at 14 with a Delphi book and no internet. By college, I was hacking WinServer networks and maintaining <strong>WoW servers (MaNGOS)</strong> on C++, learning the grit of binary patching.
-                    In the <strong>Lineage 2</strong> era, I built a custom Socks4/5 proxy layer for on-the-fly packet modification — pure raw socket magic invisible to anti-cheats.
+                  <div class="story-label">{{ t('l682') }}</div>
+                  <p v-html="t('l683')">
                   </p>
                 </div>
 
                 <div class="story-cell">
-                  <div class="story-label">THE "GREY" ERA & OPTIMIZATION</div>
-                  <p>
-                    Building botnets taught me extreme optimization: I integrated a <strong>Lua interpreter into a C-core</strong>, feeding it raw bytecode to achieve a <strong>4KB binary</strong>.
-                    Developed custom cryptors using Python-to-Pseudocode translators and bypassed top-tier AVs by shifting from standard WinAPI to CMD/FTP shellcode injection.
+                  <div class="story-label">{{ t('l684') }}</div>
+                  <p v-html="t('l685')">
                   </p>
                 </div>
               </div>
 
               <div class="philosophy-box mt-4">
-                <div class="story-label">ARCHITECTURAL PHILOSOPHY & "RELIGION"</div>
+                <div class="story-label">{{ t('l686') }}</div>
                 <div class="philosophy-content">
                   <div class="phi-column">
-                    <div class="phi-item"><strong>Infra:</strong> Debian only. Use <strong>UDP</strong> instead of TCP for real-time performance.</div>
-                    <div class="phi-item"><strong>DB:</strong> Foreign Keys are for billing only. Stop the subquery madness and DB-trash-can approach.</div>
+                    <div class="phi-item"><strong>{{ t('l687') }}</strong> <span v-html="t('l688')"></span></div>
+                    <div class="phi-item"><strong>{{ t('l689') }}</strong> {{ t('l690') }}</div>
                   </div>
                   <div class="phi-column">
-                    <div class="phi-item"><strong>Arch:</strong> Thin clients (PHP) → High-speed Microservices (Go/Java). Decentralized P2P trust rings.</div>
-                    <div class="phi-item"><strong>Logic:</strong> Debugged Pinba stack corruption for 24h. I don't trust "magic" monitoring tools anymore.</div>
+                    <div class="phi-item"><strong>{{ t('l691') }}</strong> {{ t('l692') }}</div>
+                    <div class="phi-item"><strong>{{ t('l693') }}</strong> {{ t('l694') }}</div>
                   </div>
                 </div>
               </div>
 
               <div class="story-quote mt-3">
-                "I love computers, I understand them, and they understand me."
+                {{ t('l695') }}
               </div>
             </div>
 
@@ -604,6 +603,12 @@ theme.global.name.value = 'light';
 @media print {
   .pdf-resume-container { padding: 30; width: 100%; }
   .case-card { page-break-inside: avoid; }
+  #header {
+    display: none;
+  }
+  .content {
+    padding-top: 0 !important;
+  }
 }
 
 .earlier-jobs-list {
