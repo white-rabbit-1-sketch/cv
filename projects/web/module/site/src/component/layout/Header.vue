@@ -52,8 +52,6 @@ onMounted(() => {
         </v-btn>
 
         <v-btn
-            icon
-            download
             variant="outlined"
             size="small"
             class="ml-4 pdf-download-btn font-weight-bold"
@@ -61,6 +59,7 @@ onMounted(() => {
             @click="downloadPdf"
         >
           <v-icon :icon="mdiDownload" size="18" class="mr-1" />
+          PDF
         </v-btn>
 
         <v-btn
