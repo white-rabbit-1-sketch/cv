@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import MobileLayout from "@/component/layout/MobileLayout.vue";
 import IndexPage from "@/component/page/IndexPage.vue";
+import PdfPage from "@/component/page/PdfPage.vue";
 
 const routes: any = {
   routes: [
@@ -11,6 +12,10 @@ const routes: any = {
         {
           path: '',
           component: IndexPage,
+        },
+        {
+          path: 'pdf',
+          component: PdfPage,
         },
       ],
     },
