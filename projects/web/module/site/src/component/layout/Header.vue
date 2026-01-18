@@ -25,7 +25,7 @@ function downloadPdf() {
   // Путь к файлам в папке public (например, public/Chuloshnikov-Mikhail.en.pdf)
   const fileName = `Chuloshnikov-Mikhail-Borisovich.${locale.value}.pdf`;
   const link = document.createElement('a');
-  link.href = `/public/files/${fileName}`;
+  link.href = `/files/${fileName}`;
   link.download = fileName;
   link.click();
 }
