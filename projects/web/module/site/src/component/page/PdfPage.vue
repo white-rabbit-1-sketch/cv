@@ -81,6 +81,8 @@ theme.global.name.value = 'light';
                   <span class="skill-tag">Memcached</span>
                   <span class="skill-tag">RabbitMQ</span>
                   <span class="skill-tag">Kafka</span>
+                  <span class="skill-tag">ClickHouse</span>
+                  <span class="skill-tag">Cassandra</span>
                   <span class="skill-tag">Ansible</span>
                   <span class="skill-tag">Docker</span>
                   <span class="skill-tag">Git</span>
@@ -453,6 +455,7 @@ theme.global.name.value = 'light';
               <div class="repo-group">
                 <div class="group-label"><v-icon size="10" color="primary">{{ mdiGithub }}</v-icon> {{ t('l656') }}</div>
                 <div class="repo-links">
+                  <a href="https://github.com/white-rabbit-1-sketch/lsm-storage" target="_blank">{{ t('l700') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler" target="_blank">{{ t('l657') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/helicopter" target="_blank">{{ t('l658') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot" target="_blank">{{ t('l659') }}</a>
@@ -495,9 +498,9 @@ theme.global.name.value = 'light';
               <div class="eco-column">
                 <div class="eco-label">{{ t('l674') }}</div>
                 <div class="eco-block">
-                  <strong>{{ t('l675') }}</strong><br /> PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
+                  <strong>{{ t('l675') }}</strong><br /> PostgreSQL • MySQL • MS SQL • Redis • Memcached • ClickHouse • Cassandra • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92
                   <br><strong>CI/CD</strong><br /> Docker • Ansible • Github Actions
-                  <br><strong>Infrastructure</strong><br /> Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
+                  <br><strong>Infrastructure</strong><br /> Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Kafka • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine
                   <br><strong>{{ t('l676') }}</strong><br /> Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems
                 </div>
               </div>

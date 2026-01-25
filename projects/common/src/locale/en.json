@@ -58,12 +58,12 @@
   "l57": "C / C++ / ASM / TCL / Delphi / VBA / Bash",
   "l58": "Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers",
   "l59": "Systems & High Load",
-  "l60": "Databases (1B+ Records)",
-  "l61": "PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92",
+  "l60": "Databases",
+  "l61": "PostgreSQL • MySQL • MS SQL • Redis • Memcached • ClickHouse • Cassandra • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92",
   "l62": "CI/CD",
   "l63": "Docker • Ansible • Github Actions",
   "l64": "Infrastructure",
-  "l65": "Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine",
+  "l65": "Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Kafka • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine",
   "l66": "Architecture",
   "l67": "Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems",
   "l68": "Security & Low-Level",
@@ -395,7 +395,7 @@
   "l394": "Code",
   "l395": "Open Source Projects & Technical Snippets",
   "l396": "C / C++",
-  "l397": "Python, Go, Lua",
+  "l397": "Go, Python, Lua",
   "l398": "PHP, Java, TypeScript",
   "l399": "C/C++/Golang: Algorithms",
   "l400": "C++: MySQL OpenSSL Plugin",
@@ -670,5 +670,6 @@
   "l696": "YEARS OF EXPERIENCE",
   "l697": "I bridge the gap between low-level system engineering and scalable web architecture. Leveraging 17+ years of experience, I build mission-critical backend ecosystems where performance, security, and stability are solved at the foundation.",
   "l698": "17+",
-  "l699": "Download PDF Version"
+  "l699": "Download PDF Version",
+  "l700": "Go: LSM-tree based storage"
 }

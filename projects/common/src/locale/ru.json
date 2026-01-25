@@ -58,12 +58,12 @@
   "l57": "C / C++ / ASM / TCL / Delphi / VBA / Bash",
   "l58": "Boost • WinAPI/POSIX • Kernel • Stdl • Raw sockets • COM • Stack • Heap • Registers",
   "l59": "Системы и High Load",
-  "l60": "Базы данных (1B+ записей)",
-  "l61": "PostgreSQL • MySQL • MS SQL • Redis • Memcached • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92",
+  "l60": "Базы данных",
+  "l61": "PostgreSQL • MySQL • MS SQL • Redis • Memcached • ClickHouse • Cassandra • Interbase • Firebase • Kyoto • Hash • Cardinality • Constraints • Replication • Sharding • Partitioning • Performance Tuning • Profiling • Locks • Indexes • T-SQL-92",
   "l62": "CI/CD",
   "l63": "Docker • Ansible • Github Actions",
   "l64": "Инфраструктура",
-  "l65": "Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine",
+  "l65": "Debian • Nginx • Caddy • Apache • Tomcat • Jetty • Elasticsearch • Sphinx • Solr • RabbitMQ • Kafka • Grafana • Loki • Alloy • Git • Svn • Mercurial • Jira • Confluence • Trac • Redmine",
   "l66": "Архитектура",
   "l67": "Sharding • Load Balancing • Zero-Downtime Altering • MSOA • Distributed Systems",
   "l68": "Безопасность и Low-Level",
@@ -395,7 +395,7 @@
   "l394": "Код",
   "l395": "Open Source проекты и технические сниппеты",
   "l396": "C / C++",
-  "l397": "Python, Go, Lua",
+  "l397": "Go, Python, Lua",
   "l398": "PHP, Java, TypeScript",
   "l399": "C/C++/Golang: Algorithms",
   "l400": "C++: MySQL OpenSSL Plugin",
@@ -670,5 +670,6 @@
   "l696": "ЛЕТ ОПЫТА",
   "l697": "Я объединяю низкоуровневое системное программирование и масштабируемую веб-архитектуру. Используя более 17 лет опыта, я создаю критически важные backend-экосистемы, где производительность, безопасность и стабильность закладываются на уровне фундамента.",
   "l698": "17+",
-  "l699": "Скачать PDF версию"
+  "l699": "Скачать PDF версию",
+  "l700": "Go: LSM-tree based storage"
 }

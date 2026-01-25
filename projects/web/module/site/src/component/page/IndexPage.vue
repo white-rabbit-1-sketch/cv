@@ -1333,6 +1333,7 @@ onMounted(() => {
               <div class="repo-list">
                 <a
                     v-for="repo in [
+                        { name: t('l700'), link: 'https://github.com/white-rabbit-1-sketch/lsm-storage' },
               { name: t('l406'), link: 'https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler' },
               { name: t('l407'), link: 'https://github.com/white-rabbit-1-sketch/helicopter' },
               { name: t('l408'), link: 'https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot' },
