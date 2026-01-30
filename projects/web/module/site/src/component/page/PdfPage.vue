@@ -457,6 +457,7 @@ theme.global.name.value = 'light';
                 <div class="repo-links">
                   <a href="https://github.com/white-rabbit-1-sketch/lsm-storage" target="_blank">{{ t('l700') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/golang-crawler" target="_blank">{{ t('l657') }}</a>
+                  <a href="https://github.com/white-rabbit-1-sketch/go-classes" target="_blank">{{ t('l701') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/helicopter" target="_blank">{{ t('l658') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/lineage-2-lottery-bot" target="_blank">{{ t('l659') }}</a>
                   <a href="https://github.com/white-rabbit-1-sketch/snippets/tree/master/web-cryptor" target="_blank">{{ t('l660') }}</a>
