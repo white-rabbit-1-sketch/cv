@@ -165,11 +165,6 @@ onMounted(() => {
                     <template v-slot:prepend><v-icon :icon="mdiLinkedin" /></template>
                     {{ t('l10') }}
                   </v-btn>
-
-                  <v-btn variant="outlined" rounded="lg" size="large" href="mailto:cv@fkitty.com" class="text-none border-white">
-                    <template v-slot:prepend><v-icon :icon="mdiEmail" /></template>
-                    {{ t('l11') }}
-                  </v-btn>
                 </div>
               </div>
             </v-col>
