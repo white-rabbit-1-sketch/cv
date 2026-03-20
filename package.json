@@ -7,9 +7,7 @@
     "web:serve:development": "projects/web/bin/serve.sh development",
     "web:serve:production": "projects/web/bin/serve.sh production",
     "web:build:development": "projects/web/bin/build.sh development",
-    "web:build:production": "projects/web/bin/build.sh production && npm run sourcemaps:clean",
-
-    "sourcemaps:clean": "find dist -type f -name \"*.map\" -delete"
+    "web:build:production": "projects/web/bin/build.sh production"
   },
   "dependencies": {
     "flag-icons": "^7.3.2",
