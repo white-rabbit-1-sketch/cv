@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Make script executable
+        run: chmod +x projects/web/bin/build.sh
+
       - name: Build project
         run: npm run web:build:production
 
