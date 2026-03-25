@@ -178,10 +178,10 @@ onMounted(() => {
                   <span class="text-body-2 text-grey-lighten-2">{{ t('l12') }}</span>
                 </div>
 
-                <div class="d-flex align-center mb-3">
+                <!--<div class="d-flex align-center mb-3">
                   <v-icon :icon="mdiBriefcaseVariantOutline" size="small" class="mr-3 text-primary" />
                   <span class="text-h6 text-white font-weight-black">6,000+ € <span class="text-body-2 text-grey font-weight-medium">{{t('l468')}}</span></span>
-                </div>
+                </div>-->
 
                 <div class="d-flex align-center mb-3">
                   <v-icon :icon="mdiFileDocumentOutline" size="small" class="mr-3 text-primary" />
